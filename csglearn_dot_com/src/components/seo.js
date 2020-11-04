@@ -71,13 +71,14 @@ function SEO({ description, lang, meta, title }) {
       ].concat(meta)}
     >
       <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
       />
-
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script
+        src="https://kit.fontawesome.com/3b83e0293b.js"
+        crossOrigin="anonymous"
       />
     </Helmet>
   )
