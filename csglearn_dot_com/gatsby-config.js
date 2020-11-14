@@ -1,10 +1,18 @@
 module.exports = {
   siteMetadata: {
     title: `CSG Learning Institute`,
+    siteUrl: `https://www.csglearn.com`,
     description: `Learn in an interactive virtual classroom from the comfort of your home. Register for CSEC and CAPE online classes, tertiary certification and more.`,
-    author: `@csglearn`
+    author: `Raheem McDonald`
   },
   plugins: [
+    { resolve: `gatsby-plugin-sitemap` },
+    {
+      resolve: `gatsby-plugin-clicky`,
+      options: {
+        siteId: "101286252"
+      }
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

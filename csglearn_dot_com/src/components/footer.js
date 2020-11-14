@@ -147,7 +147,7 @@ const Footer = () => (
         </ul>
         <div className="footer-copyright text-center py-3">
           © 2020 Copyright:
-          <a href="https://csglearn.com/"> CSG Learning Institute</a>
+          <a href="/"> CSG Learning Institute</a>
         </div>
       </footer>
     </div>

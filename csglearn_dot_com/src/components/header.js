@@ -33,12 +33,14 @@ class Header extends Component {
     this.toggleDropdown = this.toggleDropdown.bind(this)
     this.toggleDropdown2 = this.toggleDropdown2.bind(this)
     this.toggleDropdown3 = this.toggleDropdown3.bind(this)
+    this.toggleDropdown4 = this.toggleDropdown4.bind(this)
     this.toggleNavbar = this.toggleNavbar.bind(this)
 
     this.state = {
       dropdownOpen: false,
       dropdownOpen2: false,
       dropdownOpen3: false,
+      dropdownOpen4: false,
       collapseOpen: false
     }
   }
@@ -66,6 +68,15 @@ class Header extends Component {
       ...this.state,
       ...{
         dropdownOpen3: !this.state.dropdownOpen3
+      }
+    })
+  }
+
+  toggleDropdown4() {
+    this.setState({
+      ...this.state,
+      ...{
+        dropdownOpen4: !this.state.dropdownOpen4
       }
     })
   }
@@ -141,14 +152,6 @@ class Header extends Component {
                   </DropdownItem>
 
                   <hr />
-                  <DropdownItem href="/">
-                    Spanish Language Certification
-                  </DropdownItem>
-                  <DropdownItem href="/">
-                    Certified Public Accountant Certification
-                  </DropdownItem>
-
-                  <hr />
                   <DropdownItem
                     target="_blank"
                     href="https://www.literacyja.org"
@@ -171,6 +174,31 @@ class Header extends Component {
                   </DropdownItem>
                 </DropdownMenu>
               </Dropdown>
+
+              {/* Diplomas */}
+              <Dropdown
+                open={this.state.dropdownOpen4}
+                toggle={this.toggleDropdown4}
+                style={{ width: isBrowser ? "200%" : null }}
+              >
+                <DropdownToggle active nav caret>
+                  Diplomas
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem href="/diplomas/dele">
+                    Diplomas in Spanish (DELE)
+                  </DropdownItem>
+                  <DropdownItem href="/diplomas/delf">
+                    Diplomas in French (DELF)
+                  </DropdownItem>
+                  <hr />
+                  <DropdownItem href="/diplomas">
+                    <i class="fas fa-globe-europe text-primary mr-2"></i>
+                    Learn More
+                  </DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
+              {/* Diplomas  */}
 
               {/* Learning Certificates */}
               <Dropdown

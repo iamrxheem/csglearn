@@ -9,7 +9,7 @@ const IndexPage = () => (
   <Layout>
     <SEO
       title="Learning Certificates of Completion"
-      description="CSG Learning Institute is a private training institution that offers a range of examination preparation programmes."
+      description="Learn business, creative, and technology skills to achieve your personal and professional goals. Join today to get access to hundreds of courses."
       lang="en"
     />
     <Breadcrumb>

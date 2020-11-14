@@ -8,17 +8,20 @@ import { Breadcrumb, BreadcrumbItem } from "shards-react"
 const IndexPage = () => (
   <Layout>
     <SEO
-      title="Home"
-      description="CSG Learning Institute is a Jamaica-based private training institution that offers a range of examination preparation programmes and learning certifications, and extends is services to online learning in the Caribbean."
+      title="Diplomas"
+      description="Enroll in overseas accredited and recognised diploma and give your career a head start. Visit CSG Learning Institute today to find out how."
       lang="en"
     />
     <Breadcrumb>
       <BreadcrumbItem>
         <a href="/">Home</a>
       </BreadcrumbItem>
-      <BreadcrumbItem active></BreadcrumbItem>
+      <BreadcrumbItem active>Diplomas</BreadcrumbItem>
     </Breadcrumb>
-    <></>
+
+    <h5>Diplomas</h5>
+
+    <br />
   </Layout>
 )
 

@@ -19,7 +19,11 @@ import {
 
 const Page = () => (
   <Layout>
-    <SEO title="Contact" description="" lang="en" />
+    <SEO
+      title="Contact"
+      description="Developing · Chat live with sales · Contact sales: 1-876-565-3942 · Looking for help & support? Click here."
+      lang="en"
+    />
 
     <Breadcrumb>
       <BreadcrumbItem>
