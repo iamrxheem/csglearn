@@ -207,7 +207,7 @@ class Header extends Component {
                 style={{ width: isBrowser ? "200%" : null }}
               >
                 <DropdownToggle active nav caret>
-                  Learning Certificates
+                  Professional Certifications
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem href="/learning">
@@ -279,9 +279,14 @@ class Header extends Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink active href="/store">
+                <a
+                  target="_blank"
+                  className="nav-link"
+                  active
+                  href="https://www.store.csglearn.com"
+                >
                   Store
-                </NavLink>
+                </a>
               </NavItem>
 
               <React.Fragment>

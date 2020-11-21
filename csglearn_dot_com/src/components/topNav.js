@@ -55,10 +55,10 @@ const TopNav = () => (
         <a
           style={{ color: "white" }}
           className="nav-link"
-          href="https://www.news.csglearn.com/my/"
+          href="https://www.jobs.csglearn.com/my/"
           target="_blank"
         >
-          <small>News</small>
+          <small>Jobs</small>
         </a>
       </li>
     </ul>

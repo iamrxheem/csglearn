@@ -29,22 +29,18 @@ const Footer = () => (
 
               <ul className="list-unstyled">
                 <li className="pb-2">
-                  <a href="#!">CSEC Mathematics</a>
+                  <a href="/diplomas/dele">Diploma in Spanish</a>
                 </li>
                 <li className="pb-2">
-                  <a href="#!">CSEC English A</a>
+                  <a href="/diplomas/delf">Diploma in French</a>
                 </li>
                 <li className="pb-2">
-                  <a href="#!">
-                    {isMobile ? (
-                      <span>Spanish DELE Certification</span>
-                    ) : (
-                      <span>Spanish Certification</span>
-                    )}
-                  </a>
+                  <a href="/programes/sixth-form">Associate Sixth Form</a>
                 </li>
                 <li>
-                  <a href="#!">Customer Service</a>
+                  <a href="/professional-certifications">
+                    Professional Certifications
+                  </a>
                 </li>
               </ul>
             </div>

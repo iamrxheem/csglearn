@@ -11,7 +11,7 @@ import {
   Col,
   Alert
 } from "shards-react"
-import { MobileView } from "react-device-detect"
+import { isMobile, MobileView, BrowserView } from "react-device-detect"
 
 const IndexPage = () => (
   <Layout>
@@ -34,7 +34,16 @@ const IndexPage = () => (
       <Col sm={6} md={6} lg={6}>
         <h5>Diplomas in Spanish (DELE)</h5>
 
-        <br />
+        <img
+          style={{
+            width: isMobile ? "100%" : "50%"
+          }}
+          src="https://sta.uwi.edu/Fhe/cll/sites/default/files/virb_cll/images/Logo_DELE_CMYK.jpg"
+        />
+
+        <BrowserView>
+          <br />
+        </BrowserView>
         <span>
           Diplomas in Spanish as a Foreign Language (DELE) Exam is an official
           title certifying the degree of competence and mastery of the Spanish
@@ -55,11 +64,12 @@ const IndexPage = () => (
         <br />
 
         <Alert theme="info">A1 & A2 Diploma - Absolute Beginners</Alert>
-
-        <img
-          style={{ width: "100%" }}
-          src="https://dl.dropbox.com/s/sqxn2z219kuj3id/1.png?dl=0"
-        />
+        <MobileView>
+          <img
+            style={{ width: "100%" }}
+            src="https://dl.dropbox.com/s/sqxn2z219kuj3id/1.png?dl=0"
+          />
+        </MobileView>
         <span>
           This course and diploma are aimed at absolute beginners in Spanish as
           it starts the learning process from scratch, and certifies that the
@@ -98,10 +108,12 @@ const IndexPage = () => (
         <br />
         <Alert theme="warning">B1 & B2 Diploma - Intermediate</Alert>
         <br />
-        <img
-          style={{ width: "100%" }}
-          src="https://dl.dropbox.com/s/onuebbo0sg9vbjp/2.png?dl=0"
-        />
+        <MobileView>
+          <img
+            style={{ width: "100%" }}
+            src="https://dl.dropbox.com/s/onuebbo0sg9vbjp/2.png?dl=0"
+          />
+        </MobileView>
         <span>
           The B1 exam is aimed at intermediate learners and assesses a wide
           range of the students’ capabilities in reading comprehension, written
@@ -176,15 +188,20 @@ const IndexPage = () => (
           </Col>
         </Row>
         <br />
+      </Col>
+      <Col sm={6} md={6} lg={6}>
         <br />
 
         <Alert style={{ backgroundColor: "#8a3ab9" }}>
           C1 & C2 Diploma - Fluent
         </Alert>
-        <img
-          style={{ width: "100%" }}
-          src="https://dl.dropbox.com/s/bamb3nard1amr14/3.png?dl=0"
-        />
+
+        <MobileView>
+          <img
+            style={{ width: "100%" }}
+            src="https://dl.dropbox.com/s/bamb3nard1amr14/3.png?dl=0"
+          />
+        </MobileView>
 
         <span>
           The Diploma of Spanish level C1 accredits the ability of the user of
@@ -242,10 +259,6 @@ const IndexPage = () => (
             </Button>
           </Col>
         </Row>
-        <br />
-      </Col>
-      <Col sm={6} md={6} lg={6}>
-        <span></span>
       </Col>
     </Row>
   </Layout>
