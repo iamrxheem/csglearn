@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import "../assets/js/jotform-embed.js"
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized

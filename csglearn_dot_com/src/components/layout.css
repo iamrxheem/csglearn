@@ -2,7 +2,12 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-
+.break-out {
+  width: 100vw;
+  position: relative;
+  background-color: inherit;
+  left: calc(-1 * (100vw - 100%) / 2 );
+}
 
 /*!
  * Bootswatch v4.5.3

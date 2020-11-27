@@ -27,6 +27,26 @@ const Page = () => (
     </Breadcrumb>
 
     <h5>Register</h5>
+    <br />
+
+    <iframe
+      id="JotFormIFrame-203255137832048"
+      title="Form"
+      onLoad="window.parent.scrollTo(0,0)"
+      allowTransparency="true"
+      allowFullscreen="true"
+      allow="geolocation; microphone; camera"
+      src="https://form.jotform.com/203255137832048"
+      frameBorder="0"
+      style={{
+        minWidth: "100%",
+        height: "539px",
+        border: "none",
+        scrolling: "no"
+      }}
+    >
+      Your browser does not support iframes.
+    </iframe>
   </Layout>
 )
 

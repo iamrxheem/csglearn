@@ -33,14 +33,14 @@ class Header extends Component {
     this.toggleDropdown = this.toggleDropdown.bind(this)
     this.toggleDropdown2 = this.toggleDropdown2.bind(this)
     this.toggleDropdown3 = this.toggleDropdown3.bind(this)
-    this.toggleDropdown4 = this.toggleDropdown4.bind(this)
+    this.toggleDropdownAdmissions = this.toggleDropdownAdmissions.bind(this)
     this.toggleNavbar = this.toggleNavbar.bind(this)
 
     this.state = {
       dropdownOpen: false,
       dropdownOpen2: false,
       dropdownOpen3: false,
-      dropdownOpen4: false,
+      dropdownOpenAdmissions: false,
       collapseOpen: false
     }
   }
@@ -72,11 +72,11 @@ class Header extends Component {
     })
   }
 
-  toggleDropdown4() {
+  toggleDropdownAdmissions() {
     this.setState({
       ...this.state,
       ...{
-        dropdownOpen4: !this.state.dropdownOpen4
+        dropdownOpenAdmissions: !this.state.dropdownOpenAdmissions
       }
     })
   }
@@ -94,7 +94,7 @@ class Header extends Component {
     return (
       <>
         <TopNav />
-        <Navbar type="light" theme="" expand="md">
+        <Navbar type="light" theme="light" expand="md" className="sticky-top">
           <NavbarBrand href="/">CSG Learning</NavbarBrand>
 
           {isMobile ? (
@@ -175,14 +175,14 @@ class Header extends Component {
                 </DropdownMenu>
               </Dropdown>
 
-              {/* Diplomas */}
+              {/* Admissions */}
               <Dropdown
-                open={this.state.dropdownOpen4}
-                toggle={this.toggleDropdown4}
+                open={this.state.dropdownOpenAdmissions}
+                toggle={this.toggleDropdownAdmissions}
                 style={{ width: isBrowser ? "200%" : null }}
               >
                 <DropdownToggle active nav caret>
-                  Diplomas
+                  Admissions
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem href="/diplomas/dele">
@@ -277,16 +277,6 @@ class Header extends Component {
                 <NavLink active href="/contact">
                   Contact
                 </NavLink>
-              </NavItem>
-              <NavItem>
-                <a
-                  target="_blank"
-                  className="nav-link"
-                  active
-                  href="https://www.store.csglearn.com"
-                >
-                  Store
-                </a>
               </NavItem>
 
               <React.Fragment>

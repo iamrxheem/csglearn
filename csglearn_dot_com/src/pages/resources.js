@@ -8,7 +8,7 @@ import { Breadcrumb, BreadcrumbItem } from "shards-react"
 const Page = () => (
   <Layout>
     <SEO
-      title="Services"
+      title="Resources"
       description="Learn more about our tools and services and how you can benefit. Find scholarships, student jobs and much more!"
       lang="en"
     />
@@ -16,15 +16,13 @@ const Page = () => (
       <BreadcrumbItem>
         <a href="/">Home</a>
       </BreadcrumbItem>
-      <BreadcrumbItem active>Services</BreadcrumbItem>
+      <BreadcrumbItem active>Resources</BreadcrumbItem>
     </Breadcrumb>
 
-    <h5>Services</h5>
+    <h5>Resources</h5>
 
     <br />
-    <span></span>
-
-    <a href="/services/career-planning">Career Planning</a>
+    <span>This is resources.</span>
   </Layout>
 )
 

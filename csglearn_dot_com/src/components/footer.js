@@ -62,8 +62,13 @@ const Footer = () => (
                   </a>
                 </li>
                 <li className="pb-2">
-                  <a href="https://cxc-store.com/" target="_blank">
-                    CXC Store
+                  <a href="https://www.jobs.csglearn.com/" target="_blank">
+                    Student Employment
+                  </a>
+                </li>
+                <li className="pb-2">
+                  <a href="/scholarships" target="_blank">
+                    Scholarships
                   </a>
                 </li>
                 <li>
@@ -103,11 +108,11 @@ const Footer = () => (
 
         <ul className="list-unstyled list-inline text-center py-2">
           <li className="list-inline-item">
-            <h5 className="mb-1">Find the right course</h5>
+            <h5 className="mb-1">Need help? </h5>
           </li>
           <li className="list-inline-item">
-            <a href="register" className="btn btn-danger btn-rounded">
-              Sign up!
+            <a href="/placement" className="btn btn-danger btn-rounded">
+              Apply for Placement
             </a>
           </li>
         </ul>
