@@ -60,94 +60,72 @@ class PlacementLayout extends React.Component {
     return (
       <>
         <Layout fluid={false}>
-          <Container>
+          {/* Browser View*/}
+          <BrowserView>
+            <Container>
+              <Carousel className="break-out">
+                <Carousel.Item>
+                  <img
+                    style={{ width: "100%", height: "100%" }}
+                    className="d-block w-100 "
+                    src="https://www.mona.uwi.edu/sites/default/files/uwi/step-by-step-to-applying.jpg"
+                    alt="First slide"
+                  />
+                </Carousel.Item>
+              </Carousel>
+            </Container>
+
+            <Alert theme="danger">
+              <Nav fill>
+                <NavItem>
+                  <NavLink style={{ textDecoration: "none" }} href="/placement">
+                    HOME
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    style={{ textDecoration: "none" }}
+                    href="/placement/programmes"
+                  >
+                    PROGRAMMES
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    style={{ textDecoration: "none" }}
+                    href="/placement/resources"
+                  >
+                    RESOURCES
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    style={{ textDecoration: "none" }}
+                    href="/placement/contact-us"
+                  >
+                    CONTACT US
+                  </NavLink>
+                </NavItem>
+              </Nav>
+            </Alert>
+          </BrowserView>
+          {/* End Browser View  */}
+
+          {/* Mobile View */}
+          <MobileView>
             <Carousel className="break-out">
               <Carousel.Item>
                 <img
                   style={{ width: "100%", height: "100%" }}
                   className="d-block w-100 "
-                  src="https://www.mona.uwi.edu/sites/default/files/uwi/step-by-step-to-applying.jpg"
+                  src="https://www.mona.uwi.edu/humed/sites/default/files/humed/carousel_image/header-image-1_0.png"
                   alt="First slide"
                 />
               </Carousel.Item>
             </Carousel>
-          </Container>
+          </MobileView>
+          {/* End Mobile View */}
 
-          <Alert theme="danger">
-            <footer className="page-footer font-small indigo">
-              <div className="container">
-                <div className="row text-center d-flex justify-content-center pt-3">
-                  <div className="col-md-2 mb-3">
-                    <h6 className="text-uppercase font-weight-bold">
-                      <a style={{ textDecoration: "none" }} href="/placement">
-                        Home
-                      </a>
-                    </h6>
-                  </div>
-
-                  <div className="col-md-2 mb-3">
-                    <h6 className="text-uppercase font-weight-bold">
-                      <a
-                        style={{ textDecoration: "none" }}
-                        href="/placement/about"
-                      >
-                        About
-                      </a>
-                    </h6>
-                  </div>
-
-                  <div className="col-md-2 mb-3">
-                    <h6 className="text-uppercase font-weight-bold">
-                      <a
-                        style={{ textDecoration: "none" }}
-                        href="/placement/programes"
-                      >
-                        Programmes
-                      </a>
-                    </h6>
-                  </div>
-
-                  <div className="col-md-2 mb-3">
-                    <h6 className="text-uppercase font-weight-bold">
-                      <a
-                        style={{ textDecoration: "none" }}
-                        href="/placement/resources"
-                      >
-                        Resources
-                      </a>
-                    </h6>
-                  </div>
-
-                  <div className="col-md-2 mb-3">
-                    <h6 className="text-uppercase font-weight-bold">
-                      <a
-                        style={{ textDecoration: "none" }}
-                        href="/placement/contact"
-                      >
-                        Contact
-                      </a>
-                    </h6>
-                  </div>
-                </div>
-              </div>
-            </footer>
-          </Alert>
-
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
           {this.props.children}
         </Layout>
       </>

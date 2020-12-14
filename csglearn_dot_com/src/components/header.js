@@ -2,7 +2,12 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { Component } from "react"
 import TopNav from "./topNav"
-import { isBrowser, isMobile } from "react-device-detect"
+import {
+  isBrowser,
+  isMobile,
+  MobileView,
+  BrowserView
+} from "react-device-detect"
 
 import {
   Navbar,
@@ -93,17 +98,54 @@ class Header extends Component {
   render() {
     return (
       <>
-        <TopNav />
+        <BrowserView>
+          <TopNav />
+        </BrowserView>
+
+        <MobileView>
+          <a href="/">
+            <img
+              src="https://i.imgur.com/IcviBO3.jpg"
+              style={{ width: "100%", height: "100%" }}
+            />
+          </a>
+        </MobileView>
         <Navbar type="light" theme="light" expand="md" className="sticky-top">
-          <NavbarBrand href="/">CSG Learning</NavbarBrand>
+          <BrowserView>
+            <NavbarBrand href="/">CSG Learning</NavbarBrand>
+          </BrowserView>
+
+          <MobileView>
+            <NavbarBrand>
+              <Nav>
+                <NavItem>
+                  <NavLink
+                    active
+                    target="_blank"
+                    href="https://www.hub.csglearn.com/my/"
+                  >
+                    <i className="fas fa-user fa-lg text-secondary"></i>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    target="_blank"
+                    active
+                    href="https://api.whatsapp.com/send/?phone=18767073443&text&app_absent=0"
+                  >
+                    <i className="fas fa-phone-alt fa-lg text-secondary hover-green"></i>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink active href="#"></NavLink>
+                </NavItem>
+              </Nav>
+            </NavbarBrand>
+          </MobileView>
 
           {isMobile ? (
-            <a
-              href="https://www.hub.csglearn.com/my/"
-              target="_blank"
-              className="ml-auto mr-3"
-            >
-              <i className="fas fa-user fa-lg text-dark"></i>
+            <a href="/apply" className="ml-auto mr-3">
+              <Button>APPLY</Button>
             </a>
           ) : null}
 
@@ -185,20 +227,30 @@ class Header extends Component {
                   Admissions
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem href="/diplomas/dele">
-                    Diplomas in Spanish (DELE)
+                  <DropdownItem href="">Admission Process</DropdownItem>
+
+                  <hr />
+                  <DropdownItem href="/">Undergraduate Students</DropdownItem>
+                  <DropdownItem href="">Tuition & Fees</DropdownItem>
+                  <DropdownItem href="">
+                    Specially-Admitted Applicants
                   </DropdownItem>
-                  <DropdownItem href="/diplomas/delf">
-                    Diplomas in French (DELF)
-                  </DropdownItem>
+                  <DropdownItem href="">Forms and Documents</DropdownItem>
+                  <DropdownItem href=""></DropdownItem>
+                  <DropdownItem href=""></DropdownItem>
+                  <DropdownItem href=""></DropdownItem>
+                  <DropdownItem href=""></DropdownItem>
+                  <DropdownItem href=""></DropdownItem>
+                  <DropdownItem href="">FAQs</DropdownItem>
+
                   <hr />
                   <DropdownItem href="/diplomas">
                     <i class="fas fa-globe-europe text-primary mr-2"></i>
-                    Learn More
+                    Diplomas
                   </DropdownItem>
                 </DropdownMenu>
               </Dropdown>
-              {/* Diplomas  */}
+              {/* End Admissions  */}
 
               {/* Learning Certificates */}
               <Dropdown
@@ -301,9 +353,9 @@ class Header extends Component {
                           borderColor: "rgb(148,0,211)",
                           marginLeft: "10px"
                         }}
-                        href="/register"
+                        href="/apply"
                       >
-                        Register
+                        Apply
                       </Button>
                     </NavItem>
                   </>
@@ -332,9 +384,9 @@ class Header extends Component {
                             borderColor: "rgb(148,0,211)",
                             marginLeft: "10px"
                           }}
-                          href="/register"
+                          href="/apply"
                         >
-                          Register
+                          Apply
                         </Button>
                       </Col>
                     </Row>

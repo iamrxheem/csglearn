@@ -15,6 +15,7 @@ import Footer from "./footer"
 import "./layout.css"
 
 import { Container } from "shards-react"
+import MainMenu from "../menus/mainMenu"
 
 const Layout = ({ children, fluid, hideFooter }) => {
   const data = useStaticQuery(graphql`
@@ -29,11 +30,9 @@ const Layout = ({ children, fluid, hideFooter }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <MainMenu />
       <div>
-        <footer>
-          <Container fluid={fluid}>{children}</Container>
-        </footer>
+        <>{children}</>
         <Footer />
       </div>
       <noscript>You need to enable Javascript to view this website.</noscript>

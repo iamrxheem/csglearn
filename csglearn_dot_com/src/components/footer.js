@@ -108,7 +108,7 @@ const Footer = () => (
 
         <ul className="list-unstyled list-inline text-center py-2">
           <li className="list-inline-item">
-            <h5 className="mb-1">Need help? </h5>
+            <h5 className="mb-1">Plan your career</h5>
           </li>
           <li className="list-inline-item">
             <a href="/placement" className="btn btn-danger btn-rounded">

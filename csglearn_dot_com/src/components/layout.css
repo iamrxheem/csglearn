@@ -2,6 +2,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+.hover-green:hover{
+  color:"#25D366";
+}
+
 .break-out {
   width: 100vw;
   position: relative;

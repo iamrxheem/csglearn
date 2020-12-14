@@ -38,27 +38,27 @@ const TopNav = () => (
           href="https://www.hub.csglearn.com/my/"
           target="_blank"
         >
-          <small>Learning Hub</small>
+          <small>Student Portal</small>
         </a>
       </li>
       <li className="nav-item">
         <a
           style={{ color: "white" }}
           className="nav-link"
-          href="https://www.blog.csglearn.com/"
+          href="https://www.news.csglearn.com/"
           target="_blank"
         >
-          <small>Blog</small>
+          <small>News</small>
         </a>
       </li>
       <li className="nav-item">
         <a
           style={{ color: "white" }}
           className="nav-link"
-          href="https://www.jobs.csglearn.com/my/"
+          href="https://www.careers.csglearn.com/my/"
           target="_blank"
         >
-          <small>Jobs</small>
+          <small>Careers</small>
         </a>
       </li>
     </ul>
