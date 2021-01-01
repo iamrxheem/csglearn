@@ -3,7 +3,6 @@ import { isMobile } from "react-device-detect"
 
 const Footer = () => (
   <>
-    <br />
     <div>
       <footer className="page-footer font-small stylish-color-dark pt-4">
         <div className="container text-center text-md-left">
@@ -35,7 +34,7 @@ const Footer = () => (
                   <a href="/diplomas/delf">Diploma in French</a>
                 </li>
                 <li className="pb-2">
-                  <a href="/programes/sixth-form">Associate Sixth Form</a>
+                  <a href="/programes/sixth-form">Sixth Form Programme</a>
                 </li>
                 <li>
                   <a href="/professional-certifications">
@@ -88,13 +87,13 @@ const Footer = () => (
 
               <ul className="list-unstyled">
                 <li className="pb-2">
+                  <a href="/disclaimers">Disclaimers</a>
+                </li>
+                <li className="pb-2">
                   <a href="/terms-of-use">Terms of Use</a>
                 </li>
                 <li className="pb-2">
                   <a href="/privacy-policy">Privacy Policy</a>
-                </li>
-                <li className="pb-2">
-                  <a href="/">Sales and Support</a>
                 </li>
                 <li>
                   <a href="/contact">Contact Us</a>
