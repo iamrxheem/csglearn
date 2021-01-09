@@ -10,7 +10,11 @@ import DELFMiniMenu from "../../../common/delfMiniMenu"
 const Page = () => (
   <>
     <DELFLayout>
-      <SEO title="Forms and Documents" description="" lang="en" />
+      <SEO
+        title="Forms and Documents - Diploma in French"
+        description=""
+        lang="en"
+      />
 
       <Container>
         <Breadcrumb>
@@ -31,7 +35,7 @@ const Page = () => (
         <br />
         <DELFMiniMenu />
         <br />
-        <span>Forms and documents not yeat available.</span>
+        <span>Forms and documents not yet available.</span>
 
         <br />
       </Container>

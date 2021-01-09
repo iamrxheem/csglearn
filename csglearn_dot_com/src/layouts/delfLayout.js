@@ -19,7 +19,7 @@ class DELFLayout extends Component {
           <a href="/">
             <img
               src="https://i.imgur.com/IcviBO3.jpg"
-              style={{ width: "100%", height: "100%" }}
+              style={{ width: "100%" }}
             />
           </a>
         </MobileView>
@@ -38,7 +38,7 @@ class DELFLayout extends Component {
         {isMobile ? (
           <>
             <img
-              style={{ width: "100%" }}
+              style={{ width: "100%", height: "260px" }}
               className="d-block w-100"
               src="https://dl.dropbox.com/s/m3k97c8149s3omt/WhatsApp%20Image%202021-01-08%20at%201.59.29%20PM.jpeg?dl=0"
               alt="First slide"

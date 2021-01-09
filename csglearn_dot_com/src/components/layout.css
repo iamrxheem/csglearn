@@ -1,3 +1,11 @@
+.w-o-h{
+  color:black!important;
+}
+
+.w-o-h:hover{
+  color:white!important;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
 }

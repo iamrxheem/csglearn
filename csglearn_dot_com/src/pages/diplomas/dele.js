@@ -71,6 +71,11 @@ const DELEPage = () => (
               <li style={{ paddingTop: "10px" }}>
                 <a href="/diplomas/dele/advanced">Advanced/ Master</a>
               </li>
+              <li style={{ paddingTop: "10px" }}>
+                <a href="/diplomas/dele/escolares">
+                  Diploma in Spanish for Minors
+                </a>
+              </li>
             </ul>
 
             <br />

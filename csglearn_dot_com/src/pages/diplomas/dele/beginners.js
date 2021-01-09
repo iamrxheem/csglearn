@@ -138,7 +138,7 @@ const Page = () => (
                 levelOfStudy="Diploma"
                 numberOfCourses="4"
                 modeOfStudy="Online"
-                duration="1 year - 12 week terms"
+                duration="10 months"
                 termBeginsOn="January 25, 2021"
                 showCost
                 cost="USD $225 per term"

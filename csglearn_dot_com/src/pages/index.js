@@ -14,7 +14,8 @@ import {
 } from "shards-react"
 import { Carousel } from "react-bootstrap"
 import ComingSoonPromotion from "../components/comingSoonPromotion"
-import { isMobile, MobileView, BrowserView } from "react-device-detect"
+import { MobileView, BrowserView, isMobile } from "react-device-detect"
+import { mobile } from "is-mobile"
 
 const IndexPage = () => (
   <Layout>
@@ -32,7 +33,8 @@ const IndexPage = () => (
       </Breadcrumb>
     </Container>
 
-    <MobileView>
+    {/* Mobile View  */}
+    <div className="d-block d-md-none">
       <Carousel>
         <Carousel.Item>
           <a href="/programmes/csec">
@@ -85,33 +87,105 @@ const IndexPage = () => (
           </a>
         </Carousel.Item>
       </Carousel>
-    </MobileView>
+    </div>
 
-    <BrowserView>
-      <a
-        style={{ margin: "0 auto" }}
-        className="text-center"
-        href="/diplomas/dele"
-      >
-        <img
-          src="https://dl.dropbox.com/s/ddh0rfj7swit71a/WhatsApp%20Image%202021-01-05%20at%2011.15.59%20AM.jpeg?dl=0"
-          style={{
-            height: "70%",
-            marginRight: "auto",
-            marginLeft: "auto",
-            display: "block",
-            width: "100%"
-          }}
-        />
-      </a>
+    {/* Broswer view */}
+    <div className="d-none d-md-block">
+      <Container fluid>
+        <Row>
+          <Col sm={12} md={8}>
+            <Carousel>
+              {/* CSEC online classes */}
+              <Carousel.Item>
+                <a href="/programmes/csec">
+                  <img
+                    src="https://dl.dropbox.com/s/wwwiafaz55s6dhs/WhatsApp%20Image%202021-01-08%20at%208.42.44%20PM.jpeg?dl=0"
+                    style={{ width: "100%" }}
+                  />
+                </a>
+              </Carousel.Item>
 
-      <Carousel>
-        <Carousel.Item>
-          <a href="/" style={{ height: "70%" }}></a>
-        </Carousel.Item>
-      </Carousel>
-    </BrowserView>
+              {/* Sixth Form Programme */}
+              <Carousel.Item>
+                <a href="/programmes/sixth-form">
+                  <img
+                    src="https://dl.dropbox.com/s/ovzl2mwivfim5n1/WhatsApp%20Image%202021-01-08%20at%202.13.57%20PM.jpeg?dl=0"
+                    style={{ width: "100%" }}
+                  />
+                </a>
+              </Carousel.Item>
 
+              {/* Diploma in Spanish */}
+              <Carousel.Item>
+                <a href="/diplomas/dele">
+                  <img
+                    src="https://dl.dropbox.com/s/am5jl3bbdnsm8hk/WhatsApp%20Image%202021-01-05%20at%2010.33.15%20AM.jpeg?dl=0"
+                    style={{ width: "100%" }}
+                  />
+                </a>
+              </Carousel.Item>
+
+              {/* Diploma in French */}
+              <Carousel.Item>
+                <a href="/diplomas/delf">
+                  <img
+                    src="https://dl.dropbox.com/s/m3k97c8149s3omt/WhatsApp%20Image%202021-01-08%20at%201.59.29%20PM.jpeg?dl=0"
+                    style={{ width: "100%" }}
+                  />
+                </a>
+              </Carousel.Item>
+            </Carousel>
+          </Col>
+
+          <Col sm={12} md={4}>
+            <Alert theme="warning">
+              <br />
+              <h4 className="text-dark">Learn Spanish Online</h4>
+
+              <span className="text-dark">
+                Study for the prestegious Diploma in Spanish (DELE)
+                certification online, whether you're a beginner, intermediate or
+                advanced.
+              </span>
+
+              <br />
+              <br />
+              <Button
+                style={{ textDecoration: "none" }}
+                className="w-o-h"
+                href="/diplomas/dele/beginners"
+                outline
+                theme="dark"
+              >
+                Beginner's Diploma -->
+              </Button>
+              <br />
+              <br />
+            </Alert>
+
+            <Alert theme="primary">
+              <br />
+              <h4>Reseach and Innovation</h4>
+
+              <span>
+                We are committed to impacting our nation, region and the globe
+                with world leading solutions. Coming soon.
+              </span>
+
+              <br />
+              <br />
+              <Button theme="light" pill outline>
+                Coming in September
+              </Button>
+              <br />
+              <br />
+            </Alert>
+          </Col>
+        </Row>
+      </Container>
+    </div>
+
+    <br />
     <br />
     <Container className="text-center">
       <Row>

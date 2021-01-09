@@ -8,13 +8,13 @@ import {
   Col,
   Button
 } from "shards-react"
-import { MobileView } from "react-device-detect"
+import { MobileView, isMobile } from "react-device-detect"
 
 const ComingSoonPromotion = () => (
   <Container fluid>
     <Row>
       <Col sm={12} md={8}>
-        <Alert theme="primary">
+        <Alert theme="primary" className={isMobile ? "break-out" : ""}>
           <br />
           <h6>BEGINNING IN MARCH</h6>
 
@@ -38,14 +38,12 @@ const ComingSoonPromotion = () => (
           >
             Learn more
           </Button>
-
-          <MobileView>
-            <br />
-          </MobileView>
+          <br />
+          <br />
         </Alert>
       </Col>
       <Col sm={12} md={4}>
-        <Alert theme="info">
+        <Alert theme="info" className={isMobile ? "break-out" : ""}>
           <br />
           <h6>COMING IN APRIL</h6>
 
@@ -67,9 +65,8 @@ const ComingSoonPromotion = () => (
             Learn more
           </Button>
 
-          <MobileView>
-            <br />
-          </MobileView>
+          <br />
+          <br />
         </Alert>
       </Col>
     </Row>

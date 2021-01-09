@@ -11,7 +11,7 @@ import JotformEmbed from "react-jotform-embed"
 const Page = () => (
   <>
     <DELFLayout>
-      <SEO title="Forms and Documents" description="" lang="en" />
+      <SEO title="Pre-Register - Diploma in French" description="" lang="en" />
 
       <Container>
         <Breadcrumb>
