@@ -6,11 +6,12 @@ import SEO from "../../../components/seo"
 import { Breadcrumb, BreadcrumbItem, Container } from "shards-react"
 import { useForm, useField, splitFormProps } from "react-form"
 import DELELayout from "../../../layouts/deleLayout"
+import JotformEmbed from "react-jotform-embed"
 
-const Page = () => (
+const DELEApplyPage = () => (
   <DELELayout>
     <SEO
-      title="Register for the Spanish DELE Exam in Jamaica"
+      title="Apply Now | Spanish DELE Exam"
       description="Resgister for and sit the Spanish DELE exam in Jamaica. Call or WhatsApp (876) 707-3443 to get started."
       lang="en"
     />
@@ -25,7 +26,7 @@ const Page = () => (
         <BreadcrumbItem>
           <a href="/diplomas/dele">DELE</a>
         </BreadcrumbItem>
-        <BreadcrumbItem active>Register</BreadcrumbItem>
+        <BreadcrumbItem active>Apply</BreadcrumbItem>
       </Breadcrumb>
 
       <h5>Apply</h5>
@@ -40,41 +41,19 @@ const Page = () => (
       <br />
       <br />
       <iframe
-        id="JotFormIFrame-203255137832048"
-        title="CSG Learning DELE Registration Form"
-        onLoad="window.parent.scrollTo(0,0)"
-        allowTransparency="true"
-        allowFullscreen="true"
-        allow="geolocation; microphone; camera"
-        src="https://form.jotform.com/203255137832048"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdUSec1nePgk67RJV9GdAanj1zZdjTdegajE9VvoDVuwAZNDw/viewform?embedded=true"
+        style={{ width: "100%" }}
+        height="3227"
         frameBorder="0"
-        style={{
-          minWidth: "100%",
-          height: "539px",
-          border: "none",
-          scrolling: "no"
-        }}
+        marginHeight="0"
+        marginWidth="0"
       >
-        Your browser does not support iframes.
+        Loading…
       </iframe>
 
       <br />
-      <br />
-      <span>
-        The DELE is an in-person exam. Therefore, the examiner will need to
-        match your face to your ID upon registration and when you are at the
-        exam site.
-      </span>
-
-      <br />
-      <br />
-      <span>
-        Accepted IDs includes government-issued IDs, such as your passport,
-        national ID, state ID or driver's license. School or work IDs are not
-        allowed.
-      </span>
     </Container>
   </DELELayout>
 )
 
-export default Page
+export default DELEApplyPage

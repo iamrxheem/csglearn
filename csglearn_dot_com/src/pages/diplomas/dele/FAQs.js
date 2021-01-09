@@ -93,6 +93,18 @@ const data = {
           and preview sample exams.
           <br />
           <br />
+          <ul>
+            <li>
+              <a href="/diplomas/dele/beginners">Absolute Beginner</a>
+            </li>
+            <li style={{ paddingTop: "10px" }}>
+              <a href="/diplomas/dele/intermediate">Intermediate</a>
+            </li>
+            <li style={{ paddingTop: "10px" }}>
+              <a href="/diplomas/dele/advanced">Advanced/ Master</a>
+            </li>
+          </ul>
+          <br />
           There are also two exams specifically for young learners between 11
           and 17 years old. <a href="/diplomas/dele/escolar">Learn more</a>.
           <br />

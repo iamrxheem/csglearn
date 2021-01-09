@@ -19,7 +19,7 @@ import ProgramSummary from "../../../common/programSummary"
 
 const Page = () => (
   <DELELayout>
-    <SEO title="DELE Beginners Diploma - A1 & A2" description="" lang="en" />
+    <SEO title="Diploma de español nivel C1 y C2" description="" lang="en" />
     <Container>
       <Breadcrumb>
         <BreadcrumbItem>
@@ -31,37 +31,38 @@ const Page = () => (
         <BreadcrumbItem>
           <a href="/diplomas/dele">DELE</a>
         </BreadcrumbItem>
-        <BreadcrumbItem active>Beginners</BreadcrumbItem>
+        <BreadcrumbItem active>Advanced</BreadcrumbItem>
       </Breadcrumb>
 
-      <h5>DELE Beginners Diploma - A1 & A2</h5>
+      <h5>Diploma de español nivel C1 y C2</h5>
       <br />
       <span>
-        Students can choose between two diplomas at the beginners level - A1 and
-        A2.
+        Students can choose between two diplomas at the advanced level - C1 and
+        C2.
       </span>
 
       <br />
       <br />
-      <Tabs defaultActiveKey="a1">
-        <Tab eventKey="a1" title="A1 Diploma">
+      <Tabs defaultActiveKey="c1">
+        <Tab eventKey="c1" title="Nivel C1">
           <br />
           <Row>
             <Col sm={12} md={12} lg={7}>
               <span>
-                CSG Learning's DELE A1 program equips students with the
-                necessary training and resources to take the A1 exam. The course
-                is aimed at absolute beginners in Spanish as it starts the
-                learning process from scratch and assumes no previous knowledge
-                or experience with Spanish.
+                El Diploma de Español Nivel C1 garantiza que el progreso del
+                estudiante en el idioma se ha producido con éxito y que posee un
+                nivel más que avanzado de español (para participar en este
+                examen necesitas tener al menos un nivel C1).
               </span>
 
               <br />
               <br />
               <h4>Entry Requirements</h4>
 
-              <span>No requirements.</span>
-
+              <span>
+                <a href="/diplomas/dele/apply">Regístrate</a> e indica tus
+                calificaciones.
+              </span>
               <br />
               <br />
 
@@ -72,7 +73,7 @@ const Page = () => (
                     outline
                     href="/diplomas/dele/apply"
                   >
-                    Apply Now
+                    Regístrate ahora
                   </Button>
                 </Col>
                 <Col sm={12} md={6} lg={6}></Col>
@@ -88,32 +89,32 @@ const Page = () => (
                 levelOfStudy="Diploma"
                 numberOfCourses="4"
                 modeOfStudy="Online"
-                duration="1 year"
+                duration="1 year - 12 week terms"
                 termBeginsOn="January 25, 2021"
                 showCost
-                cost="USD $250 per term"
+                cost="USD $500 per term"
               />
             </Col>
           </Row>
         </Tab>
-        <Tab eventKey="a2" title="A2 Diploma">
+        <Tab eventKey="c2" title="Nivel C2">
           <br />
           <Row>
             <Col sm={12} md={12} lg={7}>
               <span>
-                CSG Learning's DELE A2 program equips students with the
-                necessary training and resources to take the A2 exam. At this
-                level, students are able to understand commonly used, everyday
-                phrases and expressions related to areas of experience
-                especially relevant to them (basic information about themselves
-                and their families, shopping, places of interest, work, etc.).
+                El Diploma de Español Nivel C2 acredita la competencia
+                lingüística necesaria para desenvolverse en situaciones que
+                requieran un uso elevado de la lengua y un conocimiento de los
+                hábitos culturales que a través de ella se manifiestan.
               </span>
               <br />
               <br />
               <h4>Entry Requirements</h4>
-
-              <span>No requirements.</span>
-
+              <br />
+              <span>
+                <a href="/diplomas/dele/apply">Regístrate</a> e indica tus
+                calificaciones.
+              </span>
               <br />
               <br />
               <Row>
@@ -123,7 +124,7 @@ const Page = () => (
                     outline
                     href="/diplomas/dele/apply"
                   >
-                    Apply Now
+                    Regístrate ahora
                   </Button>
                 </Col>
                 <Col sm={12} md={6} lg={6}></Col>
@@ -141,7 +142,7 @@ const Page = () => (
                 duration="1 year - 12 week terms"
                 termBeginsOn="January 25, 2021"
                 showCost
-                cost="USD $225 per term"
+                cost="USD $650 per term"
               />
             </Col>
           </Row>

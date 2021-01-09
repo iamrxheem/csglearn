@@ -27,7 +27,7 @@ const IndexPage = () => (
       <h5>Sixth Form Programme</h5>
 
       <br />
-
+      <span>Coming in April.</span>
       <Row>
         <Col xs={12} sm={6} md={6} lg={6} xl={6}></Col>
 

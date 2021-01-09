@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import DELEMenu from "../menus/deleMenu"
+import CSECMenu from "../menus/csecMenu"
 import TopNav from "../components/topNav"
 import { MobileView, BrowserView } from "react-device-detect"
 import "../components/layout.css"
@@ -7,7 +7,7 @@ import Footer from "../components/footer"
 import { Container, Nav, NavLink, Alert, NavItem } from "shards-react"
 import { isMobile } from "mobile-device-detect"
 
-class DELELayout extends Component {
+class CSECLayout extends Component {
   constructor(props) {
     super(props)
   }
@@ -33,24 +33,15 @@ class DELELayout extends Component {
         </BrowserView>
         {/* End TopNav */}
 
-        <DELEMenu />
+        <CSECMenu />
 
-        <BrowserView>
-          <img
-            style={{ width: "100%" }}
-            className="d-block w-100"
-            src="https://dl.dropbox.com/s/ddh0rfj7swit71a/WhatsApp%20Image%202021-01-05%20at%2011.15.59%20AM.jpeg?dl=0"
-            alt="First slide"
-          />
-        </BrowserView>
+        <img
+          src="https://dl.dropbox.com/s/wwwiafaz55s6dhs/WhatsApp%20Image%202021-01-08%20at%208.42.44%20PM.jpeg?dl=0"
+          style={{ width: "100%" }}
+        />
 
         {isMobile ? (
           <>
-            <img
-              style={{ width: "100%", height: "100%" }}
-              src="https://i.imgur.com/w626x26.jpg"
-            />
-
             <>
               <br />
 
@@ -65,7 +56,7 @@ class DELELayout extends Component {
                 <NavItem>
                   <NavLink
                     style={{ textDecoration: "none", color: "white" }}
-                    href="/diplomas/dele/tuition"
+                    href="/programmes/csec/tuition"
                   >
                     TUITION & FEES
                   </NavLink>
@@ -73,7 +64,7 @@ class DELELayout extends Component {
                 <NavItem style={{ textDecoration: "none" }} href="/inquire">
                   <NavLink
                     style={{ textDecoration: "none", color: "white" }}
-                    href="/diplomas/dele/apply"
+                    href="/programmes/csec/apply"
                   >
                     APPLY NOW
                   </NavLink>
@@ -84,34 +75,8 @@ class DELELayout extends Component {
           </>
         ) : (
           <>
-            <>
-              <Nav
-                fill
-                style={{
-                  paddingTop: "15px",
-                  paddingBottom: "15px",
-                  backgroundColor: "#d9534f"
-                }}
-              >
-                <NavItem>
-                  <NavLink
-                    style={{ textDecoration: "none", color: "white" }}
-                    href="/diplomas/dele/tuition"
-                  >
-                    TUITION & FEES
-                  </NavLink>
-                </NavItem>
-                <NavItem style={{ textDecoration: "none" }} href="/inquire">
-                  <NavLink
-                    style={{ textDecoration: "none", color: "white" }}
-                    href="/diplomas/dele/apply"
-                  >
-                    APPLY NOW
-                  </NavLink>
-                </NavItem>
-              </Nav>
-              <br />
-            </>
+            <br />
+            <br />
           </>
         )}
 
@@ -129,4 +94,4 @@ class DELELayout extends Component {
   }
 }
 
-export default DELELayout
+export default CSECLayout

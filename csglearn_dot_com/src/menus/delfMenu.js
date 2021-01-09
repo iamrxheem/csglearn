@@ -21,7 +21,7 @@ import {
   BrowserView
 } from "react-device-detect"
 
-class DELEMenu extends Component {
+class DELFMenu extends Component {
   constructor(props) {
     super(props)
     this.toggleNavbar = this.toggleNavbar.bind(this)
@@ -60,7 +60,7 @@ class DELEMenu extends Component {
           <NavbarBrand href="/">CSG Learning</NavbarBrand>
 
           {isMobile ? (
-            <a href="/diplomas/dele/apply" className="ml-auto mr-3">
+            <a href="/diplomas/delf/pre-register" className="ml-auto mr-3">
               <Button>APPLY</Button>
             </a>
           ) : null}
@@ -70,7 +70,7 @@ class DELEMenu extends Component {
           <Collapse open={this.state.collapseOpen} navbar>
             <Nav navbar className="ml-auto">
               <NavItem>
-                <NavLink active href="/diplomas/dele/tuition">
+                <NavLink active href="/diplomas/delf/tuition">
                   Fees & Tuition
                 </NavLink>
               </NavItem>
@@ -83,15 +83,15 @@ class DELEMenu extends Component {
                   Diploma
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem href="/diplomas/dele/beginners">
+                  <DropdownItem href="/diplomas/delf/beginners">
                     <i className="fas fa-angle-double-right mr-2 text-danger"></i>
                     Beginner's Diploma
                   </DropdownItem>
-                  <DropdownItem href="/diplomas/dele/intermediate">
+                  <DropdownItem href="/diplomas/delf/intermediate">
                     <i className="fas fa-angle-double-right mr-2 text-danger"></i>
                     Intermediate Diploma
                   </DropdownItem>
-                  <DropdownItem href="/diplomas/dele/advanced">
+                  <DropdownItem href="/diplomas/delf/advanced">
                     <i className="fas fa-angle-double-right mr-2 text-danger"></i>
                     Advanced Diploma
                   </DropdownItem>
@@ -99,21 +99,21 @@ class DELEMenu extends Component {
               </Dropdown>
 
               <NavItem>
-                <NavLink active href="/dele/exam-locations">
+                <NavLink active href="/delf/exam-locations">
                   Exam Locations
                 </NavLink>
               </NavItem>
 
               {/* Forms and Documents */}
               <NavItem>
-                <NavLink active href="/diplomas/dele/forms">
+                <NavLink active href="/diplomas/delf/forms">
                   Forms & Documents
                 </NavLink>
               </NavItem>
 
               {/* FAQs */}
               <NavItem>
-                <NavLink active href="/diplomas/dele/FAQs">
+                <NavLink active href="/diplomas/delf/FAQs">
                   <i className="fas fa-info-circle text-primary mr-2"></i>
                   FAQs
                 </NavLink>
@@ -126,7 +126,7 @@ class DELEMenu extends Component {
                       width: "100%",
                       marginLeft: "10px"
                     }}
-                    href="/diplomas/dele/apply"
+                    href="/diplomas/delf/pre-register"
                   >
                     Apply
                   </Button>
@@ -140,4 +140,4 @@ class DELEMenu extends Component {
   }
 }
 
-export default DELEMenu
+export default DELFMenu

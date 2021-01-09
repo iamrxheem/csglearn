@@ -7,13 +7,8 @@ import {
   NavItem,
   NavLink,
   Collapse,
-  Button,
-  Dropdown,
-  DropdownItem,
-  DropdownToggle,
-  DropdownMenu
+  Button
 } from "shards-react"
-
 import {
   isBrowser,
   isMobile,
@@ -25,9 +20,10 @@ class DELEMenu extends Component {
   constructor(props) {
     super(props)
     this.toggleNavbar = this.toggleNavbar.bind(this)
-    this.toggleDropdown = this.toggleDropdown.bind(this)
 
-    this.state = { dropdownOpen: false, collapseOpen: false }
+    this.state = {
+      collapseOpen: false
+    }
   }
 
   toggleNavbar() {
@@ -35,15 +31,6 @@ class DELEMenu extends Component {
       ...this.state,
       ...{
         collapseOpen: !this.state.collapseOpen
-      }
-    })
-  }
-
-  toggleDropdown() {
-    this.setState({
-      ...this.state,
-      ...{
-        dropdownOpen: !this.state.dropdownOpen
       }
     })
   }
@@ -60,7 +47,7 @@ class DELEMenu extends Component {
           <NavbarBrand href="/">CSG Learning</NavbarBrand>
 
           {isMobile ? (
-            <a href="/diplomas/dele/apply" className="ml-auto mr-3">
+            <a href="/programmes/csec/apply" className="ml-auto mr-3">
               <Button>APPLY</Button>
             </a>
           ) : null}
@@ -70,50 +57,27 @@ class DELEMenu extends Component {
           <Collapse open={this.state.collapseOpen} navbar>
             <Nav navbar className="ml-auto">
               <NavItem>
-                <NavLink active href="/diplomas/dele/tuition">
-                  Fees & Tuition
+                <NavLink active href="/programmes/csec/subjects">
+                  Subjects
                 </NavLink>
               </NavItem>
 
-              <Dropdown
-                open={this.state.dropdownOpen}
-                toggle={this.toggleDropdown}
-              >
-                <DropdownToggle nav caret>
-                  Diploma
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem href="/diplomas/dele/beginners">
-                    <i className="fas fa-angle-double-right mr-2 text-danger"></i>
-                    Beginner's Diploma
-                  </DropdownItem>
-                  <DropdownItem href="/diplomas/dele/intermediate">
-                    <i className="fas fa-angle-double-right mr-2 text-danger"></i>
-                    Intermediate Diploma
-                  </DropdownItem>
-                  <DropdownItem href="/diplomas/dele/advanced">
-                    <i className="fas fa-angle-double-right mr-2 text-danger"></i>
-                    Advanced Diploma
-                  </DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
-
               <NavItem>
-                <NavLink active href="/dele/exam-locations">
-                  Exam Locations
+                <NavLink active href="/programmes/csec/resources">
+                  Resources
                 </NavLink>
               </NavItem>
 
               {/* Forms and Documents */}
               <NavItem>
-                <NavLink active href="/diplomas/dele/forms">
+                <NavLink active href="/programmes/csec/forms">
                   Forms & Documents
                 </NavLink>
               </NavItem>
 
               {/* FAQs */}
               <NavItem>
-                <NavLink active href="/diplomas/dele/FAQs">
+                <NavLink active href="/programmes/csec/FAQs">
                   <i className="fas fa-info-circle text-primary mr-2"></i>
                   FAQs
                 </NavLink>
@@ -126,7 +90,7 @@ class DELEMenu extends Component {
                       width: "100%",
                       marginLeft: "10px"
                     }}
-                    href="/diplomas/dele/apply"
+                    href="/programmes/csec/apply"
                   >
                     Apply
                   </Button>

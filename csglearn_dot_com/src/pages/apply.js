@@ -25,6 +25,7 @@ import {
   Button,
   Row,
   Col,
+  Container,
   Badge
 } from "shards-react"
 
@@ -33,26 +34,25 @@ class Page extends Component {
     return (
       <>
         <SEO title="Apply" description="" lang="en" />
-
         <Layout>
-          <Breadcrumb>
-            <BreadcrumbItem>
-              <a href="/">Home</a>
-            </BreadcrumbItem>
-            <BreadcrumbItem active>Apply to CSG</BreadcrumbItem>
-          </Breadcrumb>
+          <Container>
+            <Breadcrumb>
+              <BreadcrumbItem>
+                <a href="/">Home</a>
+              </BreadcrumbItem>
+              <BreadcrumbItem active>Apply to CSG</BreadcrumbItem>
+            </Breadcrumb>
 
-          <Row>
-            <Col sm={12} md={6} lg={6}>
-              ...
-            </Col>
-            <Col sm={12} md={6} lg={6}>
-              ...
-            </Col>
-          </Row>
+            <Row>
+              <Col sm={12} md={6} lg={6}>
+                ...
+              </Col>
+              <Col sm={12} md={6} lg={6}>
+                ...
+              </Col>
+            </Row>
+          </Container>
         </Layout>
-
-        <br />
       </>
     )
   }

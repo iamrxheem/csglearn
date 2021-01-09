@@ -86,7 +86,7 @@ class MainMenu extends Component {
           <NavbarBrand href="/">CSG Learning</NavbarBrand>
 
           {isMobile ? (
-            <a href="/apply" className="ml-auto mr-3">
+            <a href="/diplomas/dele/apply/" className="ml-auto mr-3">
               <Button>APPLY</Button>
             </a>
           ) : null}
@@ -111,7 +111,7 @@ class MainMenu extends Component {
                   Programmes
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem href="/">
+                  <DropdownItem href="/programmes/csec">
                     <img
                       style={{ width: "50px" }}
                       className="mr-2"
@@ -119,7 +119,7 @@ class MainMenu extends Component {
                     />
                     CSEC Classes
                   </DropdownItem>
-                  <DropdownItem href="/">
+                  <DropdownItem href="/programmes/cape">
                     <img
                       style={{ width: "50px" }}
                       className="mr-2"
@@ -132,9 +132,6 @@ class MainMenu extends Component {
                   <DropdownItem href="/programmes/sixth-form">
                     <i className="far fa-bookmark mr-2"></i>
                     Sixth Form Programme
-                    <Badge pill theme="success" className="ml-2">
-                      New
-                    </Badge>
                   </DropdownItem>
 
                   <hr />
@@ -149,15 +146,6 @@ class MainMenu extends Component {
                   <hr />
                   <DropdownItem href="/">Lowerschool</DropdownItem>
                   <DropdownItem href="/">Preschool</DropdownItem>
-
-                  <hr />
-                  <DropdownItem
-                    href="https://www.help.csglearn.com"
-                    target="_blank"
-                  >
-                    <i className="fas fa-info-circle text-info mr-2"></i>
-                    Help and Support Forum
-                  </DropdownItem>
                 </DropdownMenu>
               </Dropdown>
               {/* End Programmes */}
@@ -228,7 +216,7 @@ class MainMenu extends Component {
                             borderColor: "rgb(148,0,211)",
                             marginLeft: "10px"
                           }}
-                          href="/apply"
+                          href="/diplomas/dele/apply/"
                         >
                           Apply
                         </Button>

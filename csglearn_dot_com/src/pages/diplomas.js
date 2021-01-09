@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Breadcrumb, BreadcrumbItem } from "shards-react"
+import { Breadcrumb, BreadcrumbItem, Container } from "shards-react"
 
 const IndexPage = () => (
   <Layout>
@@ -12,16 +12,19 @@ const IndexPage = () => (
       description="Enroll in overseas accredited and recognised diploma and give your career a head start. Visit CSG Learning Institute today to find out how."
       lang="en"
     />
-    <Breadcrumb>
-      <BreadcrumbItem>
-        <a href="/">Home</a>
-      </BreadcrumbItem>
-      <BreadcrumbItem active>Diplomas</BreadcrumbItem>
-    </Breadcrumb>
 
-    <h5>Diplomas</h5>
+    <Container>
+      <Breadcrumb>
+        <BreadcrumbItem>
+          <a href="/">Home</a>
+        </BreadcrumbItem>
+        <BreadcrumbItem active>Diplomas</BreadcrumbItem>
+      </Breadcrumb>
 
-    <br />
+      <h5>Diplomas</h5>
+
+      <br />
+    </Container>
   </Layout>
 )
 

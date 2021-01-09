@@ -34,7 +34,13 @@ const Footer = () => (
                   <a href="/diplomas/delf">Diploma in French</a>
                 </li>
                 <li className="pb-2">
-                  <a href="/programes/sixth-form">Sixth Form Programme</a>
+                  <a href="/programmes/csec"> CSEC Classes</a>
+                </li>
+                <li className="pb-2">
+                  <a href="/programmes/cape"> CAPE Classes</a>
+                </li>
+                <li className="pb-2">
+                  <a href="/diplomas/delf">Diploma in French</a>
                 </li>
                 <li>
                   <a href="/professional-certifications">
@@ -107,11 +113,11 @@ const Footer = () => (
 
         <ul className="list-unstyled list-inline text-center py-2">
           <li className="list-inline-item">
-            <h5 className="mb-1">Plan your career</h5>
+            <h5 className="mb-1">Start your career</h5>
           </li>
           <li className="list-inline-item">
-            <a href="/placement" className="btn btn-danger btn-rounded">
-              Apply for Placement
+            <a href="/programmes" className="btn btn-danger btn-rounded">
+              Find a programme
             </a>
           </li>
         </ul>
@@ -146,7 +152,7 @@ const Footer = () => (
           </li>
         </ul>
         <div className="footer-copyright text-center py-3">
-          © 2020 Copyright:
+          © 2021 Copyright:
           <a href="/"> CSG Learning Institute</a>
         </div>
       </footer>
