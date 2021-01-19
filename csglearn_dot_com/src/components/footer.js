@@ -12,10 +12,10 @@ const Footer = () => (
                 Our Mission
               </h5>
               <span>
-                CSG Learning Institute is dedicated to revolutionising education
-                in Jamaica, and by extension, the Caribbean, and foster a new
-                and improved alternative to the already established education
-                standard.
+                CSG Learning Institute is an online institution dedicated to
+                revolutionising education in Jamaica, and by extension, the
+                Caribbean, and foster a new and improved alternative to the
+                already established education standard.
               </span>
             </div>
 
@@ -39,14 +39,6 @@ const Footer = () => (
                 <li className="pb-2">
                   <a href="/programmes/cape"> CAPE Classes</a>
                 </li>
-                <li className="pb-2">
-                  <a href="/diplomas/delf">Diploma in French</a>
-                </li>
-                <li>
-                  <a href="/professional-certifications">
-                    Professional Certifications
-                  </a>
-                </li>
               </ul>
             </div>
 
@@ -59,20 +51,20 @@ const Footer = () => (
 
               <ul className="list-unstyled">
                 <li className="pb-2">
+                  <a href="/pay">Make a Payment</a>
+                </li>
+                <li className="pb-2">
                   <a href="/store">Store</a>
                 </li>
+
                 <li className="pb-2">
                   <a target="_blank" href="https://www.hub.csglearn.com">
                     Learning Hub
                   </a>
                 </li>
+
                 <li className="pb-2">
-                  <a href="https://www.jobs.csglearn.com/" target="_blank">
-                    Student Employment
-                  </a>
-                </li>
-                <li className="pb-2">
-                  <a href="/scholarships" target="_blank">
+                  <a href="https://www.scholarshipjamaica.com" target="_blank">
                     Scholarships
                   </a>
                 </li>
@@ -92,6 +84,9 @@ const Footer = () => (
               </h5>
 
               <ul className="list-unstyled">
+                <li className="pb-2">
+                  <a href="/support">Support</a>
+                </li>
                 <li className="pb-2">
                   <a href="/disclaimers">Disclaimers</a>
                 </li>
@@ -126,27 +121,43 @@ const Footer = () => (
 
         <ul className="list-unstyled list-inline text-center">
           <li className="list-inline-item">
-            <a className="btn-floating btn-fb mx-1">
+            <a
+              href="https://www.facebook.com/csglearning"
+              target="_blank"
+              className="btn-floating btn-fb mx-1"
+            >
               <i className="fab fa-facebook-f"> </i>
             </a>
           </li>
           <li className="list-inline-item">
-            <a className="btn-floating btn-tw mx-1">
+            <a
+              href="https://twitter.com/csglearn"
+              target="_blank"
+              className="btn-floating btn-tw mx-1"
+            >
               <i className="fab fa-twitter"> </i>
             </a>
           </li>
           <li className="list-inline-item">
-            <a className="btn-floating btn-gplus mx-1">
+            <a href="" target="_blank" className="btn-floating btn-gplus mx-1">
               <i className="fab fa-google-plus-g"> </i>
             </a>
           </li>
           <li className="list-inline-item">
-            <a className="btn-floating btn-li mx-1">
+            <a
+              href="https://www.linkedin.com/company/71081015/"
+              target="_blank"
+              className="btn-floating btn-li mx-1"
+            >
               <i className="fab fa-linkedin-in"> </i>
             </a>
           </li>
           <li className="list-inline-item">
-            <a className="btn-floating btn-dribbble mx-1">
+            <a
+              href="https://www.csglearn.com/"
+              target="_blank"
+              className="btn-floating btn-dribbble mx-1"
+            >
               <i className="fab fa-dribbble"> </i>
             </a>
           </li>

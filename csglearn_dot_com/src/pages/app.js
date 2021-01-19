@@ -52,7 +52,7 @@ class Page extends Component {
                   <Col md={8}>
                     <span>
                       Use the app to learn on the go, access your course
-                      materials and much much more. CSG Learning Institute uses
+                      materials and much, much more. CSG Learning Institute uses
                       the OpenLMS platform which allows us to to create,
                       personalize and track instruction for students with simple
                       online tools.
@@ -141,8 +141,8 @@ class Page extends Component {
 
                 <br />
                 <span>
-                  First, you must be a registered student in order to access the
-                  applcation. <a href="/programmes">Find a programme</a> and
+                  First, you must be a registered student to access the
+                  application. <a href="/programmes">Find a programme</a> and
                   enroll today.
                 </span>
 

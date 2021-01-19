@@ -28,10 +28,7 @@ const Page = () => (
         <h5>Forms and Documents</h5>
 
         <br />
-        <span>
-          A complete list of forms and documents will be available when
-          registration opens.
-        </span>
+        <span>Forms and documents are not yet available.</span>
 
         <br />
       </Container>

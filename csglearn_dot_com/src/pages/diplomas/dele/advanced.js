@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 
 import Layout from "../../../components/layout"
 import SEO from "../../../components/seo"
-import { MobileView, BrowserView } from "react-device-detect"
 import {
   Breadcrumb,
   Row,
@@ -35,13 +34,7 @@ const Page = () => (
       </Breadcrumb>
 
       <h5>Diploma de español nivel C1 y C2</h5>
-      <br />
-      <span>
-        Students can choose between two diplomas at the advanced level - C1 and
-        C2.
-      </span>
 
-      <br />
       <br />
       <Tabs defaultActiveKey="c1">
         <Tab eventKey="c1" title="Nivel C1">
@@ -57,8 +50,24 @@ const Page = () => (
 
               <br />
               <br />
-              <h4>Entry Requirements</h4>
+              <span>
+                Quien aprueba este diploma es capaz de comprender una amplia
+                variedad de textos extensos y con cierto nivel de exigencia, así
+                como reconocer en ellos sentidos implícitos; cuando sabe
+                expresarse de forma fluida y espontánea sin muestras muy
+                evidentes de esfuerzo para encontrar la expresión adecuada;
+                cuando puede hacer un uso flexible y efectivo del idioma español
+                para fines sociales, académicos y profesionales y cuando puede
+                producir textos claros, bien estructurados y detallados sobre
+                temas de cierta complejidad, mostrando un uso correcto de los
+                mecanismos de organización, articulación y cohesión del texto.​
+              </span>
 
+              <br />
+              <br />
+              <h4>Requisitos</h4>
+
+              <br />
               <span>
                 <a href="/diplomas/dele/apply">Regístrate</a> e indica tus
                 calificaciones.
@@ -79,17 +88,17 @@ const Page = () => (
                 <Col sm={12} md={6} lg={6}></Col>
               </Row>
 
-              <MobileView>
+              <div className="d-block d-md-none">
                 <br />
                 <br />
-              </MobileView>
+              </div>
             </Col>
             <Col sm={12} md={5} lg={5}>
               <ProgramSummary
                 levelOfStudy="Diploma"
                 numberOfCourses="4"
                 modeOfStudy="Online"
-                duration="1 year - 12 week terms"
+                duration="10 months"
                 termBeginsOn="January 25, 2021"
                 showCost
                 cost="USD $500 per term"
@@ -109,7 +118,20 @@ const Page = () => (
               </span>
               <br />
               <br />
-              <h4>Entry Requirements</h4>
+              <span>
+                Quien aprueba este diploma es capaz de comprender con facilidad
+                prácticamente todo lo que oye o lee; cuando sabe reconstruir la
+                información y los argumentos procedentes de diversas fuentes, ya
+                sean en idioma español hablado o escrito, y presentarlos de
+                manera coherente y resumida y cuando puede expresarse
+                espontáneamente, con gran fluidez y con un grado de precisión
+                que le permite diferenciar pequeños matices de significado
+                incluso en situaciones de mayor complejidad.1
+              </span>
+
+              <br />
+              <br />
+              <h4>Requisitos</h4>
               <br />
               <span>
                 <a href="/diplomas/dele/apply">Regístrate</a> e indica tus
@@ -129,17 +151,17 @@ const Page = () => (
                 </Col>
                 <Col sm={12} md={6} lg={6}></Col>
               </Row>
-              <MobileView>
+              <div className="d-block d-md-none">
                 <br />
                 <br />
-              </MobileView>
+              </div>
             </Col>
             <Col sm={12} md={5} lg={5}>
               <ProgramSummary
                 levelOfStudy="Diploma"
                 numberOfCourses="4"
                 modeOfStudy="Online"
-                duration="1 year - 12 week terms"
+                duration="10 months"
                 termBeginsOn="January 25, 2021"
                 showCost
                 cost="USD $650 per term"

@@ -5,7 +5,6 @@ import { MobileView, BrowserView } from "react-device-detect"
 import "../components/layout.css"
 import Footer from "../components/footer"
 import { Container, Nav, NavLink, Alert, NavItem } from "shards-react"
-import { isMobile } from "mobile-device-detect"
 
 class CSECLayout extends Component {
   constructor(props) {
@@ -15,22 +14,24 @@ class CSECLayout extends Component {
   render() {
     return (
       <>
-        <MobileView>
+        {/* Mobile View  */}
+        <div className="d-block d-md-none">
           <a href="/">
             <img
               src="https://i.imgur.com/IcviBO3.jpg"
               style={{ width: "100%", height: "100%" }}
             />
           </a>
-        </MobileView>
+        </div>
 
         {/*
       Top Navigation with with contact information for the company and
       quick links for subdomains.
     */}
-        <BrowserView>
+        {/* Broswer view */}
+        <div className="d-none d-md-block">
           <TopNav />
-        </BrowserView>
+        </div>
         {/* End TopNav */}
 
         <CSECMenu />
@@ -40,45 +41,43 @@ class CSECLayout extends Component {
           style={{ width: "100%" }}
         />
 
-        {isMobile ? (
-          <>
-            <>
-              <br />
+        {/* Mobile View */}
+        <div className="d-block d-md-none">
+          <br />
 
-              <Nav
-                fill
-                style={{
-                  paddingTop: "15px",
-                  paddingBottom: "15px",
-                  backgroundColor: "#d9534f"
-                }}
+          <Nav
+            fill
+            style={{
+              paddingTop: "15px",
+              paddingBottom: "15px",
+              backgroundColor: "#d9534f"
+            }}
+          >
+            <NavItem>
+              <NavLink
+                style={{ textDecoration: "none", color: "white" }}
+                href="/programmes/csec/tuition"
               >
-                <NavItem>
-                  <NavLink
-                    style={{ textDecoration: "none", color: "white" }}
-                    href="/programmes/csec/tuition"
-                  >
-                    TUITION & FEES
-                  </NavLink>
-                </NavItem>
-                <NavItem style={{ textDecoration: "none" }} href="/inquire">
-                  <NavLink
-                    style={{ textDecoration: "none", color: "white" }}
-                    href="/programmes/csec/apply"
-                  >
-                    APPLY NOW
-                  </NavLink>
-                </NavItem>
-              </Nav>
-              <br />
-            </>
-          </>
-        ) : (
-          <>
-            <br />
-            <br />
-          </>
-        )}
+                TUITION & FEES
+              </NavLink>
+            </NavItem>
+            <NavItem style={{ textDecoration: "none" }} href="/inquire">
+              <NavLink
+                style={{ textDecoration: "none", color: "white" }}
+                href="/programmes/csec/apply"
+              >
+                APPLY NOW
+              </NavLink>
+            </NavItem>
+          </Nav>
+          <br />
+        </div>
+
+        {/* Browser View */}
+        <div className="d-none d-md-block">
+          <br />
+          <br />
+        </div>
 
         <div style={{ backgroundColor: "#f6f6f6", marginTop: "-15px" }}>
           {/* Content */}

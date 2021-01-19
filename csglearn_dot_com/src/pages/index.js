@@ -105,16 +105,6 @@ const IndexPage = () => (
                 </a>
               </Carousel.Item>
 
-              {/* Sixth Form Programme */}
-              <Carousel.Item>
-                <a href="/programmes/sixth-form">
-                  <img
-                    src="https://dl.dropbox.com/s/ovzl2mwivfim5n1/WhatsApp%20Image%202021-01-08%20at%202.13.57%20PM.jpeg?dl=0"
-                    style={{ width: "100%" }}
-                  />
-                </a>
-              </Carousel.Item>
-
               {/* Diploma in Spanish */}
               <Carousel.Item>
                 <a href="/diplomas/dele">
@@ -212,10 +202,10 @@ const IndexPage = () => (
         </Col>
 
         <Col md={4}>
-          <MobileView>
+          <div className="d-block d-md-none">
             <br />
             <br />
-          </MobileView>
+          </div>
 
           <img
             className="rounded-circle"
@@ -238,10 +228,10 @@ const IndexPage = () => (
           <Button>Learn more</Button>
         </Col>
         <Col md={4}>
-          <MobileView>
+          <div className="d-block d-md-none">
             <br />
             <br />
-          </MobileView>
+          </div>
 
           <img
             style={{ width: "100px" }}

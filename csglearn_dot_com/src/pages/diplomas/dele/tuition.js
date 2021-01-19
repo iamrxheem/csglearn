@@ -12,7 +12,6 @@ import {
   Col
 } from "shards-react"
 import Faq from "react-faq-component"
-import { MobileView } from "react-device-detect"
 import { Table } from "react-bootstrap"
 
 const Page = () => (

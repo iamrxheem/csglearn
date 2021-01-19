@@ -15,7 +15,6 @@ import {
   Alert,
   Container
 } from "shards-react"
-import { isMobile, MobileView, BrowserView } from "react-device-detect"
 
 const DELEPage = () => (
   <>
@@ -42,11 +41,11 @@ const DELEPage = () => (
             <h4>Diploma in Spanish as a Foreign Language</h4>
             <br />
             <span>
-              The DELE is an accredited and prestigious qualification, proving
-              the ability of the holder to have excellent Spanish communications
-              skills. They are internationally recognised, so they are
-              invaluable for professional documentation across the Spanish
-              speaking world.
+              The DELE (Diplomas de Español como Lengua Extranjera) is an
+              accredited and prestigious qualification, proving the ability of
+              the holder to have excellent Spanish communications skills. They
+              are internationally recognised, so they are invaluable for
+              professional documentation across the Spanish speaking world.
             </span>
 
             <br />
@@ -95,23 +94,23 @@ const DELEPage = () => (
               </Col>
               <Col xs={6} sm={6} lg={6}>
                 <Button href="/diplomas/dele/FAQs" pill theme="dark" outline>
-                  Program FAQs
+                  Programme FAQs
                 </Button>
               </Col>
             </Row>
-            <MobileView>
+            <div className="d-block d-md-none">
               <img
                 src="https://www.eurekamadrid.com/images/Logo_DELE_CMYK.png"
                 style={{ width: "100%" }}
               />
-            </MobileView>
+            </div>
           </Col>
           <Col md={5} lg={5}>
             <ProgramSummary
               levelOfStudy="Diploma"
               numberOfCourses="4"
               modeOfStudy="Online"
-              duration="1 year"
+              duration="10 months"
               termBeginsOn="January 25, 2021"
             />
           </Col>

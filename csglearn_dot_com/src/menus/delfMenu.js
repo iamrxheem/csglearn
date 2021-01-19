@@ -59,11 +59,11 @@ class DELFMenu extends Component {
         >
           <NavbarBrand href="/">CSG Learning</NavbarBrand>
 
-          {isMobile ? (
+          <div className="d-block d-md-none">
             <a href="/diplomas/delf/pre-register" className="ml-auto mr-3">
               <Button>APPLY</Button>
             </a>
-          ) : null}
+          </div>
 
           <NavbarToggler onClick={this.toggleNavbar} />
 
@@ -91,7 +91,7 @@ class DELFMenu extends Component {
                     <i className="fas fa-angle-double-right mr-2 text-danger"></i>
                     Intermediate Diploma
                   </DropdownItem>
-                  <DropdownItem href="/diplomas/delf/advanced">
+                  <DropdownItem href="/diplomas/dalf/advanced">
                     <i className="fas fa-angle-double-right mr-2 text-danger"></i>
                     Advanced Diploma
                   </DropdownItem>
@@ -99,7 +99,7 @@ class DELFMenu extends Component {
               </Dropdown>
 
               <NavItem>
-                <NavLink active href="/delf/exam-locations">
+                <NavLink active href="/delf/exam-centres">
                   Exam Locations
                 </NavLink>
               </NavItem>
@@ -118,7 +118,7 @@ class DELFMenu extends Component {
                   FAQs
                 </NavLink>
               </NavItem>
-              <BrowserView>
+              <div className="d-none d-md-block">
                 <NavItem>
                   <Button
                     active
@@ -131,7 +131,7 @@ class DELFMenu extends Component {
                     Apply
                   </Button>
                 </NavItem>
-              </BrowserView>
+              </div>
             </Nav>
           </Collapse>
         </Navbar>

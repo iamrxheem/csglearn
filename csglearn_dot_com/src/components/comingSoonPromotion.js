@@ -16,7 +16,7 @@ const ComingSoonPromotion = () => (
       <Col sm={12} md={8}>
         <Alert theme="primary" className={isMobile ? "break-out" : ""}>
           <br />
-          <h6>BEGINNING IN MARCH</h6>
+          <h6>BEGINNING MARCH 8, 2021</h6>
 
           <br />
           <h3>Diploma in French</h3>
@@ -30,22 +30,44 @@ const ComingSoonPromotion = () => (
 
           <br />
           <br />
-          <Button
-            style={{ textDecoration: "none" }}
-            href="/diplomas/delf"
-            outline
-            theme="light"
-          >
-            Learn more
-          </Button>
-          <br />
+          <Row>
+            <Col md={6}>
+              <Button
+                style={{ textDecoration: "none" }}
+                href="/diplomas/delf/beginners"
+                outline
+                theme="light"
+              >
+                Beginner's Course
+              </Button>
+            </Col>
+
+            <Col xs={6} md={3}>
+              <br />
+              <a
+                style={{ textDecoration: "none" }}
+                href="/diplomas/delf/intermediate"
+              >
+                For Intermediate
+              </a>
+            </Col>
+            <Col xs={6} md={3}>
+              <br />
+              <a
+                style={{ textDecoration: "none" }}
+                href="/diplomas/dalf/advanced"
+              >
+                Fluent Certification
+              </a>
+            </Col>
+          </Row>
           <br />
         </Alert>
       </Col>
       <Col sm={12} md={4}>
         <Alert theme="info" className={isMobile ? "break-out" : ""}>
           <br />
-          <h6>COMING IN APRIL</h6>
+          <h6>STARTING IN SEPTEMBER</h6>
 
           <br />
           <h3>Associate Sixth Form</h3>
@@ -56,6 +78,7 @@ const ComingSoonPromotion = () => (
           </span>
           <br />
           <br />
+
           <Button
             style={{ textDecoration: "none" }}
             href="/programmes/sixth-form"

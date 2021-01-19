@@ -15,45 +15,48 @@ class DELFLayout extends Component {
   render() {
     return (
       <>
-        <MobileView>
+        {/* Mobile View */}
+        <div className="d-block d-md-none">
           <a href="/">
             <img
               src="https://i.imgur.com/IcviBO3.jpg"
               style={{ width: "100%" }}
             />
           </a>
-        </MobileView>
+        </div>
 
         {/*
           Top Navigation with with contact information for the company and
           quick links for subdomains.
+
+          Browser view
         */}
-        <BrowserView>
+        <div className="d-none d-md-block">
           <TopNav />
-        </BrowserView>
+        </div>
         {/* End TopNav */}
 
         <DELFMenu />
 
-        {isMobile ? (
-          <>
-            <img
-              style={{ width: "100%", height: "260px" }}
-              className="d-block w-100"
-              src="https://dl.dropbox.com/s/m3k97c8149s3omt/WhatsApp%20Image%202021-01-08%20at%201.59.29%20PM.jpeg?dl=0"
-              alt="First slide"
-            />
-          </>
-        ) : (
-          <>
-            <img
-              style={{ width: "100%" }}
-              className="d-block w-100"
-              src="https://dl.dropbox.com/s/m3k97c8149s3omt/WhatsApp%20Image%202021-01-08%20at%201.59.29%20PM.jpeg?dl=0"
-              alt="First slide"
-            />
-          </>
-        )}
+        {/* Mobile view */}
+        <div className="d-block d-md-none">
+          <img
+            style={{ width: "100%" }}
+            className="d-block w-100"
+            src="https://i.imgur.com/w626x26.jpg"
+            alt="First slide"
+          />
+        </div>
+
+        {/* Broswer View */}
+        <div className="d-none d-md-block">
+          <img
+            style={{ width: "100%" }}
+            className="d-block w-100"
+            src="https://dl.dropbox.com/s/m3k97c8149s3omt/WhatsApp%20Image%202021-01-08%20at%201.59.29%20PM.jpeg?dl=0"
+            alt="First slide"
+          />
+        </div>
 
         <br />
         <div style={{ backgroundColor: "#f6f6f6", marginTop: "-15px" }}>

@@ -8,7 +8,7 @@ import {
   Container
 } from "shards-react"
 
-const DELFMiniMenu = () => (
+const DELFAlternateMiniMenu = () => (
   <>
     <Row>
       <Col xs={6}>
@@ -26,29 +26,11 @@ const DELFMiniMenu = () => (
       <Col xs={6}>
         <Alert className="bg-danger" theme="danger">
           <div className="text-center">
-            <a style={{ textDecoration: "none" }} href="/diplomas/delf/forms">
-              FORMS & DOCS
-            </a>
-          </div>
-        </Alert>
-      </Col>
-      <Col xs={6}>
-        <Alert className="bg-success" theme="success">
-          <div className="text-center">
-            <a style={{ textDecoration: "none" }} href="/diplomas/delf/tuition">
-              FEES & TUITION
-            </a>
-          </div>
-        </Alert>
-      </Col>
-      <Col xs={6}>
-        <Alert className="bg-primary" theme="primary">
-          <div className="text-center">
             <a
               style={{ textDecoration: "none" }}
-              href="/diplomas/delf/exam-centres"
+              href="mailto:info@csglearn.com"
             >
-              EXAM CENTRES
+              INQUIRE
             </a>
           </div>
         </Alert>
@@ -61,4 +43,4 @@ const DELFMiniMenu = () => (
   </>
 )
 
-export default DELFMiniMenu
+export default DELFAlternateMiniMenu

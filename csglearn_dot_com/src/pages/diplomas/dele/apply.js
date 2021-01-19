@@ -29,24 +29,22 @@ const DELEApplyPage = () => (
         <BreadcrumbItem active>Apply</BreadcrumbItem>
       </Breadcrumb>
 
-      <h5>Apply</h5>
+      <h5>Diploma in Spanish Online Application</h5>
       <br />
 
-      <span>
-        Please complete this form to begin the registration process. Note,
-        additional information may be required depending on the exam level
-        chosen.
-      </span>
+      <span>Please complete this form to begin the registration process.</span>
 
       <br />
       <br />
+
       <iframe
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdUSec1nePgk67RJV9GdAanj1zZdjTdegajE9VvoDVuwAZNDw/viewform?embedded=true"
-        style={{ width: "100%" }}
-        height="3227"
+        src="https://docs.google.com/forms/d/e/1FAIpQLScFYDjGIEFl4F7IFvPfBI3GAu9xJIOMtwHdhOrjhY67xI63hQ/viewform?embedded=true"
+        width="640"
+        height="2762"
         frameBorder="0"
         marginHeight="0"
-        marginWidth="0"
+        marginwidth="0"
+        style={{ width: "100%" }}
       >
         Loading…
       </iframe>

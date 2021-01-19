@@ -26,7 +26,7 @@ const Page = () => (
           </BreadcrumbItem>
           <BreadcrumbItem active>Pre-Register</BreadcrumbItem>
         </Breadcrumb>
-        <h5>Pre-Register</h5>
+        <h5>Course Online Pre-Registration Form</h5>
         <br />
         <DELFMiniMenu />
         <br />

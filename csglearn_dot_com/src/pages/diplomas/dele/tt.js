@@ -19,7 +19,7 @@ import ProgramSummary from "../../../common/programSummary"
 const Page = () => (
   <DELELayout>
     <SEO
-      title="Diploma in Spanish (DELE) for Beginners - A1 & A2"
+      title="Diploma in Spanish (DELE) Beginners - A1 & A2 for Trinidad and Tobago"
       description=""
       lang="en"
     />
@@ -37,7 +37,9 @@ const Page = () => (
         <BreadcrumbItem active>Beginners</BreadcrumbItem>
       </Breadcrumb>
 
-      <h5>Diploma in Spanish for Beginners - A1 & A2</h5>
+      <h5>Diploma in Spanish for Beginners - Trinidad & Tobago</h5>
+
+      <br />
       <br />
       <span>
         Students can choose between two diplomas at the beginners level - A1 and
@@ -52,7 +54,7 @@ const Page = () => (
           <Row>
             <Col sm={12} md={12} lg={7}>
               <span>
-                The Diploma in Spanish A1 is an accredited and internationally
+                The Diploma in Spanish A1 & is an accredited and internationally
                 recognized diploma that connects people from their first contact
                 with Spanish and evaluates their level in Spanish from the
                 beginning of their studies. This course is aimed at absolute
@@ -96,7 +98,7 @@ const Page = () => (
                 duration="10 months"
                 termBeginsOn="January 25, 2021"
                 showCost
-                cost="JMD $37,500 per term"
+                cost="TTD $1,800 per term"
               />
             </Col>
           </Row>
@@ -146,7 +148,7 @@ const Page = () => (
                 duration="10 months"
                 termBeginsOn="January 25, 2021"
                 showCost
-                cost="JMD $37,500 per term"
+                cost="TTD $1,800 per term"
               />
             </Col>
           </Row>

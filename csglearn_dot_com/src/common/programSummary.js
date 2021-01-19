@@ -3,7 +3,7 @@ import { Row, Col, Container } from "shards-react"
 
 const ProgramSummary = props => (
   <>
-    <h3>Program Summary</h3>
+    <h3>Programme Summary</h3>
 
     <br />
     <Row style={{ paddingLeft: "20px" }}>

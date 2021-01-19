@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 
 import Layout from "../../../components/layout"
 import SEO from "../../../components/seo"
-import { MobileView, BrowserView } from "react-device-detect"
 import {
   Breadcrumb,
   Row,
@@ -109,17 +108,17 @@ const Page = () => (
                 </Col>
                 <Col sm={12} md={6} lg={6}></Col>
               </Row>
-              <MobileView>
+              <div className="d-block d-md-none">
                 <br />
                 <br />
-              </MobileView>
+              </div>
             </Col>
             <Col sm={12} md={5} lg={5}>
               <ProgramSummary
                 levelOfStudy="Diploma"
                 numberOfCourses="4"
                 modeOfStudy="Online"
-                duration="1 year - 12 week terms"
+                duration="10 months"
                 termBeginsOn="January 25, 2021"
                 showCost
                 cost="USD $400 per term"
@@ -189,17 +188,17 @@ const Page = () => (
                 </Col>
                 <Col sm={12} md={6} lg={6}></Col>
               </Row>
-              <MobileView>
+              <div className="d-block d-md-none">
                 <br />
                 <br />
-              </MobileView>
+              </div>
             </Col>
             <Col sm={12} md={5} lg={5}>
               <ProgramSummary
                 levelOfStudy="Diploma"
                 numberOfCourses="4"
                 modeOfStudy="Online"
-                duration="1 year"
+                duration="10 months"
                 termBeginsOn="January 25, 2021"
                 showCost
                 cost="USD $425 per term"

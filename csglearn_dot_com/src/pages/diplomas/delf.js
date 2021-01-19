@@ -15,7 +15,6 @@ import {
   Container,
   Button
 } from "shards-react"
-import { MobileView } from "react-device-detect"
 
 const DELFPage = () => (
   <DELFLayout>
@@ -42,10 +41,9 @@ const DELFPage = () => (
       <Row>
         <Col sm={6} md={8}>
           <DELFMiniMenu />
-
-          <MobileView>
+          <div className="d-block d-md-none">
             <br />
-          </MobileView>
+          </div>
           <span>
             DELF (Diplôme d'Etudes en Langue Française) and DALF (Diplôme
             Approfondi de Langue Française) are the only French as a foreign
@@ -53,7 +51,6 @@ const DELFPage = () => (
             are valid for life and are recognized worldwide. They allow you to
             officially validate your French learning.
           </span>
-
           <br />
           <br />
           <span>
@@ -65,17 +62,29 @@ const DELFPage = () => (
 
           <br />
           <br />
-          <span>Registration opens Monday, February 1, 2021.</span>
-
           <br />
-          <br />
-          <Button href="/diplomas/delf/pre-register">Pre-register</Button>
+          <Row>
+            <Col xs={6} md={6} lg={6}>
+              <Button style={{ width: "100%" }} href="/diplomas/delf/beginners">
+                Beginner's Course
+              </Button>
+            </Col>
+            <Col xs={6} md={6} lg={6}>
+              <Button
+                style={{ width: "100%" }}
+                outline
+                href="/diplomas/delf/pre-register"
+              >
+                Pre-register
+              </Button>
+            </Col>
+          </Row>
         </Col>
         <Col sm={6} md={4}>
-          <MobileView>
+          <div className="d-block d-md-none">
             <br />
             <br />
-          </MobileView>
+          </div>
           <ProgramSummary
             levelOfStudy="Diploma"
             numberOfCourses="4"

@@ -6,6 +6,7 @@ import { Breadcrumb, BreadcrumbItem, Container, Row, Col } from "shards-react"
 import Faq from "react-faq-component"
 import { MobileView } from "react-device-detect"
 import DELFMiniMenu from "../../../common/delfMiniMenu"
+import WordFile from "../../../common/wordFile"
 
 const Page = () => (
   <>
@@ -32,10 +33,16 @@ const Page = () => (
 
         <h5>Forms and Documents</h5>
 
-        <br />
-        <DELFMiniMenu />
-        <br />
-        <span>Forms and documents not yet available.</span>
+        <Row>
+          <Col xs={12} md={6}>
+            <br />
+            <DELFMiniMenu />
+            <br />
+
+            <span>Not yet available.</span>
+          </Col>
+          <Col xs={12} md={6}></Col>
+        </Row>
 
         <br />
       </Container>

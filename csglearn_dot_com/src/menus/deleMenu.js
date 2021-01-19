@@ -14,13 +14,6 @@ import {
   DropdownMenu
 } from "shards-react"
 
-import {
-  isBrowser,
-  isMobile,
-  MobileView,
-  BrowserView
-} from "react-device-detect"
-
 class DELEMenu extends Component {
   constructor(props) {
     super(props)
@@ -59,11 +52,12 @@ class DELEMenu extends Component {
         >
           <NavbarBrand href="/">CSG Learning</NavbarBrand>
 
-          {isMobile ? (
+          {/* Mobile View */}
+          <div className="d-block d-md-none">
             <a href="/diplomas/dele/apply" className="ml-auto mr-3">
               <Button>APPLY</Button>
             </a>
-          ) : null}
+          </div>
 
           <NavbarToggler onClick={this.toggleNavbar} />
 
@@ -99,7 +93,7 @@ class DELEMenu extends Component {
               </Dropdown>
 
               <NavItem>
-                <NavLink active href="/dele/exam-locations">
+                <NavLink active href="/diplomas/dele/exam-locations">
                   Exam Locations
                 </NavLink>
               </NavItem>
@@ -118,7 +112,9 @@ class DELEMenu extends Component {
                   FAQs
                 </NavLink>
               </NavItem>
-              <BrowserView>
+
+              {/* Browser View */}
+              <div className="d-none d-md-block">
                 <NavItem>
                   <Button
                     active
@@ -131,7 +127,7 @@ class DELEMenu extends Component {
                     Apply
                   </Button>
                 </NavItem>
-              </BrowserView>
+              </div>
             </Nav>
           </Collapse>
         </Navbar>

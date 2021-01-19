@@ -34,10 +34,12 @@ class MainMenu extends Component {
     // Used to toggle the navbar
     this.toggleNavbar = this.toggleNavbar.bind(this)
     this.toggleDropdown = this.toggleDropdown.bind(this)
+    this.toggleDropdownDiplomas = this.toggleDropdownDiplomas.bind(this)
 
     this.state = {
       collapseOpen: false,
-      dropdownOpen: false
+      dropdownOpen: false,
+      dropdownDiplomasOpen: false
     }
   }
 
@@ -60,25 +62,35 @@ class MainMenu extends Component {
     })
   }
 
+  toggleDropdownDiplomas() {
+    this.setState({
+      ...this.state,
+      ...{
+        dropdownDiplomasOpen: !this.state.dropdownDiplomasOpen
+      }
+    })
+  }
+
   render() {
     return (
       <>
-        <MobileView>
+        {/* Mobile View */}
+        <div className="d-block d-md-none">
           <a href="/">
             <img
               src="https://i.imgur.com/IcviBO3.jpg"
               style={{ width: "100%", height: "100%" }}
             />
           </a>
-        </MobileView>
+        </div>
 
         {/*
     Top Navigation with with contact information for the company and
     quick links for subdomains.
   */}
-        <BrowserView>
+        <div className="d-none d-md-block">
           <TopNav />
-        </BrowserView>
+        </div>
         {/* End TopNav */}
 
         {/* Main Menu */}
@@ -149,13 +161,40 @@ class MainMenu extends Component {
                 </DropdownMenu>
               </Dropdown>
               {/* End Programmes */}
-              {/* Admissions */}
+
+              {/*             Short Courses */}
               <NavItem>
-                <NavLink active href="/admissions">
-                  Admissions
+                <NavLink active href="/short-courses">
+                  Short Courses
                 </NavLink>
               </NavItem>
-              {/* End Admissions */}
+              {/* Short Courses */}
+
+              {/* Accredited Diplomas */}
+              <Dropdown
+                open={this.state.dropdownDiplomasOpen}
+                toggle={this.toggleDropdownDiplomas}
+              >
+                <DropdownToggle nav caret>
+                  Accredited Diplomas
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem href="/diplomas/dele">
+                    Diploma in Spanish
+                  </DropdownItem>
+                  <DropdownItem href="/diplomas/delf">
+                    Diploma in French
+                  </DropdownItem>
+
+                  <hr />
+                  <DropdownItem href="/diplomas/">
+                    <i className="fas fa-angle-right mr-2 text-danger"></i>
+                    See all
+                  </DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
+              {/* End Accredited Diplomas */}
+
               {/* Admissions */}
               <NavItem>
                 <NavLink active href="/academics">
@@ -222,6 +261,7 @@ class MainMenu extends Component {
                         </Button>
                       </Col>
                     </Row>
+                    <br />
                   </>
                 )}
               </React.Fragment>
