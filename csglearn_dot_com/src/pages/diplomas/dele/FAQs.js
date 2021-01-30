@@ -152,7 +152,11 @@ const config = {
 const Page = () => (
   <>
     <DELELayout>
-      <SEO title="DELE Exam FAQs" description="" lang="en" />
+      <SEO
+        title="DELE Exam FAQs"
+        description="View a complete list of frequently asked questions for the Diplomas in Spanish (DELE). Enroll today and start learning Spanish from scratch."
+        lang="en"
+      />
 
       <Container>
         <Breadcrumb>

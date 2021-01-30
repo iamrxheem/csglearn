@@ -3,6 +3,7 @@ import CSECMenu from "../menus/csecMenu"
 import TopNav from "../components/topNav"
 import { MobileView, BrowserView } from "react-device-detect"
 import "../components/layout.css"
+import ImportPage from "../components/import"
 import Footer from "../components/footer"
 import { Container, Nav, NavLink, Alert, NavItem } from "shards-react"
 
@@ -14,6 +15,7 @@ class CSECLayout extends Component {
   render() {
     return (
       <>
+        <ImportPage />
         {/* Mobile View  */}
         <div className="d-block d-md-none">
           <a href="/">
@@ -36,15 +38,19 @@ class CSECLayout extends Component {
 
         <CSECMenu />
 
-        <img
-          src="https://dl.dropbox.com/s/wwwiafaz55s6dhs/WhatsApp%20Image%202021-01-08%20at%208.42.44%20PM.jpeg?dl=0"
-          style={{ width: "100%" }}
-        />
+        <div className="d-none d-md-block">
+          <img
+            src="https://dl.dropbox.com/s/wwwiafaz55s6dhs/WhatsApp%20Image%202021-01-08%20at%208.42.44%20PM.jpeg?dl=0"
+            style={{ width: "100%" }}
+          />
+        </div>
 
         {/* Mobile View */}
         <div className="d-block d-md-none">
-          <br />
-
+          <img
+            src="https://loopnewslive.blob.core.windows.net/liveimage/sites/default/files/2020-09/Di3GpPFEwP.jpg"
+            style={{ width: "100%" }}
+          />
           <Nav
             fill
             style={{

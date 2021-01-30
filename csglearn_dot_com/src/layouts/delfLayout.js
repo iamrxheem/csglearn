@@ -6,6 +6,7 @@ import "../components/layout.css"
 import Footer from "../components/footer"
 import { Container, Nav, NavLink, Alert, NavItem } from "shards-react"
 import { isMobile } from "mobile-device-detect"
+import ImportPage from "../components/import"
 
 class DELFLayout extends Component {
   constructor(props) {
@@ -15,6 +16,7 @@ class DELFLayout extends Component {
   render() {
     return (
       <>
+        <ImportPage />
         {/* Mobile View */}
         <div className="d-block d-md-none">
           <a href="/">

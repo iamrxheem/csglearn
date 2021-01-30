@@ -9,7 +9,11 @@ import { MobileView } from "react-device-detect"
 const Page = () => (
   <>
     <DELELayout>
-      <SEO title="Forms and Documents - DELF" description="" lang="en" />
+      <SEO
+        title="Forms and Documents - DELE"
+        description="View a complete list of forms and documents for the Diplomas in Spanish (DELE). Enroll today and start learning Spanish from scratch."
+        lang="en"
+      />
 
       <Container>
         <Breadcrumb>

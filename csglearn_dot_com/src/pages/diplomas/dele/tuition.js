@@ -55,7 +55,7 @@ const Page = () => (
               <tbody>
                 {/* Level A1 */}
                 <tr>
-                  <td>Diploma A1 - Beginner</td>
+                  <td>Diploma A1 - Beginners</td>
                   <td>
                     <CurrencyShower
                       JM="JMD $75,000"
@@ -194,7 +194,7 @@ const Page = () => (
               <tbody>
                 {/* Level A1 */}
                 <tr>
-                  <td>Diploma A1 - Beginner</td>
+                  <td>Diploma A1 - Beginners</td>
                   <td>
                     <CurrencyShower
                       JM="JMD $75,000"

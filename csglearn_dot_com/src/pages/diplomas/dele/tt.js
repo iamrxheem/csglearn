@@ -20,7 +20,7 @@ const Page = () => (
   <DELELayout>
     <SEO
       title="Diploma in Spanish (DELE) Beginners - A1 & A2 for Trinidad and Tobago"
-      description=""
+      description="Study for the Diplomas in Spanish online in Trinidad and Tobago. Enroll today to start learning Spanish from scracth for the accredited DELE diploma."
       lang="en"
     />
     <Container>

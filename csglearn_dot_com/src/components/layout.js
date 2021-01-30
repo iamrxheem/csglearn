@@ -11,7 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import ReactGA from "react-ga"
 import Header from "./header"
 import Footer from "./footer"
-
+import ImportPage from "./import"
 import "./layout.css"
 
 import { Container } from "shards-react"
@@ -31,6 +31,7 @@ const Layout = ({ children, fluid, hideFooter }) => {
   return (
     <>
       <MainMenu />
+      <ImportPage />
       <div>
         <>{children}</>
         <Footer />

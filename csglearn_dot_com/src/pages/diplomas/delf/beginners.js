@@ -21,7 +21,7 @@ const Page = () => (
     <DELFLayout>
       <SEO
         title="Diplomas in French (DELF) for Beginners"
-        description=""
+        description="Enroll online in the accredited Diploma in French A1 or A2 today, and learn French from scratch. Study online with CSG Learning Institute in Jamaica."
         lang="en"
       />
 

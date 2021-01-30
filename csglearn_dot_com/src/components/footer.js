@@ -88,7 +88,7 @@ const Footer = () => (
                   <a href="/support">Support</a>
                 </li>
                 <li className="pb-2">
-                  <a href="/disclaimers">Disclaimers</a>
+                  <a href="/disclaimer">Disclaimer</a>
                 </li>
                 <li className="pb-2">
                   <a href="/terms-of-use">Terms of Use</a>

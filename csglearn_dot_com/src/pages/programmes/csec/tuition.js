@@ -240,7 +240,7 @@ class Page extends Component {
                     <td>Registration Fee</td>
                     <td>
                       <CurrencyShower
-                        JM="$1,000"
+                        JM="$1,500"
                         US="$10"
                         TT="$50"
                         BB="$15"

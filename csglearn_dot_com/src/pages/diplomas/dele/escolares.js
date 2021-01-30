@@ -90,7 +90,7 @@ const Page = () => (
     <DELELayout>
       <SEO
         title="Diploma in Spanish for Escolares (Minors)"
-        description=""
+        description="Enroll in the Diploma in Spanish for Minors today and start learning Spanish from scratch. Complete our application form with CSG Learning Institute."
         lang="en"
       />
 

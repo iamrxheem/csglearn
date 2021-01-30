@@ -18,7 +18,11 @@ import ProgramSummary from "../../../common/programSummary"
 
 const Page = () => (
   <DELELayout>
-    <SEO title="DELE Intermediate Diploma - B1 & B2" description="" lang="en" />
+    <SEO
+      title="DELE Intermediate Diploma - B1 & B2"
+      description="Enroll online in the accredited Diploma in Spanish B1 or B2 today, and learn Spanish at the intermediate level. Study online with CSG Learning Institute in Jamaica."
+      lang="en"
+    />
     <Container>
       <Breadcrumb>
         <BreadcrumbItem>

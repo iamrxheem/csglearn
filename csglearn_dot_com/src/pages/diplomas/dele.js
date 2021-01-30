@@ -33,7 +33,7 @@ const DELEPage = () => (
           <BreadcrumbItem>
             <a href="/diplomas/">Diplomas</a>
           </BreadcrumbItem>
-          <BreadcrumbItem active>DELE</BreadcrumbItem>
+          <BreadcrumbItem active>Diplomas in Spanish</BreadcrumbItem>
         </Breadcrumb>
 
         <Row>

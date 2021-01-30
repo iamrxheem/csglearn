@@ -18,7 +18,11 @@ import ProgramSummary from "../../../common/programSummary"
 
 const Page = () => (
   <DELELayout>
-    <SEO title="Diploma de español nivel C1 y C2" description="" lang="en" />
+    <SEO
+      title="Diploma de español nivel C1 y C2"
+      description="Enroll online in the accredited Diploma in Spanish C1 or C2 today, and learn Spanish at the advanced/ fluent level. Study online with CSG Learning Institute in Jamaica."
+      lang="en"
+    />
     <Container>
       <Breadcrumb>
         <BreadcrumbItem>

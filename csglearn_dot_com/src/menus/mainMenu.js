@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import React, { Component } from "react"
 import { isBrowser, isMobile } from "react-device-detect"
 import TopNav from "../components/topNav"
-
+import HideInProduction from "../common/hideInProduction"
 import {
   Navbar,
   NavbarToggler,
@@ -123,6 +123,7 @@ class MainMenu extends Component {
                   Programmes
                 </DropdownToggle>
                 <DropdownMenu>
+                  {/* CSEC classes */}
                   <DropdownItem href="/programmes/csec">
                     <img
                       style={{ width: "50px" }}
@@ -131,6 +132,8 @@ class MainMenu extends Component {
                     />
                     CSEC Classes
                   </DropdownItem>
+
+                  {/* CAPE classes */}
                   <DropdownItem href="/programmes/cape">
                     <img
                       style={{ width: "50px" }}
@@ -138,6 +141,19 @@ class MainMenu extends Component {
                       src="https://46i48l108maaxssg8uyuvr10-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/cape.png"
                     />
                     CAPE Classes
+                  </DropdownItem>
+
+                  {/* SAT classes */}
+
+                  <hr />
+
+                  <DropdownItem href="/programmes/sat">
+                    <img
+                      style={{ width: "50px" }}
+                      className="mr-2"
+                      src="https://crhscountyline.com/wp-content/uploads/2020/04/SAT2-1.png"
+                    />
+                    SAT Classes
                   </DropdownItem>
 
                   <hr />
@@ -154,10 +170,6 @@ class MainMenu extends Component {
                     Literacy Jamaica
                     <i className="fas fa-external-link-alt ml-2 text-primary"></i>
                   </DropdownItem>
-
-                  <hr />
-                  <DropdownItem href="/">Lowerschool</DropdownItem>
-                  <DropdownItem href="/">Preschool</DropdownItem>
                 </DropdownMenu>
               </Dropdown>
               {/* End Programmes */}

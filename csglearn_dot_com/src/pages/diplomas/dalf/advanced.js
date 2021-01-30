@@ -21,7 +21,7 @@ const Page = () => (
     <DELFLayout>
       <SEO
         title="Diplomas in French (DALF) for Fluent Speakers | C1 & C2 Jamaica"
-        description=""
+        description="Enroll online in the accredited Diploma (DALF) in French C1 or C2 today, and learn French at the fluent and advanced level. Study online with CSG Learning Institute in Jamaica."
         lang="en"
       />
 

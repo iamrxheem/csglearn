@@ -16,14 +16,24 @@ import { Carousel } from "react-bootstrap"
 import ComingSoonPromotion from "../components/comingSoonPromotion"
 import { MobileView, BrowserView, isMobile } from "react-device-detect"
 import { mobile } from "is-mobile"
+import { Helmet } from "react-helmet"
 
 const IndexPage = () => (
   <Layout>
-    <SEO
-      title="Home"
-      description="CSG Learning Institute is a Jamaica-based private training institution that offers a range of examination preparation programmes and learning certifications, and extends is services to online learning in the Caribbean."
-      lang="en"
-    />
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>The CSG Learning Institute, Jamaica</title>
+      <link rel="canonical" href="http://csglearn.com/" />
+      <meta
+        name="description"
+        content="The CSG Learning Institute is the premier provider of online education and training for accredited certifications, diplomas and education services"
+      />
+      <meta
+        name="keywords"
+        content="cxc, csec, cxcguide, csglearn, Raheem McDonald, CSG Learning Institute, CSG Learning, Kerwin Springer, Kerwin Springer Youtube, jamaica star, raheem mcdonald uwi student, DELE, diplomas de espanol, jamaica, education, online, online learning, accredited university, accredited, exam, CAPE, cape exam, csec past papers, cxc past peprs, paperbin, paperbin xyz, cxc textbooks, the student hub"
+      />
+    </Helmet>
+
     <Container>
       <Breadcrumb>
         <BreadcrumbItem>

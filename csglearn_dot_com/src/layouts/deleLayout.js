@@ -5,6 +5,8 @@ import { MobileView, BrowserView } from "react-device-detect"
 import "../components/layout.css"
 import Footer from "../components/footer"
 import { Container, Nav, NavLink, Alert, NavItem } from "shards-react"
+import ImportPage from "../components/import"
+import { Link } from "gatsby"
 
 class DELELayout extends Component {
   constructor(props) {
@@ -14,6 +16,7 @@ class DELELayout extends Component {
   render() {
     return (
       <>
+        <ImportPage />
         <div className="d-block d-md-none">
           <a href="/">
             <img
@@ -62,20 +65,22 @@ class DELELayout extends Component {
             }}
           >
             <NavItem>
-              <NavLink
+              <Link
+                className="nav-link"
                 style={{ textDecoration: "none", color: "white" }}
-                href="/diplomas/dele/tuition"
+                to="/diplomas/dele/tuition"
               >
                 TUITION & FEES
-              </NavLink>
+              </Link>
             </NavItem>
             <NavItem style={{ textDecoration: "none" }} href="/inquire">
-              <NavLink
+              <Link
                 style={{ textDecoration: "none", color: "white" }}
-                href="/diplomas/dele/apply"
+                to="/diplomas/dele/apply"
+                className="nav-link"
               >
                 APPLY NOW
-              </NavLink>
+              </Link>
             </NavItem>
           </Nav>
           <br />
@@ -100,12 +105,13 @@ class DELELayout extends Component {
               </NavLink>
             </NavItem>
             <NavItem style={{ textDecoration: "none" }} href="/inquire">
-              <NavLink
+              <Link
+                className="nav-link"
                 style={{ textDecoration: "none", color: "white" }}
-                href="/diplomas/dele/FAQs"
+                to="/diplomas/dele/FAQs"
               >
                 PROGRAMME FAQs
-              </NavLink>
+              </Link>
             </NavItem>
             <NavItem style={{ textDecoration: "none" }} href="/inquire">
               <NavLink

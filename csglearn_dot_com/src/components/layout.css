@@ -16,7 +16,7 @@ body {
 
 .break-out {
   width: 100vw;
-  position: relative;
+  position: absolute;
   background-color: inherit;
   left: calc(-1 * (100vw - 100%) / 2 );
 }

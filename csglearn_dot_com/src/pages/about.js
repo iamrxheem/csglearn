@@ -3,7 +3,22 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Breadcrumb, BreadcrumbItem } from "shards-react"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  Alert,
+  Container,
+  Row,
+  Col,
+  CardHeader,
+  CardTitle,
+  Card,
+  CardFooter,
+  CardBody,
+  Nav,
+  NavItem,
+  NavLink
+} from "shards-react"
 
 const Page = () => (
   <Layout>
@@ -12,13 +27,17 @@ const Page = () => (
       description="Learn more about CSG Learning Institute, what we do, our story and our mission."
       lang="en"
     />
-    <Breadcrumb>
-      <BreadcrumbItem>
-        <a href="/">Home</a>
-      </BreadcrumbItem>
-      <BreadcrumbItem active>About</BreadcrumbItem>
-    </Breadcrumb>
-    <></>
+    <Container>
+      <Breadcrumb>
+        <BreadcrumbItem>
+          <a href="/">Home</a>
+        </BreadcrumbItem>
+        <BreadcrumbItem active>About</BreadcrumbItem>
+      </Breadcrumb>
+
+      <br />
+      <span></span>
+    </Container>
   </Layout>
 )
 

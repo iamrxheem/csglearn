@@ -20,7 +20,7 @@ const Page = () => (
   <DELELayout>
     <SEO
       title="Diploma in Spanish (DELE) for Beginners - A1 & A2"
-      description=""
+      description="Enroll online in the accredited Diploma in Spanish A1 or A2 today, and learn Spanish from scratch. Study online with CSG Learning Institute in Jamaica."
       lang="en"
     />
     <Container>

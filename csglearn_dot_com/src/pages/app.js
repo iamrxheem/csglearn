@@ -34,7 +34,11 @@ class Page extends Component {
   render() {
     return (
       <>
-        <SEO title="Download the App" description="" lang="en" />
+        <SEO
+          title="Download the App"
+          description="Use the app to learn on the go, access your course materials and much, much more. CSG Learning Institute uses the OpenLMS platform which allows us to to create, personalize and track instruction for students with simple online tools."
+          lang="en"
+        />
         <Layout>
           <Container>
             <Breadcrumb>
@@ -70,7 +74,7 @@ class Page extends Component {
                 <br />
 
                 {/* Mobile View */}
-                <MobileView>
+                <div className="d-block d-md-none">
                   <Row>
                     <Col xs={6}>
                       <a
@@ -95,10 +99,10 @@ class Page extends Component {
                       </a>
                     </Col>
                   </Row>
-                </MobileView>
+                </div>
 
                 {/* Browser View */}
-                <BrowserView>
+                <div className="d-none d-md-block">
                   <Row>
                     <Col xs={6}>
                       <a
@@ -112,9 +116,10 @@ class Page extends Component {
                       </a>
                     </Col>
                     <Col xs={6}>
-                      <MobileView>
+                      {/* Mobile View */}
+                      <div className="d-block d-md-none">
                         <br />
-                      </MobileView>
+                      </div>
                       <a
                         href="https://play.google.com/store/apps/details?id=com.mrooms.bbopen&hl=en&gl=US"
                         target="_blank"
@@ -129,13 +134,13 @@ class Page extends Component {
                       </a>
                     </Col>
                   </Row>
-                </BrowserView>
+                </div>
               </Col>
               <Col sm={12} md={6} lg={6}>
-                <MobileView>
+                <div className="d-block d-md-none">
                   <br />
                   <br />
-                </MobileView>
+                </div>
 
                 <h4>How to log in</h4>
 
@@ -151,46 +156,56 @@ class Page extends Component {
 
                 <ol>
                   <li>
-                    {" "}
-                    Download the app from the{" "}
-                    <a
-                      href="https://play.google.com/store/apps/details?id=com.mrooms.bbopen&hl=en&gl=US"
-                      target="_blank"
-                    >
-                      Google Play
-                    </a>{" "}
-                    or{" "}
-                    <a
-                      href="https://apps.apple.com/us/app/open-lms/id1212149426"
-                      target="_blank"
-                    >
-                      App Store
-                    </a>
-                    .
-                  </li>
-
-                  <li style={{ paddingTop: "15px" }}>
-                    Enter the link to our online portal. Click the link to copy
-                    and paste in the textbox: https://www.hub.csglearn.com.{" "}
-                    <CopyToClipboard text="https://www.hub.csglearn.com">
-                      <a className="text-underline" href="#">
-                        Click to copy
+                    <span>
+                      Download the app from the{" "}
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.mrooms.bbopen&hl=en&gl=US"
+                        target="_blank"
+                      >
+                        Google Play
+                      </a>{" "}
+                      or{" "}
+                      <a
+                        href="https://apps.apple.com/us/app/open-lms/id1212149426"
+                        target="_blank"
+                      >
+                        App Store
                       </a>
-                    </CopyToClipboard>
-                    .
+                      .
+                    </span>
                   </li>
 
                   <li style={{ paddingTop: "15px" }}>
-                    Enter your username. Your username is normally the email
-                    address your provided upon registration.
+                    <span>
+                      Enter the link to our online portal. Click the link to
+                      copy and paste in the textbox:
+                      https://www.hub.csglearn.com.{" "}
+                      <CopyToClipboard text="https://www.hub.csglearn.com">
+                        <a className="text-underline" href="#">
+                          Click to copy
+                        </a>
+                      </CopyToClipboard>
+                      .
+                    </span>
                   </li>
 
                   <li style={{ paddingTop: "15px" }}>
-                    Enter your password. If you do not remember you password,
-                    please use the 'Forgot password' option.
+                    <span>
+                      Enter your username. Your username is normally the email
+                      address your provided upon registration.
+                    </span>
                   </li>
 
-                  <li style={{ paddingTop: "15px" }}>Start learning!</li>
+                  <li style={{ paddingTop: "15px" }}>
+                    <span>
+                      Enter your password. If you do not remember you password,
+                      please use the 'Forgot password' option.
+                    </span>
+                  </li>
+
+                  <li style={{ paddingTop: "15px" }}>
+                    <span>Start learning!</span>
+                  </li>
                 </ol>
               </Col>
             </Row>

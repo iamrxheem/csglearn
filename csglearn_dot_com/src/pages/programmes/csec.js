@@ -11,7 +11,11 @@ import ProgramSummary from "../../common/programSummary"
 const Page = () => (
   <CSECLayout>
     <Container>
-      <SEO title="Online CSEC Classes" description="" lang="en" />
+      <SEO
+        title="Online CSEC Classes"
+        description="Enroll in online CSEC classes today with CSG Learning Institute. Study for CXC in a virtual clasroom from the comfort of your home with CSG Learning Institute."
+        lang="en"
+      />
       <Breadcrumb>
         <BreadcrumbItem>
           <a href="/">Home</a>
@@ -86,6 +90,15 @@ const Page = () => (
           </Table>
 
           <br />
+          <Button
+            style={{ width: "100%" }}
+            outline
+            href="/programmes/csec/apply"
+          >
+            Apply now
+          </Button>
+
+          <br />
           <br />
         </Col>
 
@@ -94,7 +107,7 @@ const Page = () => (
             levelOfStudy="CSEC Certification"
             modeOfStudy="Online"
             duration="1 year"
-            numberOfCourses="Minimum 4"
+            numberOfCourses="Minimum 3"
             termBeginsOn="Monday, September 13, 2021"
             showCost
             cost="Depends on the number of subjects"

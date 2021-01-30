@@ -7,6 +7,7 @@ import Footer from "../components/footer"
 import Layout from "../components/layout"
 import "../assets/css/bulma-tabs.css"
 import "../components/layout.css"
+import ImportPage from "../components/import"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -26,6 +27,7 @@ import { Accordion, Table, Button } from "react-bootstrap"
 
 const ShortCoursesLayout = props => (
   <>
+    <ImportPage />
     <Layout>
       <div style={{ backgroundColor: "#f6f6f6" }}>
         <div className="d-block d-md-none">

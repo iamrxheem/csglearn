@@ -39,7 +39,7 @@ const Page = () => (
   <Layout>
     <SEO
       title="Accredited Degrees & Diplomas"
-      description="Enroll in overseas accredited and recognised diploma and give your career a head start. Visit CSG Learning Institute today to find out how."
+      description="Enroll in accredited and recognised diploma and give your career a head start. Visit CSG Learning Institute today to find out how."
       lang="en"
     />
 

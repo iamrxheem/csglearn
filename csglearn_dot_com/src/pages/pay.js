@@ -20,7 +20,7 @@ export default function Page() {
       <Layout>
         <SEO
           title="Pay Fees & Tuition"
-          description="Learn more about our tools and services and how you can benefit. Find scholarships, student jobs and much more!"
+          description="Make a payment on your tuition, fees and other misc charges."
           lang="en"
         />
 

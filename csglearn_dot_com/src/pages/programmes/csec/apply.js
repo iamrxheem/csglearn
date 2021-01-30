@@ -28,29 +28,13 @@ const Page = () => (
 
       <br />
       <span>
-        This form is only to be completed by candidates over 18 years of age or
-        the parents or guardians on behalf of the minor.
+        Registration opens <strong>Monday, July 19, 2021</strong>. Classes begin
+        on <b>September 13, 2021</b>.
       </span>
 
-      <br />
-
-      <span>
-        Reminder, classes begin on <b>September 13, 2021</b>.
-      </span>
       <br />
       <br />
     </Container>
-
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSe6ue8tZts-zWsdtJ4AWNeJrt6z3V5kJ5frvMaqc4vUSJ-cSA/viewform?embedded=true"
-      style={{ width: "100%" }}
-      height="2097"
-      frameBorder="0"
-      marginHeight="0"
-      marginWidth="0"
-    >
-      Loading…
-    </iframe>
   </CSECLayout>
 )
 
