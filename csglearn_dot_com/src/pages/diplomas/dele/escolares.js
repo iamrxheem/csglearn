@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import DELELayout from "../../../layouts/deleLayout"
 import SEO from "../../../components/seo"
 import {
@@ -11,7 +10,6 @@ import {
   Button
 } from "shards-react"
 import Faq from "react-faq-component"
-import { MobileView } from "react-device-detect"
 import ProgramSummary from "../../../common/programSummary"
 
 const data = {

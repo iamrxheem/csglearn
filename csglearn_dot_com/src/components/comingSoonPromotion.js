@@ -1,14 +1,12 @@
 import React from "react"
 import {
-  Breadcrumb,
-  BreadcrumbItem,
   Alert,
   Container,
   Row,
   Col,
   Button
 } from "shards-react"
-import { MobileView, isMobile } from "react-device-detect"
+import { isMobile } from "react-device-detect"
 
 const ComingSoonPromotion = () => (
   <Container fluid>

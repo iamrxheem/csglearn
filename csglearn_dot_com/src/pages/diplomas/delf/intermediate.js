@@ -111,9 +111,9 @@ const Page = () => (
                 <Button
                   style={{ width: "100%" }}
                   outline
-                  href="/diplomas/delf/pre-register"
+                  href="/diplomas/delf/enroll"
                 >
-                  Pre-register now
+                  Enroll now
                 </Button>
               </Col>
               <Col sm={12} md={6} lg={6}></Col>
@@ -131,7 +131,7 @@ const Page = () => (
               duration="10 months"
               termBeginsOn="March 8, 2021"
               showCost
-              cost="USD $450 per term"
+              cost="USD $450 per term, 2 terms"
             />
           </Col>
         </Row>

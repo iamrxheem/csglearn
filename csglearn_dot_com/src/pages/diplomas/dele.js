@@ -1,9 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-import { Tabs, Tab } from "react-bootstrap"
-import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-import DownloadButton from "../../common/downloadButton"
 import DELELayout from "../../layouts/deleLayout"
 import ProgramSummary from "../../common/programSummary"
 import {
@@ -12,7 +8,6 @@ import {
   BreadcrumbItem,
   Row,
   Col,
-  Alert,
   Container
 } from "shards-react"
 

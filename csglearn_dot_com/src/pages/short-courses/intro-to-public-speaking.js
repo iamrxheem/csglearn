@@ -1,25 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
 import ShortCoursesLayout from "../../layouts/shortCoursesLayout"
 import SEO from "../../components/seo"
 import {
   Breadcrumb,
-  BreadcrumbItem,
-  Alert,
-  Container,
-  Row,
-  Col,
-  CardHeader,
-  CardTitle,
-  Card,
-  CardFooter,
-  CardBody,
-  Nav,
-  NavItem,
-  NavLink
-} from "shards-react"
-import ShortCoursePreview from "../../common/shortCoursePreview"
-import { Accordion, Table, Button } from "react-bootstrap"
+  BreadcrumbItem} from "shards-react"
+import { Table } from "react-bootstrap"
 import { Tab, Tabs } from "react-bootstrap"
 
 const Page = () => (

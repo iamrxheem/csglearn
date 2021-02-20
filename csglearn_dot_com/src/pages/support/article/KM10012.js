@@ -1,24 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import SupportLayout from "../../../layouts/supportLayout"
 import SupportArticleLayout from "../../../supportComponents/supportArticleLayout"
-import SEO from "../../../components/seo"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  Alert,
-  Container,
-  Row,
-  Col,
-  CardHeader,
-  CardTitle,
-  Card,
-  CardFooter,
-  CardBody,
-  Nav,
-  NavItem,
-  NavLink
-} from "shards-react"
 
 const Page = () => (
   <SupportLayout>
@@ -31,7 +13,7 @@ const Page = () => (
       lastModified=""
     >
       <span>
-        Each stduent is also automatically enrolled in a payment plan once the
+        Each student is also automatically enrolled in a payment plan once the
         Miscellaneous Fees have been cleared.
       </span>
     </SupportArticleLayout>

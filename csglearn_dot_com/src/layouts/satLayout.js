@@ -1,12 +1,11 @@
 import React, { Component } from "react"
 import SATMenu from "../menus/satMenu"
 import TopNav from "../components/topNav"
-import { MobileView, BrowserView } from "react-device-detect"
 import "../components/layout.css"
 import Footer from "../components/footer"
-import { Container, Nav, NavLink, Alert, NavItem } from "shards-react"
-import ImportPage from "../components/import"
-import { Link } from "gatsby"
+import YoungManSmilingImg from "../images/bbmsml.jpg"
+import SATImage from "../images/cc-sat.png"
+import CSGLearningTopImage from "../images/top-logo.jpg"
 
 class SATLayout extends Component {
   constructor(props) {
@@ -19,16 +18,17 @@ class SATLayout extends Component {
         <div className="d-block d-md-none">
           <a href="/">
             <img
-              src="https://i.imgur.com/IcviBO3.jpg"
+              alt="CSG Learning Institute company logo"
+              src={CSGLearningTopImage}
               style={{ width: "100%", height: "100%" }}
             />
           </a>
         </div>
 
         {/*
-      Top Navigation with with contact information for the company and
-      quick links for subdomains.
-    */}
+          Top Navigation with with contact information for the company and
+          quick links for subdomains.
+        */}
         <div className="d-none d-md-block">
           <TopNav />
         </div>
@@ -43,7 +43,7 @@ class SATLayout extends Component {
         <div className="d-block d-md-none">
           <img
             style={{ width: "100%", height: "100%" }}
-            src="https://i.imgur.com/w626x26.jpg"
+            src={YoungManSmilingImg}
           />
 
           <br />
@@ -56,7 +56,7 @@ class SATLayout extends Component {
           <br />
           <br />
         </div>
-
+        <img src={SATImage} style={{ width: "100%", height: "50%" }} />
         {/* General footer */}
         <Footer />
       </>

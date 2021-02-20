@@ -2,20 +2,9 @@ import React from "react"
 import {
   Breadcrumb,
   BreadcrumbItem,
-  Alert,
   Container,
   Row,
-  Col,
-  CardHeader,
-  CardTitle,
-  CardSubtitle,
-  Card,
-  CardFooter,
-  CardBody,
-  Nav,
-  NavItem,
-  NavLink
-} from "shards-react"
+  Col} from "shards-react"
 import SEO from "../components/seo"
 
 const SupportArticleLayout = props => (

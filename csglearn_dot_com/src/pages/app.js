@@ -1,34 +1,13 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Breadcrumb, BreadcrumbItem, Container } from "shards-react"
-import { useForm, useField, splitFormProps } from "react-form"
 
 import {
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  FormInput,
-  Collapse,
-  Button,
   Row,
-  Col,
-  Badge
-} from "shards-react"
+  Col} from "shards-react"
 import { CopyToClipboard } from "react-copy-to-clipboard"
-import { isMobile, MobileView, BrowserView } from "react-device-detect"
+import { isMobile } from "react-device-detect"
 
 class Page extends Component {
   render() {

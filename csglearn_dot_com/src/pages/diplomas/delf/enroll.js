@@ -6,12 +6,17 @@ import { Breadcrumb, BreadcrumbItem, Container, Row, Col } from "shards-react"
 import Faq from "react-faq-component"
 import { MobileView } from "react-device-detect"
 import DELFMiniMenu from "../../../common/delfMiniMenu"
+import DelfApplyFormComponent from "../../../formComponents/delfApplyFormComponent"
 import JotformEmbed from "react-jotform-embed"
 
 const Page = () => (
   <>
     <DELFLayout>
-      <SEO title="Pre-Register - Diploma in French" description="" lang="en" />
+      <SEO
+        title="Enroll - Diploma in French"
+        description="Enroll in the accredited Diploma in French as a Foregign Langauge (DELF & DALF) online and start learning with CSG Learning Institute."
+        lang="en"
+      />
 
       <Container>
         <Breadcrumb>
@@ -24,22 +29,27 @@ const Page = () => (
           <BreadcrumbItem>
             <a href="/diplomas/delf">DELF</a>
           </BreadcrumbItem>
-          <BreadcrumbItem active>Pre-Register</BreadcrumbItem>
+          <BreadcrumbItem active>Enroll Now</BreadcrumbItem>
         </Breadcrumb>
-        <h5>Course Online Pre-Registration Form</h5>
+
+        <h3>Enroll in the Diploma in French</h3>
         <br />
         <DELFMiniMenu />
+
         <br />
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSfYfuNtWzDTXTMZgnu3WPvcwYveVUL_mYBBeoY_TFZE4hbq5w/viewform?embedded=true"
-          style={{ width: "100%" }}
-          height="2030"
-          frameBorder="0"
-          marginHeight="0"
-          marginWidth="0"
-        >
-          Loading…
-        </iframe>
+        <span>
+          Please complete this form to enroll in the Diploma in French. If you
+          wish to inquire, please review our{" "}
+          <a href="/diplomas/delf/FAQs" target="_blank">
+            frequently asked questions
+          </a>{" "}
+          or <a href="mailto:info@csglearn.com">send us an email</a>. Otherwise,
+          please complete the below form to enroll.
+        </span>
+        <br />
+        <br />
+        <br />
+        <DelfApplyFormComponent />
         <br />
       </Container>
     </DELFLayout>

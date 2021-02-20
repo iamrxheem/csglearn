@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import SEO from "../components/seo"
+
 
 import SATPage from "./programmes/sat"
 /*

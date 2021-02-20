@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import SEO from "../../../components/seo"
+import CSECSubjectTable from "../../../common/csecSubjectTable"
 import { Breadcrumb, BreadcrumbItem } from "shards-react"
 import { Alert, Button, Row, Col, Container } from "shards-react"
 import CSECLayout from "../../../layouts/csecLayout"
@@ -40,58 +41,15 @@ const Page = () => (
 
           <br />
           <br />
-          <Table striped bordered hover>
-            <tbody>
-              <tr>
-                <td>English Language</td>
-                <td>English Literature</td>
-              </tr>
-              <tr>
-                <td>Mathemtics</td>
-                <td>Additional Mathemtics</td>
-              </tr>
-              <tr>
-                <td>Spanish</td>
-                <td>French</td>
-              </tr>
-              <tr>
-                <td>Chemistry</td>
-                <td>Biology</td>
-              </tr>
-              <tr>
-                <td>Physics</td>
-                <td>Human & Social Biology</td>
-              </tr>
-              <tr>
-                <td>Integrated Science</td>
-                <td>Information Technology</td>
-              </tr>
-              <tr>
-                <td>Social Studies</td>
-                <td>Caribbean History</td>
-              </tr>
-              <tr>
-                <td>Principles of Accounts</td>
-                <td>Principles of Business</td>
-              </tr>
-              <tr>
-                <td>Office Administration</td>
-                <td>Economics</td>
-              </tr>
-              <tr>
-                <td>Geography</td>
-                <td>Electronic Document Preparation </td>
-              </tr>
-            </tbody>
-          </Table>
+          <CSECSubjectTable />
 
           <br />
           <Button
             style={{ width: "100%" }}
             outline
-            href="/programmes/csec/apply"
+            href="/programmes/csec/enroll"
           >
-            Apply now
+            Enroll now
           </Button>
         </Col>
 

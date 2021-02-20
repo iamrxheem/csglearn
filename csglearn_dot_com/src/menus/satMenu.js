@@ -7,19 +7,8 @@ import {
   NavItem,
   NavLink,
   Collapse,
-  Button,
-  Dropdown,
-  DropdownItem,
-  DropdownToggle,
-  DropdownMenu
-} from "shards-react"
+  Button} from "shards-react"
 
-import {
-  isBrowser,
-  isMobile,
-  MobileView,
-  BrowserView
-} from "react-device-detect"
 
 class SATMenu extends Component {
   constructor(props) {

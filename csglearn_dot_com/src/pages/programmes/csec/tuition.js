@@ -76,7 +76,7 @@ class Page extends Component {
               <br />
               <br />
 
-              <h5>Montly Fee - January Exams</h5>
+              <h5>Monthly Fee - January Exams</h5>
               <br />
 
               <span>
@@ -164,7 +164,7 @@ class Page extends Component {
               </Table>
 
               <br />
-              <h5>Montly Fee - May/ June Exams</h5>
+              <h5>Monthly Fee - May/ June Exams</h5>
               <br />
 
               <span>

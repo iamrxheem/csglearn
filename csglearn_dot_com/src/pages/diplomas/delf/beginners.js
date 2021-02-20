@@ -21,7 +21,7 @@ const Page = () => (
     <DELFLayout>
       <SEO
         title="Diplomas in French (DELF) for Beginners"
-        description="Enroll online in the accredited Diploma in French A1 or A2 today, and learn French from scratch. Study online with CSG Learning Institute in Jamaica."
+        description="Enroll online in the accredited Diploma in French Beginners A1 or A2 today, and learn French from scratch. Study online with CSG Learning Institute in Jamaica."
         lang="en"
       />
 
@@ -113,9 +113,9 @@ const Page = () => (
                 <Button
                   style={{ width: "100%" }}
                   outline
-                  href="/diplomas/delf/pre-register"
+                  href="/diplomas/delf/enroll"
                 >
-                  Pre-register now
+                  Enroll now
                 </Button>
               </Col>
               <Col sm={12} md={6} lg={6}></Col>
@@ -133,7 +133,7 @@ const Page = () => (
               duration="10 months"
               termBeginsOn="March 8, 2021"
               showCost
-              cost="JMD $37,500 per term"
+              cost="JMD $37,500 per term, 2 terms"
             />
           </Col>
         </Row>

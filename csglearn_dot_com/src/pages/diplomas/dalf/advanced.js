@@ -110,9 +110,9 @@ const Page = () => (
                 <Button
                   style={{ width: "100%" }}
                   outline
-                  href="/diplomas/delf/pre-register"
+                  href="/diplomas/delf/enroll"
                 >
-                  Pre-register now
+                  Enroll now
                 </Button>
               </Col>
               <Col sm={12} md={6} lg={6}></Col>
@@ -128,7 +128,7 @@ const Page = () => (
               numberOfCourses="4"
               modeOfStudy="Online"
               duration="10 months"
-              termBeginsOn="March 8, 2021"
+              termBeginsOn="March 8, 2021, 2 terms"
               showCost
               cost="USD $700 per term"
             />

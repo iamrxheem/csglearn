@@ -1,24 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import SupportLayout from "../../../layouts/supportLayout"
 import SupportArticleLayout from "../../../supportComponents/supportArticleLayout"
-import SEO from "../../../components/seo"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  Alert,
-  Container,
-  Row,
-  Col,
-  CardHeader,
-  CardTitle,
-  Card,
-  CardFooter,
-  CardBody,
-  Nav,
-  NavItem,
-  NavLink
-} from "shards-react"
 import Faq from "react-faq-component"
 
 const data = {

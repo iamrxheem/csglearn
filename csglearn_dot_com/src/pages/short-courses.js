@@ -1,24 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
 import ShortCoursesLayout from "../layouts/shortCoursesLayout"
 import SEO from "../components/seo"
 import {
   Breadcrumb,
   BreadcrumbItem,
-  Alert,
-  Container,
   Row,
-  Col,
-  CardHeader,
-  CardTitle,
-  Card,
-  Button,
-  CardFooter,
-  CardBody,
-  Nav,
-  NavItem,
-  NavLink
-} from "shards-react"
+  Col} from "shards-react"
 import ShortCoursePreview from "../common/shortCoursePreview"
 
 const Page = () => (

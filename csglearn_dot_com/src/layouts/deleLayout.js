@@ -1,12 +1,12 @@
 import React, { Component } from "react"
 import DELEMenu from "../menus/deleMenu"
 import TopNav from "../components/topNav"
-import { MobileView, BrowserView } from "react-device-detect"
 import "../components/layout.css"
 import Footer from "../components/footer"
-import { Container, Nav, NavLink, Alert, NavItem } from "shards-react"
+import {  Nav, NavLink, Alert, NavItem } from "shards-react"
 import ImportPage from "../components/import"
 import { Link } from "gatsby"
+import YoungManSmilingImg from "../images/bbmsml.jpg"
 
 class DELELayout extends Component {
   constructor(props) {
@@ -51,7 +51,7 @@ class DELELayout extends Component {
         <div className="d-block d-md-none">
           <img
             style={{ width: "100%", height: "100%" }}
-            src="https://i.imgur.com/w626x26.jpg"
+            src={YoungManSmilingImg}
           />
 
           <br />

@@ -5,12 +5,15 @@ import SEO from "../../../components/seo"
 import { Breadcrumb, BreadcrumbItem } from "shards-react"
 import { Alert, Button, Row, Col, Container } from "shards-react"
 import CSECLayout from "../../../layouts/csecLayout"
-import JotformEmbed from "react-jotform-embed"
 
 const Page = () => (
   <CSECLayout>
     <Container>
-      <SEO title="Apply Now | CSEC Classes" description="" lang="en" />
+      <SEO
+        title="Resources - CSEC Classes"
+        description="View a list of resources for our online CSEC classes. Enroll now with CSG Learning Institute."
+        lang="en"
+      />
       <Breadcrumb>
         <BreadcrumbItem>
           <a href="/">Home</a>
@@ -19,21 +22,21 @@ const Page = () => (
           <a href="/programmes/">Programmes</a>
         </BreadcrumbItem>
         <BreadcrumbItem>
-          <a href="/programmes/csec">CSEC</a>
+          <a href="/programmes/">CSEC</a>
         </BreadcrumbItem>
-        <BreadcrumbItem active>Apply</BreadcrumbItem>
+        <BreadcrumbItem active>Resources</BreadcrumbItem>
       </Breadcrumb>
 
-      <h5>Apply</h5>
+      <Row>
+        <Col sm={12} md={7} lg={7}>
+          <h5>Resources</h5>
 
-      <br />
-      <span>
-        Registration opens <strong>Monday, July 19, 2021</strong>. Classes begin
-        on <b>September 13, 2021</b>.
-      </span>
+          <br />
+          <br />
+        </Col>
 
-      <br />
-      <br />
+        <Col sm={12} md={5} lg={5}></Col>
+      </Row>
     </Container>
   </CSECLayout>
 )

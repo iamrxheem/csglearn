@@ -14,11 +14,8 @@ const DELFMiniMenu = () => (
       <Col xs={6}>
         <Alert className="bg-info" theme="info">
           <div className="text-center">
-            <a
-              style={{ textDecoration: "none" }}
-              href="/diplomas/delf/pre-register"
-            >
-              PRE-REGISTER
+            <a style={{ textDecoration: "none" }} href="/diplomas/delf/enroll">
+              ENROLL NOW
             </a>
           </div>
         </Alert>

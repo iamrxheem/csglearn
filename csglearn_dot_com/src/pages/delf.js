@@ -1,5 +1,4 @@
 import React, { Component } from "react"
-import SEO from "../components/seo"
 
 import DELFPage from "./diplomas/delf"
 /*

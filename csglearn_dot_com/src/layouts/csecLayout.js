@@ -1,11 +1,10 @@
 import React, { Component } from "react"
 import CSECMenu from "../menus/csecMenu"
 import TopNav from "../components/topNav"
-import { MobileView, BrowserView } from "react-device-detect"
 import "../components/layout.css"
 import ImportPage from "../components/import"
 import Footer from "../components/footer"
-import { Container, Nav, NavLink, Alert, NavItem } from "shards-react"
+import {  Nav, NavLink, NavItem } from "shards-react"
 
 class CSECLayout extends Component {
   constructor(props) {
@@ -16,15 +15,22 @@ class CSECLayout extends Component {
     return (
       <>
         <ImportPage />
-        {/* Mobile View  */}
-        <div className="d-block d-md-none">
-          <a href="/">
-            <img
-              src="https://i.imgur.com/IcviBO3.jpg"
-              style={{ width: "100%", height: "100%" }}
-            />
-          </a>
-        </div>
+
+        {this.props.hideLogo ? (
+          <></>
+        ) : (
+          <>
+            {/* Mobile View  */}
+            <div className="d-block d-md-none">
+              <a href="/">
+                <img
+                  src="https://i.imgur.com/IcviBO3.jpg"
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </a>
+            </div>
+          </>
+        )}
 
         {/*
       Top Navigation with with contact information for the company and
@@ -38,19 +44,21 @@ class CSECLayout extends Component {
 
         <CSECMenu />
 
-        <div className="d-none d-md-block">
-          <img
-            src="https://dl.dropbox.com/s/wwwiafaz55s6dhs/WhatsApp%20Image%202021-01-08%20at%208.42.44%20PM.jpeg?dl=0"
-            style={{ width: "100%" }}
-          />
-        </div>
-
         {/* Mobile View */}
-        <div className="d-block d-md-none">
-          <img
-            src="https://loopnewslive.blob.core.windows.net/liveimage/sites/default/files/2020-09/Di3GpPFEwP.jpg"
-            style={{ width: "100%" }}
-          />
+        <div className="d-block d-md-none" style={{ clear: "both" }}>
+          {this.props.swapImg === true ? (
+            <>
+              <img src={this.props.img} style={{ width: "100%" }} />
+            </>
+          ) : (
+            <>
+              <img
+                src="https://loopnewslive.blob.core.windows.net/liveimage/sites/default/files/2020-09/Di3GpPFEwP.jpg"
+                style={{ width: "100%" }}
+              />
+            </>
+          )}
+
           <Nav
             fill
             style={{
@@ -70,23 +78,18 @@ class CSECLayout extends Component {
             <NavItem style={{ textDecoration: "none" }} href="/inquire">
               <NavLink
                 style={{ textDecoration: "none", color: "white" }}
-                href="/programmes/csec/apply"
+                href="/programmes/csec/enroll"
               >
-                APPLY NOW
+                ENROLL NOW
               </NavLink>
             </NavItem>
           </Nav>
-          <br />
         </div>
 
-        {/* Browser View */}
-        <div className="d-none d-md-block">
+        <div style={{ backgroundColor: "#f6f6f6" }}>
           <br />
-          <br />
-        </div>
-
-        <div style={{ backgroundColor: "#f6f6f6", marginTop: "-15px" }}>
           {/* Content */}
+
           {this.props.children}
           <br />
           <br />

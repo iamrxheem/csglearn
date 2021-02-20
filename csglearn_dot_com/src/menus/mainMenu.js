@@ -1,9 +1,6 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React, { Component } from "react"
 import { isBrowser, isMobile } from "react-device-detect"
 import TopNav from "../components/topNav"
-import HideInProduction from "../common/hideInProduction"
 import {
   Navbar,
   NavbarToggler,
@@ -15,17 +12,11 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  FormInput,
   Collapse,
   Button,
   Row,
-  Col,
-  Badge
-} from "shards-react"
-import { MobileView, BrowserView } from "react-device-detect"
+  Col} from "shards-react"
+import CSGLearningTopImage from "../images/top-logo.jpg"
 
 class MainMenu extends Component {
   constructor(props) {
@@ -78,7 +69,7 @@ class MainMenu extends Component {
         <div className="d-block d-md-none">
           <a href="/">
             <img
-              src="https://i.imgur.com/IcviBO3.jpg"
+              src={CSGLearningTopImage}
               style={{ width: "100%", height: "100%" }}
             />
           </a>
@@ -98,7 +89,7 @@ class MainMenu extends Component {
           <NavbarBrand href="/">CSG Learning</NavbarBrand>
 
           {isMobile ? (
-            <a href="/diplomas/dele/apply/" className="ml-auto mr-3">
+            <a href="/diplomas/delf/enroll/" className="ml-auto mr-3">
               <Button>APPLY</Button>
             </a>
           ) : null}
@@ -109,9 +100,7 @@ class MainMenu extends Component {
             <Nav navbar className="ml-auto">
               {/* About */}
               <NavItem>
-                <NavLink active href="/about">
-                  About
-                </NavLink>
+                <NavLink href="/about">About</NavLink>
               </NavItem>
               {/* End About */}
               <Dropdown
@@ -134,13 +123,9 @@ class MainMenu extends Component {
                   </DropdownItem>
 
                   {/* CAPE classes */}
-                  <DropdownItem href="/programmes/cape">
-                    <img
-                      style={{ width: "50px" }}
-                      className="mr-2"
-                      src="https://46i48l108maaxssg8uyuvr10-wpengine.netdna-ssl.com/wp-content/uploads/2015/10/cape.png"
-                    />
-                    CAPE Classes
+                  <DropdownItem href="/programmes/sixth-form">
+                    <i className="far fa-bookmark mr-2"></i>
+                    Sixth Form Programme
                   </DropdownItem>
 
                   {/* SAT classes */}
@@ -157,12 +142,6 @@ class MainMenu extends Component {
                   </DropdownItem>
 
                   <hr />
-                  <DropdownItem href="/programmes/sixth-form">
-                    <i className="far fa-bookmark mr-2"></i>
-                    Sixth Form Programme
-                  </DropdownItem>
-
-                  <hr />
                   <DropdownItem
                     target="_blank"
                     href="https://www.literacyja.org"
@@ -174,11 +153,9 @@ class MainMenu extends Component {
               </Dropdown>
               {/* End Programmes */}
 
-              {/*             Short Courses */}
+              {/* Short Courses */}
               <NavItem>
-                <NavLink active href="/short-courses">
-                  Short Courses
-                </NavLink>
+                <NavLink href="/short-courses">Short Courses</NavLink>
               </NavItem>
               {/* Short Courses */}
 
@@ -207,11 +184,9 @@ class MainMenu extends Component {
               </Dropdown>
               {/* End Accredited Diplomas */}
 
-              {/* Admissions */}
+              {/* Academics */}
               <NavItem>
-                <NavLink active href="/academics">
-                  Academics
-                </NavLink>
+                <NavLink href="/academics">Academics</NavLink>
               </NavItem>
               {/* End Admissions */}
               <React.Fragment>

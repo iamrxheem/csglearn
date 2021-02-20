@@ -4,30 +4,8 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Breadcrumb, BreadcrumbItem } from "shards-react"
-import { useForm, useField, splitFormProps } from "react-form"
 
-import {
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
-  FormInput,
-  Collapse,
-  Button,
-  Row,
-  Col,
-  Container,
-  Badge
-} from "shards-react"
+import { Row, Col, Container } from "shards-react"
 
 class Page extends Component {
   render() {

@@ -142,7 +142,7 @@ const Page = () => (
           <a href="/programmes/">Programmes</a>
         </BreadcrumbItem>
         <BreadcrumbItem>
-          <a href="/programmes/">CSEC</a>
+          <a href="/programmes/csec">CSEC</a>
         </BreadcrumbItem>
         <BreadcrumbItem active>FAQs</BreadcrumbItem>
       </Breadcrumb>

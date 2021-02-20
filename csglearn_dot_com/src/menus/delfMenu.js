@@ -15,11 +15,7 @@ import {
 } from "shards-react"
 
 import {
-  isBrowser,
-  isMobile,
-  MobileView,
-  BrowserView
-} from "react-device-detect"
+  MobileView} from "react-device-detect"
 
 class DELFMenu extends Component {
   constructor(props) {
@@ -59,20 +55,16 @@ class DELFMenu extends Component {
         >
           <NavbarBrand href="/">CSG Learning</NavbarBrand>
 
-          <div className="d-block d-md-none">
-            <a href="/diplomas/delf/pre-register" className="ml-auto mr-3">
-              <Button>APPLY</Button>
-            </a>
-          </div>
+          <MobileView>
+            <Button href="/diplomas/delf/enroll">Enroll Now</Button>
+          </MobileView>
 
           <NavbarToggler onClick={this.toggleNavbar} />
 
           <Collapse open={this.state.collapseOpen} navbar>
             <Nav navbar className="ml-auto">
               <NavItem>
-                <NavLink active href="/diplomas/delf/tuition">
-                  Fees & Tuition
-                </NavLink>
+                <NavLink href="/diplomas/delf/tuition">Fees & Tuition</NavLink>
               </NavItem>
 
               <Dropdown
@@ -99,21 +91,17 @@ class DELFMenu extends Component {
               </Dropdown>
 
               <NavItem>
-                <NavLink active href="/delf/exam-centres">
-                  Exam Locations
-                </NavLink>
+                <NavLink href="/delf/exam-centres">Exam Locations</NavLink>
               </NavItem>
 
               {/* Forms and Documents */}
               <NavItem>
-                <NavLink active href="/diplomas/delf/forms">
-                  Forms & Documents
-                </NavLink>
+                <NavLink href="/diplomas/delf/forms">Forms & Documents</NavLink>
               </NavItem>
 
               {/* FAQs */}
               <NavItem>
-                <NavLink active href="/diplomas/delf/FAQs">
+                <NavLink href="/diplomas/delf/FAQs">
                   <i className="fas fa-info-circle text-primary mr-2"></i>
                   FAQs
                 </NavLink>
@@ -126,9 +114,9 @@ class DELFMenu extends Component {
                       width: "100%",
                       marginLeft: "10px"
                     }}
-                    href="/diplomas/delf/pre-register"
+                    href="/diplomas/delf/enroll"
                   >
-                    Apply
+                    Enroll
                   </Button>
                 </NavItem>
               </div>

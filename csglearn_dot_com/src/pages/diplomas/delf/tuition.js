@@ -167,9 +167,9 @@ const Page = () => (
             <Button
               style={{ width: "100%" }}
               outline
-              href="/diplomas/delf/pre-pregister"
+              href="/diplomas/delf/enroll"
             >
-              PRE-REGISTER NOW
+              ENROLL NOW
             </Button>
 
             <br />

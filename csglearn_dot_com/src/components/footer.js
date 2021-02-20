@@ -1,5 +1,4 @@
 import React from "react"
-import { isMobile } from "react-device-detect"
 
 const Footer = () => (
   <>
@@ -34,10 +33,10 @@ const Footer = () => (
                   <a href="/diplomas/delf">Diploma in French</a>
                 </li>
                 <li className="pb-2">
-                  <a href="/programmes/csec"> CSEC Classes</a>
+                  <a href="/programmes/csec">CSEC Classes</a>
                 </li>
                 <li className="pb-2">
-                  <a href="/programmes/cape"> CAPE Classes</a>
+                  <a href="/programmes/sixth-form">Sixth Form Programme</a>
                 </li>
               </ul>
             </div>

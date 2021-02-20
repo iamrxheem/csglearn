@@ -6,14 +6,9 @@ import {
   Form,
   FormInput,
   FormGroup,
-  FormCheckbox,
   FormSelect,
-  InputGroup,
-  InputGroupAddon,
-  InputGroupText,
   Button
 } from "shards-react"
-import Select from "react-select"
 
 class ProgrammeInfoRequest extends Component {
   constructor(props) {

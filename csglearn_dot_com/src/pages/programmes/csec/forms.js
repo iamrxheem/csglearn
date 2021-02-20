@@ -8,21 +8,25 @@ import CSECLayout from "../../../layouts/csecLayout"
 
 const Page = () => (
   <CSECLayout>
-    <SEO title="Form and Documents - CSEC Classes" description="" lang="en" />
-    <Breadcrumb>
-      <BreadcrumbItem>
-        <a href="/">Home</a>
-      </BreadcrumbItem>
-      <BreadcrumbItem>
-        <a href="/programmes/">Programmes</a>
-      </BreadcrumbItem>
-      <BreadcrumbItem>
-        <a href="/programmes/">CSEC</a>
-      </BreadcrumbItem>
-      <BreadcrumbItem active>Forms</BreadcrumbItem>
-    </Breadcrumb>
-
     <Container>
+      <SEO
+        title="Form and Documents - CSEC Classes"
+        description="View a list of form and documents for our online CSEC online classes. Enroll now wish CSG Learning Institute."
+        lang="en"
+      />
+      <Breadcrumb>
+        <BreadcrumbItem>
+          <a href="/">Home</a>
+        </BreadcrumbItem>
+        <BreadcrumbItem>
+          <a href="/programmes/">Programmes</a>
+        </BreadcrumbItem>
+        <BreadcrumbItem>
+          <a href="/programmes/">CSEC</a>
+        </BreadcrumbItem>
+        <BreadcrumbItem active>Forms</BreadcrumbItem>
+      </Breadcrumb>
+
       <Row>
         <Col sm={12} md={7} lg={7}>
           <h5>Forms & Documents</h5>

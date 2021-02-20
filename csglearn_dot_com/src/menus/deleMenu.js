@@ -64,9 +64,7 @@ class DELEMenu extends Component {
           <Collapse open={this.state.collapseOpen} navbar>
             <Nav navbar className="ml-auto">
               <NavItem>
-                <NavLink active href="/diplomas/dele/tuition">
-                  Fees & Tuition
-                </NavLink>
+                <NavLink href="/diplomas/dele/tuition">Fees & Tuition</NavLink>
               </NavItem>
 
               <Dropdown
@@ -93,21 +91,19 @@ class DELEMenu extends Component {
               </Dropdown>
 
               <NavItem>
-                <NavLink active href="/diplomas/dele/exam-locations">
+                <NavLink href="/diplomas/dele/exam-locations">
                   Exam Locations
                 </NavLink>
               </NavItem>
 
               {/* Forms and Documents */}
               <NavItem>
-                <NavLink active href="/diplomas/dele/forms">
-                  Forms & Documents
-                </NavLink>
+                <NavLink href="/diplomas/dele/forms">Forms & Documents</NavLink>
               </NavItem>
 
               {/* FAQs */}
               <NavItem>
-                <NavLink active href="/diplomas/dele/FAQs">
+                <NavLink href="/diplomas/dele/FAQs">
                   <i className="fas fa-info-circle text-primary mr-2"></i>
                   FAQs
                 </NavLink>

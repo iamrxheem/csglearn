@@ -33,7 +33,7 @@ function ImportPage() {
         <meta name="rating" content="safe for kids" />
         <meta name="twitter:site" content="@csglearn" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:creator" content="@csglearn" />
+        <meta name="twitter:creator" content="@iamrxheem" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="CSG Learning Institute, Ltd." />
         <meta

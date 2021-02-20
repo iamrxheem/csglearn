@@ -10,11 +10,7 @@ import {
   Button
 } from "shards-react"
 import {
-  isBrowser,
-  isMobile,
-  MobileView,
-  BrowserView
-} from "react-device-detect"
+  isMobile} from "react-device-detect"
 
 class AdmissionsMenu extends Component {
   constructor(props) {

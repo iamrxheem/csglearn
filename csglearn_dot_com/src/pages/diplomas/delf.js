@@ -1,7 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
 import DELFLayout from "../../layouts/delfLayout"
-import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import ProgramSummary from "../../common/programSummary"
 import DELFMiniMenu from "../../common/delfMiniMenu"
@@ -11,7 +9,6 @@ import {
   BreadcrumbItem,
   Row,
   Col,
-  Alert,
   Container,
   Button
 } from "shards-react"
@@ -20,7 +17,7 @@ const DELFPage = () => (
   <DELFLayout>
     <SEO
       title="Diplôme d'Etudes en Langue Française (DELF) in Jamaica"
-      description="Study and take the International French Language, Certification Diplôme d'Etudes en Langue Française, (DELF Exam) in Jamaica with CSG Learning Institute. Call or WhatsApp (876) 707-3443 to get started."
+      description="Study and take the International French Language certification Diplôme d'Etudes en Langue Française, (DELF Exam) in Jamaica with CSG Learning Institute. Call or WhatsApp (876) 707-3443 to get started."
       lang="en"
     />
 
@@ -32,10 +29,10 @@ const DELFPage = () => (
         <BreadcrumbItem>
           <a href="/diplomas/">Diplomas</a>
         </BreadcrumbItem>
-        <BreadcrumbItem active>DELF</BreadcrumbItem>
+        <BreadcrumbItem active>Diploma in French</BreadcrumbItem>
       </Breadcrumb>
 
-      <h5>International French Language Certification (DELF)</h5>
+      <h5>Diploma in French as a Foreign Language</h5>
       <br />
 
       <Row>
@@ -45,11 +42,12 @@ const DELFPage = () => (
             <br />
           </div>
           <span>
-            DELF (Diplôme d'Etudes en Langue Française) and DALF (Diplôme
-            Approfondi de Langue Française) are the only French as a foreign
-            language diplomas issued by the French Ministry of Education. They
-            are valid for life and are recognized worldwide. They allow you to
-            officially validate your French learning.
+            The Diploma in French as a Foreign Langauge (Diplôme d'Etudes en
+            Langue Française) and DALF (Diplôme Approfondi de Langue Française)
+            are the only French as a foreign language diplomas issued by the
+            French Ministry of Education. They are valid for life and are
+            recognized worldwide. They allow you to officially validate your
+            French learning.
           </span>
           <br />
           <br />
@@ -73,9 +71,9 @@ const DELFPage = () => (
               <Button
                 style={{ width: "100%" }}
                 outline
-                href="/diplomas/delf/pre-register"
+                href="/diplomas/delf/enroll"
               >
-                Pre-register
+                Enroll Now
               </Button>
             </Col>
           </Row>
