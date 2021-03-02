@@ -12,8 +12,10 @@ const HomeCarousel = props => {
         {/* CSEC online classes */}
         <Carousel.Item>
           <a href="/programmes/csec">
-            Hello from slide 1
-            <img src="" style={{ width: "100%" }} />
+            <img
+              src="https://dl.dropbox.com/s/wwwiafaz55s6dhs/WhatsApp%20Image%202021-01-08%20at%208.42.44%20PM.jpeg?dl=0"
+              style={{ width: "100%" }}
+            />
           </a>
         </Carousel.Item>
 
@@ -22,7 +24,7 @@ const HomeCarousel = props => {
           <a href="/diplomas/dele">
             <img
               alt="Flyer for the Diplomas in Spanish"
-              src={DeleImage}
+              src="https://dl.dropbox.com/s/am5jl3bbdnsm8hk/WhatsApp%20Image%202021-01-05%20at%2010.33.15%20AM.jpeg?dl=0"
               style={{ width: "100%", height: "100%" }}
             />
           </a>

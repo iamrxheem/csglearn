@@ -1,13 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import SEO from "../../components/seo"
 import CSECSubjectTable from "../../common/csecSubjectTable"
 import { Breadcrumb, BreadcrumbItem } from "shards-react"
-import { Table } from "react-bootstrap"
-import { Alert, Button, Row, Col, Container } from "shards-react"
+import { Button, Row, Col, Container } from "shards-react"
 import CSECLayout from "../../layouts/csecLayout"
 import ProgramSummary from "../../common/programSummary"
+import { Table } from "react-bootstrap"
 
 const Page = () => (
   <CSECLayout>
@@ -33,19 +31,86 @@ const Page = () => (
 
           <br />
           <span>
-            Our weekly online classes are taught by qualified, experienced and
-            qualified teachers with 95% passes. CSG Learning offers a wide range
-            of extra classes for students looking to sit the CSEC examination in
-            January or May/ June 2022.
+            Our 3-months CSEC Online classes begin on Monday, March 8, 2021.
+            Students can register for one-on-one or group classes, all major
+            subjects included.
           </span>
 
           <br />
           <br />
+          <Table>
+            <thead>
+              <tr>
+                <th>Course</th>
+                <th>Cost (per month)</th>
+              </tr>
+            </thead>
 
-          <h3>Subjects Offered</h3>
+            <tbody>
+              <tr>
+                <td>English A</td>
+                <td>JMD $5,800</td>
+              </tr>
+              <tr>
+                <td>Mathematics</td>
+                <td>JMD $5,800</td>
+              </tr>
+              <tr>
+                <td>All other subjects</td>
+                <td>JMD $4,300</td>
+              </tr>
+            </tbody>
+          </Table>
 
           <br />
-          <CSECSubjectTable />
+          <span>
+            <strong>
+              Note, exam registration fees are not included in this amount.
+            </strong>
+          </span>
+
+          <br />
+          <br />
+          <Button
+            style={{ width: "100%" }}
+            outline
+            href="/programmes/csec/enroll"
+          >
+            Enroll now
+          </Button>
+
+          <br />
+          <br />
+          <h4>One-on-one Classes</h4>
+
+          <br />
+          <span>Please note the fees for 1:1 classes.</span>
+
+          <br />
+          <br />
+          <Table>
+            <thead>
+              <tr>
+                <th>Course</th>
+                <th>Cost (per month)</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>English A</td>
+                <td>JMD $12,000</td>
+              </tr>
+              <tr>
+                <td>Mathematics</td>
+                <td>JMD $12,000</td>
+              </tr>
+              <tr>
+                <td>All other subjects</td>
+                <td>JMD $9,000</td>
+              </tr>
+            </tbody>
+          </Table>
 
           <br />
           <Button
@@ -58,17 +123,18 @@ const Page = () => (
 
           <br />
           <br />
+          <br />
         </Col>
 
         <Col sm={12} md={5} lg={5}>
           <ProgramSummary
+            hasOptions
+            options="One-on-One, Group"
             levelOfStudy="CSEC Certification"
             modeOfStudy="Online"
-            duration="1 year"
-            numberOfCourses="Minimum 3"
-            termBeginsOn="Monday, September 13, 2021"
-            showCost
-            cost="Depends on the number of subjects"
+            duration="3 months"
+            numberOfCourses="1"
+            termBeginsOn="Monday, March 8, 2021"
           />
         </Col>
       </Row>

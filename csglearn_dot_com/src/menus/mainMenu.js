@@ -15,8 +15,12 @@ import {
   Collapse,
   Button,
   Row,
-  Col} from "shards-react"
+  Col
+} from "shards-react"
+
+// Images
 import CSGLearningTopImage from "../images/top-logo.jpg"
+import ACCALogo from "../images/logo-acca.jpg"
 
 class MainMenu extends Component {
   constructor(props) {
@@ -88,11 +92,15 @@ class MainMenu extends Component {
         <Navbar type="light" theme="light" expand="md" className="sticky-top">
           <NavbarBrand href="/">CSG Learning</NavbarBrand>
 
-          {isMobile ? (
-            <a href="/diplomas/delf/enroll/" className="ml-auto mr-3">
-              <Button>APPLY</Button>
-            </a>
-          ) : null}
+          {this.props.hideApplyButton ? (
+            <></>
+          ) : (
+            <>
+              <a href="/enroll/" className="ml-auto mr-3">
+                <Button>APPLY</Button>
+              </a>
+            </>
+          )}
 
           <NavbarToggler onClick={this.toggleNavbar} />
 
@@ -123,8 +131,8 @@ class MainMenu extends Component {
                   </DropdownItem>
 
                   {/* CAPE classes */}
+                  <hr />
                   <DropdownItem href="/programmes/sixth-form">
-                    <i className="far fa-bookmark mr-2"></i>
                     Sixth Form Programme
                   </DropdownItem>
 
@@ -133,12 +141,29 @@ class MainMenu extends Component {
                   <hr />
 
                   <DropdownItem href="/programmes/sat">
-                    <img
-                      style={{ width: "50px" }}
-                      className="mr-2"
-                      src="https://crhscountyline.com/wp-content/uploads/2020/04/SAT2-1.png"
-                    />
+                    <i
+                      style={{ color: "orange" }}
+                      className="fas fa-location-arrow mr-2"
+                    ></i>
                     SAT Classes
+                  </DropdownItem>
+
+                  {/* ACCA Classes */}
+                  <DropdownItem href="/programmes/acca">
+                    <i
+                      style={{ color: "royalblue" }}
+                      className="fas fa-location-arrow mr-2"
+                    ></i>
+                    ACCA Programme
+                  </DropdownItem>
+
+                  {/* CFA Classes */}
+                  <DropdownItem href="/programmes/acca">
+                    <i
+                      style={{ color: "purple" }}
+                      className="fas fa-location-arrow mr-2"
+                    ></i>
+                    CFA Programme
                   </DropdownItem>
 
                   <hr />
@@ -169,9 +194,17 @@ class MainMenu extends Component {
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem href="/diplomas/dele">
+                    <i
+                      style={{ color: "royalblue" }}
+                      className="fas fa-location-arrow mr-2"
+                    ></i>
                     Diploma in Spanish
                   </DropdownItem>
                   <DropdownItem href="/diplomas/delf">
+                    <i
+                      style={{ color: "green" }}
+                      className="fas fa-location-arrow mr-2"
+                    ></i>
                     Diploma in French
                   </DropdownItem>
 

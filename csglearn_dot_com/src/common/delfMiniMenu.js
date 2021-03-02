@@ -7,6 +7,7 @@ import {
   Alert,
   Container
 } from "shards-react"
+import { Link } from "gatsby"
 
 const DELFMiniMenu = () => (
   <>

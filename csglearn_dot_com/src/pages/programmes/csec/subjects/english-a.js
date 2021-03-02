@@ -11,6 +11,8 @@ import { isBrowser } from "react-device-detect"
 import ProgramSummary from "../../../../common/programSummary"
 import { Tab, Tabs, TabContainer } from "react-bootstrap"
 
+
+
 const subject = "English A"
 
 const Page = () => (

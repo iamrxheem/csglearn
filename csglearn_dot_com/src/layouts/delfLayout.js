@@ -9,6 +9,17 @@ import { isMobile } from "mobile-device-detect"
 import ImportPage from "../components/import"
 import YoungManSmilingImg from "../images/bbmsml.jpg"
 
+// Configuration for  DELF
+const delfConfig = {
+  to: "/apply",
+  state: {
+    hasProgramme: true,
+    programme: `Diplomas in French`,
+    delf: true,
+    term: ``
+  }
+}
+
 class DELFLayout extends Component {
   constructor(props) {
     super(props)
@@ -39,7 +50,7 @@ class DELFLayout extends Component {
         </div>
         {/* End TopNav */}
 
-        <DELFMenu />
+        <DELFMenu delfConfig={delfConfig} />
 
         {/* Mobile View */}
         {this.props.hideImg === true ? (

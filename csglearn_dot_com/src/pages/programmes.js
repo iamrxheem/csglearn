@@ -35,6 +35,7 @@ import {
   CardBody,
   CardFooter
 } from "shards-react"
+import YoungManSmilingImg from "../images/bbmsml.jpg"
 
 class Page extends Component {
   render() {
@@ -42,6 +43,9 @@ class Page extends Component {
       <>
         <SEO title="Programmes" description="" lang="en" />
         <Layout>
+          <div className="d-block d-md-none">
+            <img src={YoungManSmilingImg} style={{ width: "100%" }} />
+          </div>
           <Container>
             <Breadcrumb>
               <BreadcrumbItem>
@@ -49,7 +53,9 @@ class Page extends Component {
               </BreadcrumbItem>
               <BreadcrumbItem active>Programmes</BreadcrumbItem>
             </Breadcrumb>
+          </Container>
 
+          <Container fluid>
             <Row>
               <Col sm={12} md={7}>
                 <h5>Programmes</h5>

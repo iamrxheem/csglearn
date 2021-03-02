@@ -8,6 +8,83 @@ import { Breadcrumb, BreadcrumbItem } from "shards-react"
 import { Alert, Button, Row, Col, Container } from "shards-react"
 import ComingSoon from "react-coming-soon"
 
+import Faq from "react-faq-component"
+
+const data = {
+  title: "",
+  rows: [
+    {
+      title: "",
+      content: (
+        <span>
+          <br />
+
+          <br />
+          <br />
+        </span>
+      )
+    },
+    {
+      title: "",
+      content: (
+        <span>
+          <br />
+
+          <br />
+          <br />
+        </span>
+      )
+    },
+    {
+      title: "",
+      content: (
+        <span>
+          <br />
+
+          <br />
+          <br />
+        </span>
+      )
+    },
+    {
+      title: "",
+      content: (
+        <span>
+          <br />
+
+          <br />
+          <br />
+        </span>
+      )
+    },
+    {
+      title: "",
+      content: (
+        <span>
+          <br />
+
+          <br />
+          <br />
+        </span>
+      )
+    }
+  ]
+}
+
+const styles = {
+  bgColor: "transparent",
+  titleTextColor: "",
+  rowTitleColor: ""
+  // rowContentColor: 'grey',
+  // arrowColor: "red",
+}
+
+const config = {
+  animate: true
+  // arrowIcon: "V",
+  // tabFocus: true
+}
+
 const SATPage = () => (
   <SATLayout>
     <Container>
@@ -32,27 +109,16 @@ const SATPage = () => (
       <Row>
         <Col sm={6}>
           <SATMiniMenu />
-
-          <br />
-          <h4>Frequently Asked Questions</h4>
-
-          <br />
-          <span>Exam centres are not yet available.</span>
-
-          <br />
-          <br />
-          <span>
-            Our SAT classes are launching in April, 2021. While we smooth out
-            the edges, follow us on{" "}
-            <a target="_blank" href="https://www.instagram.com/csglearn">
-              Instagram
-            </a>{" "}
-            for more updates.
-          </span>
         </Col>
 
         <Col sm={6}></Col>
       </Row>
+
+      <br />
+      <h4>Frequently Asked Questions</h4>
+
+      <br />
+      <Faq data={data} styles={styles} config={config} />
     </Container>
   </SATLayout>
 )

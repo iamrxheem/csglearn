@@ -6,6 +6,7 @@ import { Breadcrumb, BreadcrumbItem } from "shards-react"
 import { Alert, Button, Row, Col, Container } from "shards-react"
 import CSECLayout from "../../../layouts/csecLayout"
 import JotformEmbed from "react-jotform-embed"
+import GeneralProgrammeApplicationComponent from "../../../components/generalProgrammeApplicationComponent"
 
 const Page = () => (
   <CSECLayout>
@@ -32,7 +33,7 @@ const Page = () => (
 
       <br />
       <span>
-        Our 4-months crash course begins on Monday, February 8, 2021. Please use
+        Our 3-months crash course begins on Monday, March 8, 2021. Please use
         this form to enroll. If you wish to inquire only , please
         <a
           target="_blank"
@@ -45,17 +46,17 @@ const Page = () => (
 
       <br />
       <br />
-      <iframe
-        style={{ width: "100%" }}
-        src="https://docs.google.com/forms/d/e/1FAIpQLSeizcVb8ccN99RZ_gKpL_MYrpQM69DVZHVFDuXYgLNWAOxBJg/viewform?embedded=true"
-        width="640"
-        height="1968"
-        frameBorder="0"
-        marginHeight="0"
-        marginWidth="0"
-      >
-        Loading…
-      </iframe>
+      <GeneralProgrammeApplicationComponent
+        note="Open regsitration: 3-months crash course"
+        csec
+        costOfMathAndEnglish={5800}
+        costOfGeneralSubjects={4300}
+        csecCourseMaterialFee={4500}
+        administrationFee={1500}
+        programme="CSEC Online Classes"
+        term="September 18, 2021"
+        hasFee
+      />
     </Container>
   </CSECLayout>
 )

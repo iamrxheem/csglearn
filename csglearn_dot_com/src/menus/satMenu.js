@@ -7,8 +7,8 @@ import {
   NavItem,
   NavLink,
   Collapse,
-  Button} from "shards-react"
-
+  Button
+} from "shards-react"
 
 class SATMenu extends Component {
   constructor(props) {
@@ -47,6 +47,10 @@ class SATMenu extends Component {
           expand="md"
         >
           <NavbarBrand href="/">CSG Learning</NavbarBrand>
+
+          <div className="d-block d-md-none ml-5">
+            <Button href="/programmes/sat/apply">Apply</Button>
+          </div>
 
           <NavbarToggler onClick={this.toggleNavbar} />
 

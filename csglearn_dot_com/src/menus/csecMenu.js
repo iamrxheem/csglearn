@@ -6,15 +6,11 @@ import {
   Nav,
   NavItem,
   NavLink,
-  Collapse
+  Collapse,
+  Button
 } from "shards-react"
-import {
-  MobileView,
-  BrowserView
-} from "react-device-detect"
+import { MobileView, BrowserView } from "react-device-detect"
 
-import {
-  Button} from "@chakra-ui/react"
 import CSECQuickEnroll from "../common/csecQuickEnroll"
 
 class DELEMenu extends Component {
@@ -48,7 +44,7 @@ class DELEMenu extends Component {
           <NavbarBrand href="/">CSG Learning</NavbarBrand>
 
           <MobileView>
-            <Button href="/programmes/csec/enroll">Enroll</Button>
+            <Button href="/programmes/csec/enroll">Enroll now</Button>
           </MobileView>
 
           <NavbarToggler onClick={this.toggleNavbar} />

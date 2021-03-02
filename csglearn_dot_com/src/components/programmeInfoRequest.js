@@ -85,7 +85,35 @@ class ProgrammeInfoRequest extends Component {
                   <FormGroup>
                     <label htmlFor="country">Country</label>
 
-                    <FormSelect id="country" onChange={this.changeHandler} />
+                    <FormSelect id="country" onChange={this.changeHandler}>
+                      <option value="Antigua and Barbuda">
+                        Antigua and Barbuda
+                      </option>
+                      <option value="Bahamas">Bahamas</option>
+                      <option value="Barbados">Barbados</option>
+                      <option value="Belize">Belize</option>
+                      <option value="Dominica">Dominica</option>
+                      <option value="Grenada">Grenada</option>
+                      <option value="Guyana">Guyana</option>
+                      <option value="Haiti">Haiti</option>
+                      <option value="Jamaica" selected>
+                        Jamaica
+                      </option>
+                      <option value="Montserrat">Montserrat</option>
+                      <option value="Saint Kitts and Nevis">
+                        Saint Kitts and Nevis
+                      </option>
+                      <option value="Saint Lucia">Saint Lucia</option>
+                      <option value="Saint Vincent and the Grenadines">
+                        Saint Vincent and the Grenadines
+                      </option>
+                      <option value="Trinidad and Tobago">
+                        Trinidad and Tobago
+                      </option>
+                      <option value="United States of America">
+                        United States of America
+                      </option>
+                    </FormSelect>
                   </FormGroup>
                 </Col>
               </Row>

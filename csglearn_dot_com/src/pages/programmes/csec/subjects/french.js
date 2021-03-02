@@ -17,7 +17,7 @@ const Page = () => (
   <CSECLayout
     hideLogo
     swapImg
-    img="https://logos.flamingtext.com/City-Logos/French-Logo.png"
+    img="https://edraak-marketing-uploads.edraak.org/Courses/French-Course-Image1%20(1).jpg"
   >
     <Container>
       <SEO

@@ -82,7 +82,11 @@ const CSECSubjectTable = props => {
             <td>
               <a href="/programmes/csec/subjects/geography">Geography</a>
             </td>
-            <td>Electronic Document Preparation </td>
+            <td>
+              <a href="/programmes/csec/subjects/edpm">
+                Electronic Document Preparation
+              </a>
+            </td>
           </tr>
         </tbody>
       </Table>

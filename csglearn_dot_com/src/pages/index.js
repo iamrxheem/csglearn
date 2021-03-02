@@ -43,10 +43,14 @@ const IndexPage = () => (
       </Breadcrumb>
     </Container>
 
-    {isMobile ? <HomeCarousel /> : null}
+    {/* Displays on Mobile */}
+    <div className="d-block d-md-none">
+      <HomeCarousel />
+    </div>
 
     <Container fluid>
       <Row>
+        {/* Displays on Browser */}
         <Col sm={12} md={8} lg={8}>
           {isMobile ? null : <HomeCarousel />}
 

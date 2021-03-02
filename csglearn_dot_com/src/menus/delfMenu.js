@@ -13,9 +13,9 @@ import {
   DropdownToggle,
   DropdownMenu
 } from "shards-react"
+import { Link } from "gatsby"
 
-import {
-  MobileView} from "react-device-detect"
+import { MobileView } from "react-device-detect"
 
 class DELFMenu extends Component {
   constructor(props) {
@@ -56,7 +56,13 @@ class DELFMenu extends Component {
           <NavbarBrand href="/">CSG Learning</NavbarBrand>
 
           <MobileView>
-            <Button href="/diplomas/delf/enroll">Enroll Now</Button>
+            <Link
+              className="btn btn-primary"
+              to="/diplomas/delf/enroll/"
+              state={this.props.delfConfig.state}
+            >
+              Enroll now
+            </Link>
           </MobileView>
 
           <NavbarToggler onClick={this.toggleNavbar} />
@@ -108,16 +114,17 @@ class DELFMenu extends Component {
               </NavItem>
               <div className="d-none d-md-block">
                 <NavItem>
-                  <Button
-                    active
+                  <Link
+                    className="btn btn-primary"
+                    to="/apply"
+                    state={this.props.delfConfig.state}
                     style={{
                       width: "100%",
                       marginLeft: "10px"
                     }}
-                    href="/diplomas/delf/enroll"
                   >
-                    Enroll
-                  </Button>
+                    Enroll now
+                  </Link>
                 </NavItem>
               </div>
             </Nav>

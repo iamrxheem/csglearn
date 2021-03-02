@@ -8,6 +8,7 @@ import { MobileView } from "react-device-detect"
 import DELFMiniMenu from "../../../common/delfMiniMenu"
 import DelfApplyFormComponent from "../../../formComponents/delfApplyFormComponent"
 import JotformEmbed from "react-jotform-embed"
+import GeneralProgrammeApplicationComponent from "../../../components/generalProgrammeApplicationComponent"
 
 const Page = () => (
   <>
@@ -49,8 +50,23 @@ const Page = () => (
         <br />
         <br />
         <br />
-        <DelfApplyFormComponent />
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfYfuNtWzDTXTMZgnu3WPvcwYveVUL_mYBBeoY_TFZE4hbq5w/viewform?embedded=true"
+          width="640"
+          height="3611"
+          style={{ frameBorder: "0", width: "100%" }}
+          frameBorder="0"
+          marginHeight="0"
+          marginWidth="0"
+        >
+          Loading…
+        </iframe>
         <br />
+
+        <br />
+        <a href="https://forms.gle/WaihVLtRUxZV1Xic6" target="_blank">
+          Open form in a new tab
+        </a>
       </Container>
     </DELFLayout>
   </>

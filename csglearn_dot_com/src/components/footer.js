@@ -27,6 +27,9 @@ const Footer = () => (
 
               <ul className="list-unstyled">
                 <li className="pb-2">
+                  <a href="/programmes/sat">SAT Classes</a>
+                </li>
+                <li className="pb-2">
                   <a href="/diplomas/dele">Diploma in Spanish</a>
                 </li>
                 <li className="pb-2">
@@ -53,7 +56,9 @@ const Footer = () => (
                   <a href="/pay">Make a Payment</a>
                 </li>
                 <li className="pb-2">
-                  <a href="/store">Store</a>
+                  <a target="_blank" href="https://www.store.csglearn.com">
+                    Store
+                  </a>
                 </li>
 
                 <li className="pb-2">
@@ -87,7 +92,7 @@ const Footer = () => (
                   <a href="/support">Support</a>
                 </li>
                 <li className="pb-2">
-                  <a href="/disclaimer">Disclaimer</a>
+                  <a href="/disclaimers">Disclaimers</a>
                 </li>
                 <li className="pb-2">
                   <a href="/terms-of-use">Terms of Use</a>

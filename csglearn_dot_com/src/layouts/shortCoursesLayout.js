@@ -21,6 +21,7 @@ import {
   CardBody,
   Nav,
   NavItem,
+  Button as Btn,
   NavLink
 } from "shards-react"
 import { Accordion, Table, Button } from "react-bootstrap"
@@ -78,27 +79,26 @@ const ShortCoursesLayout = props => (
               </div>
 
               <br />
-              <Alert theme="primary">
+              <Alert>
                 <br />
-                <h5>Accredited Diploma in Spanish</h5>
+                <h4>Online SAT Classes</h4>
 
-                <br />
                 <span>
-                  Study online for an accredited diploma in Spanish with no
-                  entry requirements.
+                  Our SAT classes prepares students to take the 2021 format of
+                  the SAT exams, and opens a world of opportunities for
+                  international study.
                 </span>
 
                 <br />
                 <br />
-                <Button
-                  className="bg-white text-dark"
+                <Btn
                   style={{ textDecoration: "none" }}
+                  href="/programmes/sat"
                   outline
-                  href="/diplomas/dele/beginners"
-                  secondary
+                  theme="light"
                 >
-                  Beginner's course
-                </Button>
+                  Enroll now
+                </Btn>
                 <br />
                 <br />
               </Alert>
@@ -115,7 +115,7 @@ const ShortCoursesLayout = props => (
 
                 <br />
                 <br />
-                <Button
+                <Btn
                   outline
                   className="bg-white text-dark"
                   style={{ textDecoration: "none" }}
@@ -123,7 +123,7 @@ const ShortCoursesLayout = props => (
                   theme="light"
                 >
                   Apply now
-                </Button>
+                </Btn>
 
                 <br />
                 <br />

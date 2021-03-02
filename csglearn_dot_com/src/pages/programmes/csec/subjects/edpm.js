@@ -1,24 +1,23 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import SEO from "../../../../components/seo"
 import { Breadcrumb, BreadcrumbItem } from "shards-react"
-import {
-  Button,
-  Row,
-  Col,
-  Container} from "shards-react"
+import { Alert, Button, Row, Col, Container } from "shards-react"
 import CSECLayout from "../../../../layouts/csecLayout"
+import JotformEmbed from "react-jotform-embed"
+import { Table } from "react-bootstrap"
 import { isBrowser } from "react-device-detect"
 import ProgramSummary from "../../../../common/programSummary"
 import { Tab, Tabs, TabContainer } from "react-bootstrap"
 
-const subject = "Principles of Accounts"
+const subject = "EDPM"
 
 const Page = () => (
   <CSECLayout
     hideLogo
     swapImg
-    img="https://images.squarespace-cdn.com/content/v1/54c2b1afe4b0688a881a6e01/1600936576762-4B4I5GYIB1FRUC274O57/ke17ZwdGBToddI8pDm48kLkM6y4JkZw0UcECSUjKOfpZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxIxf1kQA6utKFInWPJKzy63gHWiTheVcfpbUq8J1RVNPuis_x0lctZNHNIm2DAEes/Accounting+for+Business_+A+guide+to+doing+your+small+business+accounting.png"
+    img="https://angellawsd.com/wp-content/uploads/2018/11/e-signature-and-document-generation-in-salesforce.jpg"
   >
     <Container>
       <SEO
@@ -45,7 +44,7 @@ const Page = () => (
         <BreadcrumbItem>
           <a href="/programmes/csec/subjects">Subjects</a>
         </BreadcrumbItem>
-        <BreadcrumbItem active>POA</BreadcrumbItem>
+        <BreadcrumbItem active>{subject}</BreadcrumbItem>
       </Breadcrumb>
 
       <Row>
@@ -66,10 +65,7 @@ const Page = () => (
             <Tab eventKey="overview" title="Overview">
               <TabContainer>
                 <br />
-                <br />
-
-                <br />
-                <br />
+                <span>This is overview</span>
               </TabContainer>
             </Tab>
             <Tab eventKey="entry" title="Entry">

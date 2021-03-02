@@ -23,27 +23,59 @@ const ProgramSummary = props => (
         <span style={{ marginTop: "10px" }}>{props.levelOfStudy}</span>
       </Col>
 
-      <br />
-      <br />
-      <br />
-      <br />
-      {/* Number of Courses */}
-      <Col xs={3} md={3}>
-        <i className="fas fa-list-ul fa-3x"></i>
-      </Col>
-      <Col xs={9} md={9}>
-        <span>
-          <b>NUMBER OF COURSES</b>
-        </span>
+      {props.hideCourses ? (
+        <></>
+      ) : (
+        <>
+          <br />
+          <br />
+          <br />
+          <br />
+          {/* Number of Courses */}
+          <Col xs={3} md={3}>
+            <i className="fas fa-list-ul fa-3x"></i>
+          </Col>
+          <Col xs={9} md={9}>
+            <span>
+              <b>NUMBER OF COURSES</b>
+            </span>
 
-        <br />
-        <span style={{ marginTop: "10px" }}>{props.numberOfCourses}</span>
-      </Col>
+            <br />
+            <span style={{ marginTop: "10px" }}>{props.numberOfCourses}</span>
+          </Col>
+        </>
+      )}
 
       <br />
       <br />
       <br />
       <br />
+
+      {/* Options */}
+      {props.hasOptions ? (
+        <>
+          {/* Number of Courses */}
+          <Col xs={3} md={3}>
+            <i className="fas fa-cogs  fa-3x"></i>
+          </Col>
+          <Col xs={9} md={9}>
+            <span>
+              <b>OPTIONS</b>
+            </span>
+
+            <br />
+            <span style={{ marginTop: "10px" }}>{props.options}</span>
+          </Col>
+
+          <br />
+          <br />
+          <br />
+          <br />
+          {/* End options */}
+        </>
+      ) : (
+        <></>
+      )}
 
       {props.showCost ? (
         <>

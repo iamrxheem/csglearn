@@ -31,7 +31,7 @@ class HomeRightPromoComponent extends Component {
             pill
             outline
           >
-            Starting soon
+            Enroll now
           </Button>
           <br />
           <br />

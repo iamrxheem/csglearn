@@ -14,7 +14,11 @@ import { Tab, Tabs, TabContainer } from "react-bootstrap"
 const subject = "English Literature"
 
 const Page = () => (
-  <CSECLayout>
+  <CSECLayout
+    hideLogo
+    swapImg
+    img="https://calhum.org/wp-content/uploads/2017/07/AP_Blog_Enewsjpg-614x330.jpg"
+  >
     <Container>
       <SEO
         title={`CXC CSEC ${subject}`}
@@ -40,7 +44,7 @@ const Page = () => (
         <BreadcrumbItem>
           <a href="/programmes/csec/subjects">Subjects</a>
         </BreadcrumbItem>
-        <BreadcrumbItem active>{subject}</BreadcrumbItem>
+        <BreadcrumbItem active>Literature</BreadcrumbItem>
       </Breadcrumb>
 
       <Row>

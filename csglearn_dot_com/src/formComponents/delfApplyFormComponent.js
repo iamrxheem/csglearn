@@ -21,6 +21,8 @@ class DelfApplyFormComponent extends Component {
     super(props)
 
     this.handleChange = this.handleChange.bind(this)
+    this.handleLastName = this.handleLastName.bind(this)
+    this.handleFirstName = this.handleFirstName.bind(this)
 
     this.state = {
       id: "",
@@ -64,6 +66,16 @@ class DelfApplyFormComponent extends Component {
     this.setState({ value: event.target.value })
   }
 
+  // Handle the first name change
+  handleFirstName(event) {
+    this.setState({ firstName: event.target.value })
+  }
+
+  // Handle the first name change
+  handleLastName(event) {
+    this.setState({ firstName: event.target.value })
+  }
+
   render() {
     return (
       <>
@@ -94,7 +106,11 @@ class DelfApplyFormComponent extends Component {
                             </InputGroupText>
                           </InputGroupAddon>
 
-                          <FormInput id="#firstName" placeholder="" />
+                          <FormInput
+                            onChange={this.handleFirstName}
+                            id="#firstName"
+                            placeholder=""
+                          />
                         </InputGroup>
                       </FormGroup>
                     </Col>
@@ -124,7 +140,11 @@ class DelfApplyFormComponent extends Component {
                         </InputGroupText>
                       </InputGroupAddon>
 
-                      <FormInput id="#lastName" placeholder="" />
+                      <FormInput
+                        onChange={this.handleLastName}
+                        id="#lastName"
+                        placeholder=""
+                      />
                     </InputGroup>
                   </FormGroup>
                 </Col>
@@ -168,6 +188,8 @@ class DelfApplyFormComponent extends Component {
                     </InputGroupText>
                   </InputGroupAddon>
                   <DatePicker
+                    selected={new Date()}
+                    dateFormat="MMMM d, yyyy"
                     style={{ width: "100%" }}
                     className="form-control"
                   />

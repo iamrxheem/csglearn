@@ -8,6 +8,8 @@ import { Breadcrumb, BreadcrumbItem } from "shards-react"
 import { Alert, Button, Row, Col, Container } from "shards-react"
 import ComingSoon from "react-coming-soon"
 
+import GeneralProgrammeApplicationComponent from "../../../components/generalProgrammeApplicationComponent"
+
 const SATPage = () => (
   <SATLayout>
     <Container>
@@ -35,24 +37,21 @@ const SATPage = () => (
 
           <br />
           <h4>SAT Online Application</h4>
-
           <br />
-          <span>Registration opens in May.</span>
-
-          <br />
-          <br />
-          <span>
-            Our SAT classes are launching in April, 2021. While we smooth out
-            the edges, follow us on{" "}
-            <a target="_blank" href="https://www.instagram.com/csglearn">
-              Instagram
-            </a>{" "}
-            for more updates.
-          </span>
         </Col>
 
         <Col sm={6}></Col>
       </Row>
+
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLScF5J5onlNur-XU_Hm9G4AMeOCixJ22YSnY-wE-07I406cIfg/viewform?embedded=true"
+        style={{ width: "100%", height: "1347px" }}
+        frameBorder="0"
+        marginHeight="0"
+        marginWidth="0"
+      >
+        Loading…
+      </iframe>
     </Container>
   </SATLayout>
 )

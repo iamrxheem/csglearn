@@ -1,24 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import SEO from "../../../../components/seo"
 import { Breadcrumb, BreadcrumbItem } from "shards-react"
 import {
-  Alert,
   Button,
   Row,
   Col,
-  Container,
-  Card,
-  CardHeader,
-  CardTitle,
-  CardImg,
-  CardBody,
-  CardFooter
-} from "shards-react"
+  Container} from "shards-react"
 import CSECLayout from "../../../../layouts/csecLayout"
-import JotformEmbed from "react-jotform-embed"
-import { Table } from "react-bootstrap"
 import { isBrowser } from "react-device-detect"
 import ProgramSummary from "../../../../common/programSummary"
 import { Tab, Tabs, TabContainer } from "react-bootstrap"

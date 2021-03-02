@@ -4,7 +4,8 @@ import TopNav from "../components/topNav"
 import "../components/layout.css"
 import ImportPage from "../components/import"
 import Footer from "../components/footer"
-import {  Nav, NavLink, NavItem } from "shards-react"
+import { Nav, NavLink, NavItem } from "shards-react"
+import YoungStudentSmiling from "../images/yss.jpg"
 
 class CSECLayout extends Component {
   constructor(props) {
@@ -52,10 +53,7 @@ class CSECLayout extends Component {
             </>
           ) : (
             <>
-              <img
-                src="https://loopnewslive.blob.core.windows.net/liveimage/sites/default/files/2020-09/Di3GpPFEwP.jpg"
-                style={{ width: "100%" }}
-              />
+              <img src={YoungStudentSmiling} style={{ width: "100%" }} />
             </>
           )}
 

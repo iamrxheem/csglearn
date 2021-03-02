@@ -55,9 +55,13 @@ class SATLayout extends Component {
           {this.props.children}
           <br />
           <br />
+          <br />
         </div>
+
         <img src={SATImage} style={{ width: "100%", height: "50%" }} />
         {/* General footer */}
+        <br />
+        <br />
         <Footer />
       </>
     )
