@@ -36,12 +36,10 @@ class GetUsRate extends Component {
     this.getGeoInfo()
   }
 
-  getConvertedAmount(amount) {
-    const amountInUsd = amount / EXCHANGE_RATE
+  getConvertedAmount() {
+    const amountInUsd = this.state.amount / EXCHANGE_RATE
 
     return Math.ceil(amountInUsd / 10) * 10
-
-    return
   }
 
   render() {
@@ -51,13 +49,17 @@ class GetUsRate extends Component {
           <>JMD ${this.formatAsCurrency(this.state.amount)}</>
         </>
       )
+    } else if (this.state.country !== "JM") {
+      return (
+        <>
+          <>USD ${this.formatAsCurrency(this.getConvertedAmount)}</>
+        </>
+      )
     } else {
       return (
         <>
-          <>
-            USD $
-            {this.formatAsCurrency(this.getConvertedAmount(this.state.amount))}
-          </>
+          {/* If all else fails, which it shouldn't but it does, it will return the rate in JMD */}
+          <>JMD ${this.formatAsCurrency(this.state.amount)}</>
         </>
       )
     }

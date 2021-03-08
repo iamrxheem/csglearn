@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { isBrowser, isMobile } from "react-device-detect"
+import { isBrowser, isMobile, MobileView } from "react-device-detect"
 import TopNav from "../components/topNav"
 import {
   Navbar,
@@ -90,15 +90,17 @@ class MainMenu extends Component {
 
         {/* Main Menu */}
         <Navbar type="light" theme="light" expand="md" className="sticky-top">
-          <NavbarBrand href="/">CSG Learning</NavbarBrand>
+          <NavbarBrand href="/">CSG Learning </NavbarBrand>
 
           {this.props.hideApplyButton ? (
             <></>
           ) : (
             <>
-              <a href="/enroll/" className="ml-auto mr-3">
-                <Button>APPLY</Button>
-              </a>
+              <div className="d-block d-md-none">
+                <a href="/enroll/" className="ml-auto ml-4">
+                  <Button>APPLY</Button>
+                </a>
+              </div>
             </>
           )}
 

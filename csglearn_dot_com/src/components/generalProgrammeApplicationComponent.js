@@ -33,19 +33,20 @@ class GeneralProgrammeApplicationComponent extends Component {
     this.state = {
       id: uuidv4(),
       programme: this.props.programme,
-      level: "",
-      subjects: [],
-      term: this.props.term,
-      firstName: "",
-      lastName: "",
-      dateOfBirth: "",
+      level: this.props.level ? this.props.level : "",
+      subjects: this.props.subjects ? this.props.subjects : [],
+      subjectCount: 0,
+      term: this.props.term ? this.props.term : "",
+      firstName: this.props.firstName ? this.props.firstName : "",
+      lastName: this.props.lastName ? this.props.lastName : "",
+      dateOfBirth: this.props.dateOfBirth ? this.props.dateOfBirth : "",
       gender: "Male",
-      phoneNumber: "",
-      email: "",
-      address: "",
-      country: "",
-      employed: false,
-      school: false,
+      phoneNumber: this.props.phoneNumber ? this.props.phoneNumber : "",
+      email: this.props.email ? this.props.email : "",
+      address: this.props.address ? this.props.address : "",
+      country: this.props.country ? this.props.country : "",
+      employed: this.props.employed ? this.props.employed : false,
+      school: this.props.school ? this.props.school : false,
       hasAgreedToTerms: false,
       errorMsg: "",
       allGood: false,
@@ -74,6 +75,7 @@ class GeneralProgrammeApplicationComponent extends Component {
     this.addSubject = this.addSubject.bind(this)
     this.addToCsecCost = this.addToCsecCost.bind(this)
     this.removeFromCsecCost = this.removeFromCsecCost.bind(this)
+    this.isSubjectSelected = this.isSubjectSelected.bind(this)
 
     // Handle submit
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -119,6 +121,15 @@ class GeneralProgrammeApplicationComponent extends Component {
     this.setState({ lastName: e.target.value })
 
     this.checkIfAllGood()
+  }
+
+  // Checks the subject array if a subject is selected and return either true or false
+  isSubjectSelected(e) {
+    if (this.state.subjects.includes(e.target.value)) {
+      return true
+    } else {
+      return false
+    }
   }
 
   // Changes the phone number
@@ -261,9 +272,16 @@ class GeneralProgrammeApplicationComponent extends Component {
 
       // If Math or English then we'd want to add the price for
       // the Math and ENglish classes
-      if (sub === "English A" || sub == "Mathematics") {
+      if (sub === "English A" || sub === "Mathematics") {
         this.removeFromCsecCost(this.props.costOfMathAndEnglish)
-      } else {
+      } else if (
+        sub === "Chemistry" ||
+        sub === "Physics" ||
+        sub === "Chemistry"
+      ) {
+        this.removeFromCsecCost(this.props.costOfScienceSubjects)
+      }
+      {
         // Use the regular subject cost
         this.removeFromCsecCost(this.props.costOfGeneralSubjects)
       }
@@ -273,8 +291,14 @@ class GeneralProgrammeApplicationComponent extends Component {
 
       // If Math or English then we'd want to add the price for
       // the Math and ENglish classes
-      if (sub === "English A" || sub == "Mathematics") {
+      if (sub === "English A" || sub === "Mathematics") {
         this.addToCsecCost(this.props.costOfMathAndEnglish)
+      } else if (
+        sub === "Chemistry" ||
+        sub === "Physics" ||
+        sub === "Chemistry"
+      ) {
+        this.addToCsecCost(this.props.costOfScienceSubjects)
       } else {
         // Use the regular subject cost
         this.addToCsecCost(this.props.costOfGeneralSubjects)
@@ -283,7 +307,8 @@ class GeneralProgrammeApplicationComponent extends Component {
 
     // Then we finally update the states
     this.setState({
-      subjects: allSubjects
+      subjects: allSubjects,
+      subjectCount: this.state.subjects.length
     })
   }
 
@@ -390,7 +415,7 @@ class GeneralProgrammeApplicationComponent extends Component {
                       <br />
                       <br />
                       <Row>
-                        <Col xs={6}>
+                        <Col md={6}>
                           <FormCheckbox
                             onChange={this.addSubject}
                             value="Additional Mathematics"
@@ -452,7 +477,7 @@ class GeneralProgrammeApplicationComponent extends Component {
                             Geography
                           </FormCheckbox>
                         </Col>
-                        <Col xs={6}>
+                        <Col md={6}>
                           <FormCheckbox
                             onChange={this.addSubject}
                             value="Human & Social Biology"
@@ -516,6 +541,7 @@ class GeneralProgrammeApplicationComponent extends Component {
                         </Col>
                       </Row>
                     </FormGroup>
+                    <br />
                   </>
                 ) : (
                   <></>
@@ -575,6 +601,7 @@ class GeneralProgrammeApplicationComponent extends Component {
                 {/* End first and last name */}
 
                 {/* Gender */}
+                <br />
                 <FormGroup>
                   <label htmlFor="gender">
                     <span style={{ color: "red" }}>* </span>Gender
@@ -780,7 +807,9 @@ class GeneralProgrammeApplicationComponent extends Component {
                       administrationFee={this.props.administrationFee}
                       csecCourseMaterialFee={this.props.csecCourseMaterialFee}
                       subjects={this.state.subjects}
+                      subjectCount={this.state.subjectCount}
                       cost={this.state.cost}
+                      costOfScienceSubjects={this.props.costOfScienceSubjects}
                     />
                   </>
                 ) : null}
@@ -793,7 +822,7 @@ class GeneralProgrammeApplicationComponent extends Component {
                       this.agreedToTerms(e, !this.state.hasAgreedToTerms)
                     }
                   >
-                    I agree to the{" "}
+                    I agree to the above listed charges,{" "}
                     <a target="_blank" href="/terms-of-use">
                       Terms of Use
                     </a>{" "}

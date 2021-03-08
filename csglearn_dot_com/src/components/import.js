@@ -1,5 +1,8 @@
 import React from "react"
 import { Helmet } from "react-helmet"
+
+// Local CSS imports
+import "../assets/css/animate.css"
 import "normalize.css"
 
 function ImportPage() {
@@ -7,7 +10,6 @@ function ImportPage() {
     <>
       <Helmet>
         <script src="https://www.paypal.com/sdk/js?client-id=AWF2k7JHihz8QzSt9ivellRbG2hNj_fOHF0PkZsv3u6qcuHtZJX33pXJWPEpR4CXsJC4fZ_Vf3JKe1aM&currency=USD" />
-
         <link
           href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap"
           rel="stylesheet"

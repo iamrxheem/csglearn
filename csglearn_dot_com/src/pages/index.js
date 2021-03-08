@@ -11,7 +11,12 @@ import {
   Container,
   Row,
   Col,
-  Button
+  Button,
+  Card,
+  CardFooter,
+  CardBody,
+  CardTitle,
+  CardImg
 } from "shards-react"
 import HomeCarousel from "../home/homeCarousel"
 import ComingSoonPromotion from "../components/comingSoonPromotion"
@@ -34,120 +39,58 @@ const IndexPage = () => (
       />
     </Helmet>
 
-    <Container>
-      <Breadcrumb>
-        <BreadcrumbItem>
-          <a href="/">Home</a>
-        </BreadcrumbItem>
-        <BreadcrumbItem active></BreadcrumbItem>
-      </Breadcrumb>
-    </Container>
-
-    {/* Displays on Mobile */}
-    <div className="d-block d-md-none">
-      <HomeCarousel />
-    </div>
-
-    <Container fluid>
-      <Row>
-        {/* Displays on Browser */}
-        <Col sm={12} md={8} lg={8}>
-          {isMobile ? null : <HomeCarousel />}
-
-          <br />
-        </Col>
-        <Col sm={12} md={4} lg={4}>
-          <HomeRightPromoComponent />
-        </Col>
-      </Row>
-    </Container>
-
-    <Container>
-      <br />
-      <br />
-      <Row className="text-center">
-        <Col md={4} lg={4} xl={4}>
-          <img
-            style={{ width: "100px" }}
-            className="rounded-circle"
-            src="https://www.languagescientific.com/wp-content/uploads/2016/02/translationaccreditationprocess-e1481228309605.jpg"
-          />
-
-          <br />
-          <br />
-          <h5>Accredited</h5>
-          <br />
-
-          <span>
-            Study for accredited certifications and diplomas including SATs, CXC
-            and more!
-          </span>
-
-          <br />
-          <br />
-          <Button href="/programmes">Find a programme</Button>
-        </Col>
-
-        <Col md={4}>
-          <div className="d-block d-md-none">
-            <br />
-            <br />
-          </div>
-
-          <img
-            className="rounded-circle"
-            style={{ width: "100px" }}
-            src="https://i.imgur.com/F42WuKZ.jpg"
-          />
-
-          <br />
-          <br />
-          <h5>Fully Online</h5>
-          <br />
-
-          <span>
-            Learn from the comfort of your home in a timeframe that fits your
-            schedule.
-          </span>
-
-          <br />
-          <br />
-          <Button>Learn more</Button>
-        </Col>
-        <Col md={4}>
-          <div className="d-block d-md-none">
-            <br />
-            <br />
-          </div>
-
-          <img
-            style={{ width: "100px" }}
-            className="rounded-circle"
-            src="https://www.kindpng.com/picc/m/469-4690660_trusted-by-kitchen-bath-professionals-everywhere-quality-free.png"
-          />
-          <br />
-          <br />
-          <h5>Trusted</h5>
-          <br />
-
-          <span>
-            Trusted by over 25,000 yearly students across the Caribbean for
-            online resources.
-          </span>
-
-          <br />
-          <br />
-          <Button>Find out why</Button>
-        </Col>
-      </Row>
-    </Container>
-
-    <br />
-    <br />
-    <ComingSoonPromotion />
-
     <AppPromo />
-    <br />
+
+    <Container fluid className="mt-5">
+      <Row>
+        <Col md={6}>
+          <Alert theme="primary">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+          </Alert>
+        </Col>
+
+        <Col md={6}>
+          <Alert theme="warning">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+          </Alert>
+        </Col>
+      </Row>
+    </Container>
+
     <br />
   </Layout>
 )

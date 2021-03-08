@@ -3,9 +3,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Breadcrumb, BreadcrumbItem, Container } from "shards-react"
 
-import {
-  Row,
-  Col} from "shards-react"
+import { Row, Col } from "shards-react"
 import { CopyToClipboard } from "react-copy-to-clipboard"
 import { isMobile } from "react-device-detect"
 
@@ -51,69 +49,6 @@ class Page extends Component {
 
                 <br />
                 <br />
-
-                {/* Mobile View */}
-                <div className="d-block d-md-none">
-                  <Row>
-                    <Col xs={6}>
-                      <a
-                        src="https://apps.apple.com/us/app/open-lms/id1212149426"
-                        target="_blank"
-                      >
-                        <img
-                          src="https://i1.wp.com/incipia.co/wp-content/uploads/2017/10/app-store.png?fit=519%2C160&ssl=1"
-                          style={{ width: "100%" }}
-                        />
-                      </a>
-                    </Col>
-                    <Col xs={6}>
-                      <a
-                        src="https://play.google.com/store/apps/details?id=com.mrooms.bbopen&hl=en&gl=US"
-                        target="_blank"
-                      >
-                        <img
-                          src="https://miro.medium.com/max/4000/1*OIIv4FEjJQMqh-zEPhtlYA.png"
-                          style={{ width: "100%" }}
-                        />
-                      </a>
-                    </Col>
-                  </Row>
-                </div>
-
-                {/* Browser View */}
-                <div className="d-none d-md-block">
-                  <Row>
-                    <Col xs={6}>
-                      <a
-                        href="https://apps.apple.com/us/app/open-lms/id1212149426"
-                        target="_blank"
-                      >
-                        <img
-                          src="https://i1.wp.com/incipia.co/wp-content/uploads/2017/10/app-store.png?fit=519%2C160&ssl=1"
-                          style={{ width: "100%", height: "70px" }}
-                        />
-                      </a>
-                    </Col>
-                    <Col xs={6}>
-                      {/* Mobile View */}
-                      <div className="d-block d-md-none">
-                        <br />
-                      </div>
-                      <a
-                        href="https://play.google.com/store/apps/details?id=com.mrooms.bbopen&hl=en&gl=US"
-                        target="_blank"
-                      >
-                        <img
-                          src="https://miro.medium.com/max/4000/1*OIIv4FEjJQMqh-zEPhtlYA.png"
-                          style={{
-                            width: "100%",
-                            height: isMobile ? "" : "70px"
-                          }}
-                        />
-                      </a>
-                    </Col>
-                  </Row>
-                </div>
               </Col>
               <Col sm={12} md={6} lg={6}>
                 <div className="d-block d-md-none">

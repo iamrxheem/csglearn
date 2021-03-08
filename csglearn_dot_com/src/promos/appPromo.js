@@ -8,69 +8,167 @@ import {
   Col,
   Button
 } from "shards-react"
+import { isMobile } from "react-device-detect"
+import { Carousel } from "react-bootstrap"
+import { Animated } from "react-animated-css"
+
+// images
+import MobileAppPromoImage from "../images/app-promo.png"
+import MobileAppPromoImage2 from "../images/app-promo-2.png"
+import MobileAppPromoMobile from "../images/app-promo-mobile.png"
+
+// Logos and icons
+import GooglePlayIcon from "../images/google-play-icon.png"
 
 const AppPromo = () => (
   <>
-    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-      <div class="col-md-5 p-lg-5 mx-auto my-5">
-        <h1 class="display-4 font-weight-normal">Do more with the app</h1>
-        <p class="lead font-weight-normal">
-          Ease and convenience - take your online learning experience offline.
-        </p>
-        <a class="btn btn-outline-secondary" href="/app">
-          Download Now
-        </a>
-      </div>
-      <div class="product-device box-shadow d-none d-md-block"></div>
-      <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
-    </div>
+    <Container>
+      <Row>
+        <Col sm={6}>
+          {isMobile ? (
+            <>
+              <Animated
+                animationIn="bounceInLeft"
+                animationOut="fadeOut"
+                isVisible={true}
+              >
+                <img
+                  className="d-block w-100"
+                  style={{ width: "100%" }}
+                  src={MobileAppPromoMobile}
+                />
+              </Animated>
+            </>
+          ) : (
+            <>
+              <Animated
+                animationIn="bounceInUp"
+                animationOut="fadeOut"
+                isVisible={true}
+              >
+                <Carousel slide={false}>
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-100"
+                      style={{ width: "100%" }}
+                      src={MobileAppPromoImage}
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      className="d-block w-100"
+                      style={{ width: "100%" }}
+                      src={MobileAppPromoImage2}
+                    />
+                  </Carousel.Item>
+                </Carousel>
+              </Animated>
+            </>
+          )}
+        </Col>
+        <Col sm={6}>
+          <div>
+            {isMobile ? (
+              <></>
+            ) : (
+              <>
+                <br />
+              </>
+            )}
+            <br />
+            <h1>Study from the comfort of your home</h1>
 
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-      <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5">Learn on the go</h2>
-          <p class="lead">
-            Join your classes, upload assignments and access course materials
-            offline
-          </p>
-        </div>
-        <div
-          class="bg-light box-shadow mx-auto"
-          style={{
-            width: "80%",
-            height: "300px",
-            borderRadius: "21px 21px 0 0"
-          }}
-        >
-          <img
-            src="https://i.imgur.com/seTgnIj.jpg"
-            style={{ width: "100%" }}
-          />
-        </div>
-      </div>
-      <div class="bg-light mr-md-3 px-md-5 pt-3 px-3 pt-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">In-app Messaging</h2>
-          <p class="lead">
-            Ask questions and communicate with your teachers and peers instantly
-          </p>
-        </div>
-        <div
-          class="bg-dark  mx-auto"
-          style={{
-            width: "80%",
-            height: "300px",
-            borderRadius: "21px 21px 0 0"
-          }}
-        >
-          <img
-            className="rounded"
-            src="https://i.imgur.com/c1RvZUa.jpg"
-            style={{ width: "100%" }}
-          />
-        </div>
-      </div>
-    </div>
+            <br />
+            <span>
+              Study online for accredited diplomas and certifications, and use
+              the app to stay connected with your peers, communicate with
+              teachers and more!
+            </span>
+
+            <br />
+            <br />
+            <ul style={{ listStyleType: "none", marginLeft: "-20px" }}>
+              <li>
+                <i className="fas fa-check-circle mr-3 text-success"></i>
+                <span>Get class notifications and reminders</span>
+              </li>
+              <li className="mt-3">
+                <i className="fas fa-check-circle mr-3 text-success"></i>
+                <span>Access class materials both online and offline</span>
+              </li>
+              <li className="mt-3">
+                <i className="fas fa-check-circle mr-3 text-success"></i>
+                <span>Upload assignments and homework</span>
+              </li>
+              <li className="mt-3">
+                <i className="fas fa-check-circle mr-3 text-success"></i>
+                <span>Communicate with teachers and peers</span>
+              </li>
+            </ul>
+          </div>
+
+          <br />
+          {/* Mobile View */}
+          <div className="d-block d-md-none">
+            <Row>
+              <Col xs={6}>
+                <a
+                  src="https://apps.apple.com/us/app/open-lms/id1212149426"
+                  target="_blank"
+                >
+                  <img
+                    src="https://i1.wp.com/incipia.co/wp-content/uploads/2017/10/app-store.png?fit=519%2C160&ssl=1"
+                    style={{ width: "100%" }}
+                  />
+                </a>
+              </Col>
+              <Col xs={6}>
+                <a
+                  src="https://play.google.com/store/apps/details?id=com.mrooms.bbopen&hl=en&gl=US"
+                  target="_blank"
+                >
+                  <img src={GooglePlayIcon} style={{ width: "95%" }} />
+                </a>
+              </Col>
+            </Row>
+          </div>
+
+          {/* Browser View */}
+          <div className="d-none d-md-block">
+            <Row>
+              <Col xs={6}>
+                <a
+                  href="https://apps.apple.com/us/app/open-lms/id1212149426"
+                  target="_blank"
+                >
+                  <img
+                    src="https://i1.wp.com/incipia.co/wp-content/uploads/2017/10/app-store.png?fit=519%2C160&ssl=1"
+                    style={{ width: "70%" }}
+                  />
+                </a>
+              </Col>
+              <Col xs={6}>
+                {/* Mobile View */}
+                <div className="d-block d-md-none">
+                  <br />
+                </div>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.mrooms.bbopen&hl=en&gl=US"
+                  target="_blank"
+                >
+                  <img
+                    src={GooglePlayIcon}
+                    style={{
+                      width: "65%"
+                    }}
+                  />
+                </a>
+              </Col>
+            </Row>
+          </div>
+        </Col>
+      </Row>
+    </Container>
   </>
 )
 

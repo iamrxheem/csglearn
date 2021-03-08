@@ -12,8 +12,8 @@ const Page = () => (
   <CSECLayout>
     <Container>
       <SEO
-        title="Enroll Today - Online CSEC Classes"
-        description="Enroll in online CSEC classes with CSEC classes and exam registration with CSG Learning Institute for September 2021."
+        title="Enroll in Online CSEC Classes"
+        description="Enroll in online CSEC classes with CSEC classes and exam registration with CSG Learning Institute in Jamaica for September 2021."
         lang="en"
       />
       <Breadcrumb>
@@ -29,7 +29,7 @@ const Page = () => (
         <BreadcrumbItem active>Enroll</BreadcrumbItem>
       </Breadcrumb>
 
-      <h5>Enroll</h5>
+      <h3>Enroll in Online CSEC Classes</h3>
 
       <br />
       <span>
@@ -47,15 +47,21 @@ const Page = () => (
       <br />
       <br />
       <GeneralProgrammeApplicationComponent
-        note="Open regsitration: 3-months crash course"
+        firstName=""
+        lastName=""
+        email=""
+        note=""
+        address=""
         csec
-        costOfMathAndEnglish={5800}
-        costOfGeneralSubjects={4300}
-        csecCourseMaterialFee={4500}
-        administrationFee={1500}
         programme="CSEC Online Classes"
         term="September 18, 2021"
         hasFee
+        term="Regular"
+        costOfMathAndEnglish={5800}
+        costOfGeneralSubjects={4300}
+        costOfScienceSubjects={5300}
+        csecCourseMaterialFee={4500}
+        administrationFee={1500}
       />
     </Container>
   </CSECLayout>
