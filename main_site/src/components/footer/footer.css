@@ -1,0 +1,17 @@
+.ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.ul li {
+    padding-top: 15px;
+}
+
+.ul .dark li a  {
+  color: #C0C0C0;  /* Silver */
+}
+
+.ul .dark li a:hover {
+  color: #FFF!important;   /* White */
+  text-decoration: none;
+}

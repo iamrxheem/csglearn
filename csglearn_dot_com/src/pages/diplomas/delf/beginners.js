@@ -131,7 +131,7 @@ const Page = () => (
               numberOfCourses="4"
               modeOfStudy="Online"
               duration="10 months"
-              termBeginsOn="March 8, 2021"
+              termBeginsOn="March 29, 2021"
               showCost
               cost="JMD $37,500 per term, 2 terms"
             />

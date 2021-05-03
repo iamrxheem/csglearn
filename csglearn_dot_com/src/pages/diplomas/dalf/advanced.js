@@ -128,7 +128,7 @@ const Page = () => (
               numberOfCourses="4"
               modeOfStudy="Online"
               duration="10 months"
-              termBeginsOn="March 8, 2021, 2 terms"
+              termBeginsOn="March 29, 2021"
               showCost
               cost="USD $700 per term"
             />

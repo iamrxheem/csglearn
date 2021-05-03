@@ -22,6 +22,13 @@ import HomeCarousel from "../home/homeCarousel"
 import ComingSoonPromotion from "../components/comingSoonPromotion"
 import { MobileView, BrowserView, isMobile } from "react-device-detect"
 import { Helmet } from "react-helmet"
+import LazyLoad from "react-lazyload"
+
+import AwesomeSlider from "react-awesome-slider"
+import "react-awesome-slider/dist/styles.css"
+
+// Images
+import MaleStudentImageCropped from "../images/male-cropped-out.png"
 
 const IndexPage = () => (
   <Layout>
@@ -39,54 +46,65 @@ const IndexPage = () => (
       />
     </Helmet>
 
+    <br />
     <AppPromo />
 
-    <Container fluid className="mt-5">
+    <ComingSoonPromotion />
+
+    <Container fluid className="mt-4">
       <Row>
         <Col md={6}>
-          <Alert theme="primary">
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+          <Alert theme="light">
+            <Row>
+              <Col md={6}>
+                <LazyLoad>
+                  <img
+                    style={{ width: "100%" }}
+                    src={MaleStudentImageCropped}
+                  />
+                </LazyLoad>
+              </Col>
+              <Col md={6}>
+                <br />
+                <h3>Accredited Diploma in French</h3>
+
+                <br />
+                <span>
+                  Start learning French from scratch for the accredited Diplomas
+                  in French, or the Diploma in French Master's Certification for
+                  fluent speakers.
+                </span>
+
+                <br />
+                <br />
+
+                <Button
+                  style={{ textDecoration: "none" }}
+                  href="/diplomas/delf/beginners"
+                  outline
+                  theme="secondary"
+                >
+                  Beginner's Diploma
+                </Button>
+
+                <br />
+                <br />
+                <span>
+                  Learn about the{" "}
+                  <a className="text-primary" href="/diplomas/dalf/advanced">
+                    master's certification
+                  </a>
+                  .
+                </span>
+                <br />
+                <br />
+              </Col>
+            </Row>
           </Alert>
         </Col>
 
         <Col md={6}>
-          <Alert theme="warning">
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-          </Alert>
+          <HomeCarousel />
         </Col>
       </Row>
     </Container>

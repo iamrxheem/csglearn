@@ -88,7 +88,7 @@ const DELFPage = () => (
             numberOfCourses="4"
             modeOfStudy="Online"
             duration="1 year"
-            termBeginsOn="March 8, 2021"
+            termBeginsOn="March 29, 2021"
           />
           <br />
         </Col>

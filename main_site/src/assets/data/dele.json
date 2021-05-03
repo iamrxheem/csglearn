@@ -1,0 +1,17 @@
+{
+  "data": [
+    {
+      "short_name": "DELE",
+      "long_name": "Diplomas in Spanish",
+      "description": "",
+      "level": "Diploma",
+      "number_of_courses": "4",
+      "options": "",
+      "mode_of_study": "Online",
+      "years": "1",
+      "semesters": "2",
+      "term_begins_on": "",
+      "cost": "xx"
+    }
+  ]
+}

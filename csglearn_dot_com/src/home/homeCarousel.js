@@ -1,46 +1,39 @@
 import React from "react"
 import { Carousel } from "react-bootstrap"
+import LazyLoad from "react-lazyload"
 
 // Images
 import DelfImage from "../images/delf-mini-flyer.jpeg"
 import DeleImage from "../images/dele-mini-flyer.jpeg"
+import OrangeBackground from "../images/orange-notice.png"
+import BlueNoticeSign from "../images/blue-notice-sign.png"
+import DELEImageLarge from "../images/dele-img-large.jpeg"
+import CSECPreRegisterFlyerImage from "../images/csec-preregister.jpeg"
+import SixthFormProgrammeImage from "../images/sixth-form-programme.jpeg"
+
+// Slider
+import AwesomeSlider from "react-awesome-slider"
+import "react-awesome-slider/dist/styles.css"
+
+import { isMobile } from "react-device-detect"
 
 const HomeCarousel = props => {
   return (
     <>
       <Carousel>
-        {/* CSEC online classes */}
-        <Carousel.Item>
-          <a href="/programmes/csec">
-            <img
-              src="https://dl.dropbox.com/s/wwwiafaz55s6dhs/WhatsApp%20Image%202021-01-08%20at%208.42.44%20PM.jpeg?dl=0"
-              style={{ width: "100%" }}
-            />
-          </a>
-        </Carousel.Item>
-
-        {/* Diploma in Spanish */}
+        {/* CSEC Online Classes */}
         <Carousel.Item>
           <a href="/diplomas/dele">
             <img
-              alt="Flyer for the Diplomas in Spanish"
-              src="https://dl.dropbox.com/s/am5jl3bbdnsm8hk/WhatsApp%20Image%202021-01-05%20at%2010.33.15%20AM.jpeg?dl=0"
-              style={{ width: "100%", height: "100%" }}
-            />
-          </a>
-        </Carousel.Item>
-
-        {/* Diploma in French */}
-        <Carousel.Item>
-          <a href="/diplomas/delf">
-            <img
-              alt="Flyer for the Diplomas in French"
-              src={DelfImage}
-              style={{ width: "100%", height: "100%" }}
+              className="d-block w-100"
+              style={{ width: "100%" }}
+              src={CSECPreRegisterFlyerImage}
+              alt="CSEC online classes flyer"
             />
           </a>
         </Carousel.Item>
       </Carousel>
+      <br />
     </>
   )
 }

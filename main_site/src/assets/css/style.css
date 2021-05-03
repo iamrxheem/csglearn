@@ -1,0 +1,76 @@
+.link-light {
+  color: gainsboro;
+}
+
+.link-light:hover {
+  color: white;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.center {
+  margin: auto!important;
+  align:center!important;
+  width: 50%!important;
+  display: block!important;
+}
+
+.break-container{
+  width:100vw!important;
+  position:relative!important;
+  left:calc(-1 * (100vw - 100%)/2);
+}
+
+body {
+  width: 100%!important;
+}
+
+main {
+    width: 100%!important;
+}
+
+.glowing-border {
+    border: none!important;
+}
+
+.glowing-border:hover {
+    border-radius: 7px;
+    outline: none;
+    border: 2px solid;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px #9ecaed;
+}
+
+h1, h2 {
+  color: #2269b0;
+}
+
+#mc_embed_signup {
+  clear: left;
+}
+
+.hover-on-underline:hover {
+  text-decoration: underline!important;
+}
+
+/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+.asterisk {
+  margin-left: 5px;
+  color: red;
+}
+
+.center-on-small {
+  display: block!important;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  text-align: center;
+}

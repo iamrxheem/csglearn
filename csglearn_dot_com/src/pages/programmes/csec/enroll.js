@@ -46,6 +46,8 @@ const Page = () => (
 
       <br />
       <br />
+
+      {/*
       <GeneralProgrammeApplicationComponent
         firstName=""
         lastName=""
@@ -63,6 +65,19 @@ const Page = () => (
         csecCourseMaterialFee={4500}
         administrationFee={1500}
       />
+
+      */}
+
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSf4Z5Z96007V4SoRc4yhAxjQPt3AoFN5ywRFvFuKVTLHnxjGA/viewform?embedded=true"
+        width="640"
+        height="2380"
+        frameBorder="0"
+        marginHeight="0"
+        marginWidth="0"
+      >
+        Loading…
+      </iframe>
     </Container>
   </CSECLayout>
 )

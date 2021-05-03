@@ -15,16 +15,17 @@ import "./layout.css"
 import MainMenu from "../menus/mainMenu"
 
 const Layout = ({ children }) => {
-
   return (
     <>
-      <MainMenu />
-      <ImportPage />
-      <div>
-        <>{children}</>
-        <Footer />
-      </div>
-      <noscript>You need to enable Javascript to view this website.</noscript>
+      <>
+        <MainMenu />
+        <ImportPage />
+        <div>
+          <>{children}</>
+          <Footer />
+        </div>
+        <noscript>You need to enable Javascript to view this website.</noscript>
+      </>
     </>
   )
 }

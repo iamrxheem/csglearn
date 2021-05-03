@@ -21,6 +21,7 @@ import {
 // Images
 import CSGLearningTopImage from "../images/top-logo.jpg"
 import ACCALogo from "../images/logo-acca.jpg"
+import MainLogo from "../images/logo.png"
 
 class MainMenu extends Component {
   constructor(props) {
@@ -90,19 +91,7 @@ class MainMenu extends Component {
 
         {/* Main Menu */}
         <Navbar type="light" theme="light" expand="md" className="sticky-top">
-          <NavbarBrand href="/">CSG Learning </NavbarBrand>
-
-          {this.props.hideApplyButton ? (
-            <></>
-          ) : (
-            <>
-              <div className="d-block d-md-none">
-                <a href="/enroll/" className="ml-auto ml-4">
-                  <Button>APPLY</Button>
-                </a>
-              </div>
-            </>
-          )}
+          <NavbarBrand href="/">CSG Learning</NavbarBrand>
 
           <NavbarToggler onClick={this.toggleNavbar} />
 
