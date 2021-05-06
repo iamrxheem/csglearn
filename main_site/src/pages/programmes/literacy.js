@@ -19,6 +19,9 @@ import {
   Button
 } from "react-bootstrap"
 
+import KidsImage from "../../images/kids-reading.jpeg"
+import LiteracyProgrammeMiniMenu from "../../components/miniMenus/literacyProgrammeMiniMenu"
+
 // Shards-React Components
 import {
   Row,
@@ -39,9 +42,12 @@ const Page = props => (
     />
 
     <LiteracyProgrammeLayout
+      container
+      showBreak
       enroll="/programmes/literacy/enroll"
-      image="https://img.icons8.com/bubbles/2x/book-reading.png"
+      image={KidsImage}
     >
+      <br />
       <Container>
         <Breadcrumb>
           <BreadcrumbItem>
@@ -50,32 +56,90 @@ const Page = props => (
           <BreadcrumbItem>
             <Link to="/programmes">Programmes</Link>
           </BreadcrumbItem>
+
           <BreadcrumbItem active>Literacy</BreadcrumbItem>
         </Breadcrumb>
 
-        <h3>Literacy Programme</h3>
-
-        <br />
         <Row>
-          <Col xs={6}>
-            <Alert theme="primary" className="text-center">
-              <Link
-                style={{ textDecoration: "none" }}
-                to="/programmes/literacy/kids"
-              >
-                For Kids
-              </Link>
-            </Alert>
+          <Col sm={7}>
+            <h3>Children Reading Classes</h3>
+
+            <br />
+            <LiteracyProgrammeMiniMenu />
+
+            <br />
+            <span>
+              Our online Adult Literacy and Numeracy Programme is offered for
+              students age 5 - 17, and provides early childhood and developent
+              with special focus on
+            </span>
+
+            <br />
+            <br />
+            <ul>
+              <li>reading</li>
+              <li style={{ paddingTop: "15px" }}>writing</li>
+              <li style={{ paddingTop: "15px" }}>vocabulary Development</li>
+              <li style={{ paddingTop: "15px" }}>numeracy</li>
+            </ul>
+
+            <br />
+            <span>
+              Our programme last for three (3) months and are conducted
+              completely online.
+            </span>
+
+            <br />
+            <br />
+            <h5>Fees & Tuition</h5>
+
+            <br />
+            <Table>
+              <tbody>
+                <tr>
+                  <td>Course Fee</td>
+                  <td>JMD $30,000</td>
+                </tr>
+                <tr>
+                  <td>Registration Fee</td>
+                  <td>JMD $2,000</td>
+                </tr>
+              </tbody>
+            </Table>
+
+            <br />
+            <Button
+              style={{ width: "100%" }}
+              href="/programmes/literacy/enroll"
+            >
+              Enroll now
+            </Button>
           </Col>
-          <Col xs={6}>
-            <Alert theme="danger" className="text-center">
-              <Link
-                style={{ textDecoration: "none" }}
-                to="/programmes/literacy/adults"
+          <Col sm={5}>
+            <MobileView>
+              <br />
+              <br />
+            </MobileView>
+            <ProgrammeSummary
+              hasOptions
+              options="Group"
+              levelOfStudy="Literacy Certification"
+              modeOfStudy="Online"
+              duration="3 months"
+              numberOfCourses="1"
+              termBeginsOn="Monday, May 17, 2021"
+            />
+
+            <MobileView>
+              <br />
+              <br />
+              <Button
+                style={{ width: "100%" }}
+                href="/programmes/literacy/enroll"
               >
-                For Adults
-              </Link>
-            </Alert>
+                Enroll now
+              </Button>
+            </MobileView>
           </Col>
         </Row>
       </Container>

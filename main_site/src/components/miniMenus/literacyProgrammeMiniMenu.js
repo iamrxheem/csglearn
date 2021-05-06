@@ -18,12 +18,12 @@ const LiteracyProgrammeMiniMenu = () => (
         </Alert>
       </Col>
       <Col xs={6}>
-        <Alert theme="success" className="text-center">
+        <Alert theme="danger" className="text-center">
           <Link
             style={{ textDecoration: "none" }}
-            to="/programmes/literacy/faqs"
+            to="/programmes/literacy/adults"
           >
-            FAQs
+            FOR ADULTS
           </Link>
         </Alert>
       </Col>

@@ -54,6 +54,7 @@ function ImportPage() {
           name="copyright"
           content="CSG Learning Institute Jamaica Limited"
         />
+        <meta http-equiv="X-Frame-Options" content="deny" />
         <meta name="robots" content="index,follow" />
         <meta name="Classification" content="Education" />
         <meta name="author" content="Raheem McDonald, info@csglearn.com" />

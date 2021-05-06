@@ -95,7 +95,7 @@ const Page = props => (
               <tbody>
                 <tr>
                   <td>Course Fee</td>
-                  <td>JMD $35,000</td>
+                  <td>JMD $40,000</td>
                 </tr>
                 <tr>
                   <td>Registration Fee</td>
@@ -124,7 +124,7 @@ const Page = props => (
               modeOfStudy="Online"
               duration="3 months"
               numberOfCourses="1"
-              termBeginsOn="Monday, June 7, 2021"
+              termBeginsOn="Monday, May 17, 2021"
             />
 
             <MobileView>
