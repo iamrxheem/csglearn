@@ -136,8 +136,8 @@ class Interviews extends React.Component {
                   </Col>
 
                   <Col sm={6}>
-                    <FormGroup>
-                      <FormSelect name="MMERGE6" class="" id="mce-MMERGE6">
+                    <FormGroup className="form-control custom-select">
+                      <FormSelect name="MMERGE6" id="mce-MMERGE6">
                         <option value="">-- select a programme --</option>
                         <option value="CSEC Programme">CSEC Programme</option>
                         <option value="CAPE Programme">CAPE Programme</option>

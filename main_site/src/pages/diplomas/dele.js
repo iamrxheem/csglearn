@@ -3,11 +3,13 @@ import SEO from "../../components/seo"
 import { Link } from "gatsby"
 
 // Layout
-import DiplomaLayout from "../../layouts/diplomaLayout"
+import DeleLayout from "../../layouts/deleLayout"
 
 // View Components
 import MobileView from "../../common/mobileView"
 import BrowserView from "../../common/browserView"
+
+import DeleStudentVideo from "../../videos/dele-student-video.mp4"
 
 // Shards-React Components
 import {
@@ -22,10 +24,7 @@ import { Tabs, Tab } from "react-bootstrap"
 import ProgrammeSummary from "../../common/programmeSummary"
 
 const Page = () => (
-  <DiplomaLayout
-    enroll="/diplomas/dele/enroll"
-    tuition="/diplomas/dele/tuition"
-  >
+  <DeleLayout enroll="/diplomas/dele/enroll" tuition="/diplomas/dele/tuition">
     <Container>
       <SEO
         title="Diplomas de Español como Lengua Extranjera (DELE)"
@@ -147,14 +146,28 @@ const Page = () => (
             <br />
           </MobileView>
 
+          <BrowserView>
+            <video
+              style={{ width: "100%" }}
+              preload="auto"
+              autoPlay={true}
+              loop
+              muted
+            >
+              <source src={DeleStudentVideo} type="video/mp4" />
+            </video>
+            <br />
+            <br />
+          </BrowserView>
+
           <ProgrammeSummary
             showCost
             cost="JMD $80,000"
             levelOfStudy="Accredited Diploma"
             modeOfStudy="Online"
-            duration="1 year"
+            duration="8 months"
             numberOfCourses="4"
-            termBeginsOn="July 5, 2021"
+            termBeginsOn="June 28, 2021"
           />
 
           <MobileView>
@@ -167,7 +180,7 @@ const Page = () => (
         </Col>
       </Row>
     </Container>
-  </DiplomaLayout>
+  </DeleLayout>
 )
 
 export default Page

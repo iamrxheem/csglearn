@@ -8,6 +8,8 @@ import CsecMiniMenu from "../../../components/miniMenus/csecMiniMenu"
 import SEO from "../../../components/seo"
 import { Carousel, Table, OverlayTrigger, Popover } from "react-bootstrap"
 
+import CsecEnrollment from "../../../components/enrollments/csecEnrollment"
+
 // Shards-React Components
 import {
   Row,
@@ -46,9 +48,12 @@ const Page = props => (
           <BreadcrumbItem active>Enroll</BreadcrumbItem>
         </Breadcrumb>
 
-        <h3>CSEC Online Application</h3>
-        <br />
-        <span>Applications are not yet open.</span>
+        <CsecEnrollment
+          formUrl="https://forms.zohopublic.com/csglearninginstitute/form/CSECOnlineApplicationForm/formperma/bbk1vsbzM5VTw_TtMO64z8tSUXizqwvmapMtc7umL6E"
+          action="https://forms.zohopublic.com/csglearninginstitute/form/CSECOnlineApplicationForm/formperma/bbk1vsbzM5VTw_TtMO64z8tSUXizqwvmapMtc7umL6E/htmlRecords/submit"
+          title="CSEC Online Application"
+          description="Please use this form to apply for our online CSEC online classes. Note, this is only to be completed by students beginning classes in September, 2021."
+        />
       </Container>
     </CSECLayout>
   </>

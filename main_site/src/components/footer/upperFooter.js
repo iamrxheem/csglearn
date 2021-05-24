@@ -39,10 +39,10 @@ function UpperFooter() {
                 <Link to="/programmes/sat">SAT Classes</Link>
               </li>
               <li>
-                <Link to="/programmes/dele">Diploma in Spanish</Link>
+                <Link to="/diplomas/dele">Diploma in Spanish</Link>
               </li>
               <li>
-                <Link to="/programmes/delf">Diploma in French</Link>
+                <Link to="/diplomas/delf">Diploma in French</Link>
               </li>
               <li>
                 <Link to="/programmes/csec">CSEC Classes</Link>
@@ -56,29 +56,23 @@ function UpperFooter() {
             <br className="d-block d-md-none" />
           </Col>
           <Col md={3}>
-            <h5>RESOURCES</h5>
+            <h5>UPCOMING COURSES</h5>
 
             <ul className="ul">
               <li>
-                <Link to="/programmes/csec/resources/sba-guides">
-                  SBA Guides
-                </Link>
+                <Link to="/programmes/literacy">Literacy Classes</Link>
               </li>
               <li>
-                <Link to="/programmes/cape/resources/ia-guides">IA Guides</Link>
+                <Link to="/short-courses/webdev">Web Design</Link>
               </li>
               <li>
-                <Link to="/programmes/csec/syallabus">CXC Syllabus</Link>
+                <Link to="/short-courses/">Customer Service</Link>
               </li>
               <li>
-                <Link to="/programmes/csec/timetables/">
-                  CSEC & CAPE Timetables
-                </Link>
+                <Link to="/short-courses/">Project Management</Link>
               </li>
               <li>
-                <Link to="/programmes/csec/resources/">
-                  Multiple Choice Practice
-                </Link>
+                <Link to="/short-courses/">CSEC & CAPE Timetables</Link>
               </li>
             </ul>
           </Col>

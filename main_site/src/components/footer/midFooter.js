@@ -53,6 +53,11 @@ function MidFooter() {
 
               <ul className="ul">
                 <li>
+                  <a className="link-light" href="/pay">
+                    Make a Payment
+                  </a>
+                </li>
+                <li>
                   <a
                     className="link-light"
                     target="_blank"

@@ -46,10 +46,12 @@ const Page = props => (
             <h4>Sixth Form CAPE Examination</h4>
 
             <br />
-
             <SixthFormMiniMenu />
+
+            <br />
+            <span>We'll be sharing more details on examination soon.</span>
           </Col>
-          <Col sm={6}>...</Col>
+          <Col sm={6}></Col>
         </Row>
       </Container>
     </SixthFormLayout>

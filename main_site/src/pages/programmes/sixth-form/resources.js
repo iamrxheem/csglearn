@@ -47,8 +47,12 @@ const Page = props => (
 
             <br />
             <SixthFormMiniMenu />
+
+            <br />
+            <br />
+            <span>We'll be sharing more resources soon.</span>
           </Col>
-          <Col sm={6}>...</Col>
+          <Col sm={6}></Col>
         </Row>
       </Container>
     </SixthFormLayout>

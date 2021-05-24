@@ -3,11 +3,13 @@ import SEO from "../../components/seo"
 import { Link } from "gatsby"
 
 // Layout
-import DiplomaLayout from "../../layouts/diplomaLayout"
+import DelfLayout from "../../layouts/delfLayout"
 
 // View Components
 import MobileView from "../../common/mobileView"
 import BrowserView from "../../common/browserView"
+
+import DelfStudentVideo from "../../videos/delf-student-video.mp4"
 
 // Shards-React Components
 import {
@@ -22,10 +24,7 @@ import { Tabs, Tab } from "react-bootstrap"
 import ProgrammeSummary from "../../common/programmeSummary"
 
 const Page = () => (
-  <DiplomaLayout
-    enroll="/diplomas/delf/enroll"
-    tuition="/diplomas/delf/tuition"
-  >
+  <DelfLayout enroll="/diplomas/delf/enroll" tuition="/diplomas/delf/tuition">
     <Container>
       <SEO title="Diplôme d'Etudes en Langue Française (DELF)" description="" />
 
@@ -145,14 +144,28 @@ const Page = () => (
             <br />
           </MobileView>
 
+          <BrowserView>
+            <video
+              style={{ width: "100%" }}
+              preload="auto"
+              autoPlay={true}
+              loop
+              muted
+            >
+              <source src={DelfStudentVideo} type="video/mp4" />
+            </video>
+            <br />
+            <br />
+          </BrowserView>
+
           <ProgrammeSummary
             showCost
             cost="JMD $80,000"
             levelOfStudy="Accredited Diploma"
             modeOfStudy="Online"
-            duration="1 year"
+            duration="6 months"
             numberOfCourses="4"
-            termBeginsOn="May 3, 2021"
+            termBeginsOn="June 28, 2021"
           />
 
           <MobileView>
@@ -165,7 +178,7 @@ const Page = () => (
         </Col>
       </Row>
     </Container>
-  </DiplomaLayout>
+  </DelfLayout>
 )
 
 export default Page

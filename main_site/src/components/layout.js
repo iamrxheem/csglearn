@@ -20,8 +20,10 @@ class Layout extends React.Component {
     return (
       <>
         <ImportPage />
-        <Header />
-        <SiteAlert />
+
+        {this.props.hideMenu ? null : <Header />}
+
+        {this.props.hideAlert ? null : <SiteAlert />}
         <main>{this.props.children}</main>
 
         <Footer />

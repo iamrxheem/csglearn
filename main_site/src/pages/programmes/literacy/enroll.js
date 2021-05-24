@@ -79,7 +79,7 @@ const Page = props => (
             {/*Name*/}
             <label>
               Name
-              <em>*</em>
+              <em className="text-danger ml-1">*</em>
             </label>
             <Row>
               <Col md={6}>
@@ -129,7 +129,7 @@ const Page = props => (
                 {/*Radio*/}
                 <label>
                   Gender
-                  <em>*</em>
+                  <em className="text-danger ml-1">*</em>
                 </label>
                 <Row>
                   <Col xs={6}>
@@ -170,7 +170,7 @@ const Page = props => (
                 {/*Phone*/}
                 <label>
                   Phone Number
-                  <em>*</em>
+                  <em className="text-danger ml-1">*</em>
                 </label>
                 <FormInput
                   type="text"
@@ -185,7 +185,7 @@ const Page = props => (
                 {/*Email*/}
                 <label>
                   Email
-                  <em>*</em>
+                  <em className="text-danger ml-1">*</em>
                 </label>
                 <FormInput type="email" maxLength={255} name="Email" />
               </FormGroup>
@@ -199,7 +199,7 @@ const Page = props => (
                 {/*Address*/}
                 <label>
                   Address
-                  <em>*</em>
+                  <em className="text-danger ml-1">*</em>
                 </label>
                 <FormInput
                   type="text"
@@ -256,7 +256,9 @@ const Page = props => (
 
           <br />
           <Row>
-            <label>Choose your programme</label>
+            <label>
+              Choose your programme <em className="text-danger ml-1">*</em>
+            </label>
             <Col sm={6}>
               <FormGroup>
                 <Row>
@@ -291,6 +293,13 @@ const Page = props => (
           <Button target="_blank" type="submit">
             Submit
           </Button>
+
+          <br />
+          <br />
+          <small className="text-danger">
+            Please only submit this form <strong>ONCE</strong>. If you are
+            having an issue, please <a href="/contact">contact us</a>.
+          </small>
         </Form>
       </Container>
     </LiteracyProgrammeLayout>

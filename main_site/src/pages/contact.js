@@ -23,9 +23,6 @@ const ContactPage = () => (
       title="Contact Us"
       description="Contact our Customer Support team today online, or give us a call at (876) 707-3443 or by email at info@csglearn.com."
     />
-    <div className="blue-gradient">
-      <br />
-    </div>
 
     <Container>
       <Breadcrumb>

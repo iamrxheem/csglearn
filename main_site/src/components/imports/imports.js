@@ -19,6 +19,11 @@ function ImportPage() {
     <>
       <Helmet>
         <script
+          src="https://www.paypal.com/sdk/js?client-id=AWSNp5vB92XLnyeNLore9vTj7iXOhe9td45d_wJomi0Au1tv94zAM0RN5yLAQt6iNCqoJQpOLNlYffwC&currency=USD"
+          data-sdk-integration-source="button-factory"
+        />
+
+        <script
           type="text/javascript"
           src="https://assets.calendly.com/assets/external/widget.js"
           async

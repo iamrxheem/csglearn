@@ -8,6 +8,7 @@ import Img1 from "../../images/class-promo/1.png"
 import Img2 from "../../images/class-promo/2.png"
 import Img3 from "../../images/class-promo/3.png"
 import Img4 from "../../images/class-promo/4.png"
+import FaceToFace from "../../videos/face-to-face.mp4"
 
 // View
 import BrowserView from "../../common/browserView"
@@ -65,12 +66,24 @@ const ProgrammesPromo = () => (
           wrap
         >
           <Carousel.Item>
+            <video
+              style={{ width: "100%" }}
+              preload="auto"
+              autoPlay={true}
+              loop
+              muted
+            >
+              <source src={FaceToFace} type="video/mp4" />
+            </video>
+          </Carousel.Item>
+          <Carousel.Item>
             <img
               className={isMobile ? "break-container" : "d-block w-100"}
               style={{ width: "100%" }}
               src={Img1}
             />
           </Carousel.Item>
+
           <Carousel.Item>
             <img
               className="d-block w-100"
@@ -85,13 +98,6 @@ const ProgrammesPromo = () => (
               src={Img2}
             />
           </Carousel.Item>
-          {/* <Carousel.Item>
-            <img
-              className="d-block w-100"
-              style={{ width: "100%" }}
-              src={Img4}
-            />
-          </Carousel.Item> */}
         </Carousel>
       </Col>
     </Row>

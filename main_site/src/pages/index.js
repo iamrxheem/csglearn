@@ -30,6 +30,7 @@ import ProgrammesPromo from "../home/programmes-promo/programmesPromo"
 import Services from "../home/services"
 import OnlineClasses from "../home/onlineClasses"
 import Reviews from "../home/reviews"
+import DelePromotion from "../home/delePromotion"
 
 import StayInTheLoop from "../components/stayInTheLoop/stayInTheLoop"
 
@@ -88,11 +89,17 @@ class IndexPage extends React.Component {
           />
         </Helmet>
 
-        <Layout>
+        <Layout hideAlert>
+          <MobileView>
+            <DelePromotion />
+          </MobileView>
+
           <Container>
             <ProgrammesPromo />
           </Container>
-
+          <BrowserView>
+            <DelePromotion />
+          </BrowserView>
           <OnlineClasses />
 
           <Container>

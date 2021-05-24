@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Nav, NavItem, NavLink } from "shards-react"
+import { Nav, NavItem, NavLink, Row, Col } from "shards-react"
 
 function SocialMediaNavigation() {
   return (
@@ -54,9 +54,29 @@ function SocialMediaNavigation() {
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink target="_blank" href=""></NavLink>
+          <NavLink
+            target="_blank"
+            href="https://api.whatsapp.com/send/?phone=18767073443&text&app_absent=0"
+          >
+            <i
+              className="fab fa-whatsapp fa-lg"
+              style={{ color: "#25D366" }}
+            ></i>
+          </NavLink>
         </NavItem>
       </Nav>
+
+      <br />
+      <Row>
+        <Col xs={6}>
+          <i className="fas fa-phone-alt text-success mr-2"></i>
+          (876) 707-3443
+        </Col>
+        <Col xs={6}>
+          <i className="fas fa-envelope text-secondary mr-2"></i>
+          <a href="mailto:info@csglearn.com">info@csglearn.com</a>
+        </Col>
+      </Row>
     </>
   )
 }

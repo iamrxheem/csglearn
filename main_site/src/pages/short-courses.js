@@ -32,7 +32,7 @@ import CustomerServiceImage from "../images/short-courses/customer-service.png"
 
 const ContactPage = () => (
   <Layout>
-    <SEO title="Short Courses" description="" />
+    <SEO title="Short Courses & Certifications" description="" />
 
     <br />
     <Container>
@@ -42,9 +42,7 @@ const ContactPage = () => (
         </BreadcrumbItem>
         <BreadcrumbItem active>Short Courses</BreadcrumbItem>
       </Breadcrumb>
-    </Container>
 
-    <Container fluid>
       <Row>
         <Col md={4}>
           <MobileView>
@@ -56,9 +54,6 @@ const ContactPage = () => (
             <CardBody>
               <CardTitle>Web Design</CardTitle>
 
-              <span>This is the description.</span>
-
-              <br />
               <br />
               <Button href="/short-courses/webdev">Learn more</Button>
             </CardBody>
@@ -74,9 +69,6 @@ const ContactPage = () => (
             <CardBody>
               <CardTitle>Project Management</CardTitle>
 
-              <span>This is the description.</span>
-
-              <br />
               <br />
               <Button href="/short-courses/project-management">
                 Learn more
@@ -95,9 +87,6 @@ const ContactPage = () => (
             <CardBody>
               <CardTitle>Customer Service & Sales</CardTitle>
 
-              <span>This is the description.</span>
-
-              <br />
               <br />
               <Button href="/short-courses/customer-service">Learn more</Button>
             </CardBody>

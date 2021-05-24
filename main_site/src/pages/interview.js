@@ -10,11 +10,6 @@ import BrowserView from "../common/browserView"
 
 import { Container, Breadcrumb, BreadcrumbItem } from "shards-react"
 
-const iframeStyle = {
-  width: "100%",
-  height: "750px"
-}
-
 const Interviews = () => (
   <Layout>
     <SEO

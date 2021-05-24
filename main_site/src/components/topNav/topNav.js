@@ -1,7 +1,7 @@
 import React from "react"
 
 const TopNav = () => (
-  <div className="bg-primary">
+  <div className="" style={{ backgroundColor: "#2392E8" }}>
     <ul className="nav justify-content-center">
       <li className="nav-item">
         <a

@@ -13,8 +13,9 @@ function Copyright() {
         <br />
         <br />
         <span>
-          &#xa9; Copyright 2021 <Link to="/">CSG Learning</Link>. All rights
-          reserved.
+          &#xa9; Copyright 2021 <Link to="/">CSG Learning Institute Ltd</Link>.
+          <br />
+          All rights reserved.
         </span>
         <br />
         <br />
