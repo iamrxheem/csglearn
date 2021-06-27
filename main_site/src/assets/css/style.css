@@ -1,4 +1,10 @@
+body {
+  width: 100%!important;
+}
 
+html {
+  width: 100%!important;
+}
 
 .link-light {
   color: gainsboro;
@@ -115,5 +121,17 @@ We recommend moving this block and the preceding CSS link to the HEAD of your HT
   width: 100%;
   height: 100%;
   border: none;
+}
 
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"!important;
 }

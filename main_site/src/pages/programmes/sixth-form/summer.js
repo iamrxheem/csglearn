@@ -46,6 +46,13 @@ import SixthFormMiniMenu from "../../../components/miniMenus/sixthFormMiniMenu"
 // Images
 import Img1 from "../../../images/young-student.jpg"
 
+import { applyLinks } from "../../../data/links"
+let applyLink = ""
+
+applyLinks.map(data => {
+  return (applyLink = data.capeSummer)
+})
+
 const Page = props => (
   <>
     <SEO
@@ -53,7 +60,7 @@ const Page = props => (
       description="Enroll online in our online Sixth Form Summer Programme, beginning on June 14, 2021. Subjects include Communication Studies, Caribbean Studies, Management of Business and more!"
     />
 
-    <SixthFormLayout enroll="/programmes/sixth-form/summer/enroll">
+    <SixthFormLayout enroll={applyLink}>
       <Container>
         <Breadcrumb>
           <BreadcrumbItem>
@@ -74,22 +81,23 @@ const Page = props => (
               <Row>
                 <Col xs={6}>
                   <Alert theme="primary">
-                    <Link
+                    <a
+                      target="_blank"
                       style={{ textDecoration: "none" }}
-                      to="/programmes/sixth-form/summer/enroll"
+                      href={applyLink}
                     >
                       ENROLL NOW
-                    </Link>
+                    </a>
                   </Alert>
                 </Col>
                 <Col xs={6}>
                   <Alert theme="success">
-                    <Link
+                    <a
                       style={{ textDecoration: "none" }}
-                      to="/programmes/csec/summer"
+                      href="/programmes/csec/summer"
                     >
                       FOR CSEC
-                    </Link>
+                    </a>
                   </Alert>
                 </Col>
               </Row>
@@ -97,9 +105,9 @@ const Page = props => (
 
             <br />
             <span>
-              Our Sixth Form Summer Programme begins July 14 to August 13, 2021
-              and are open to all students. Please see the list of subjects
-              being offered:
+              Our Sixth Form Summer Programme is aimed for students who
+              additional help in critical subject areas, and is now open for
+              registration.
             </span>
 
             <br />
@@ -108,15 +116,8 @@ const Page = props => (
 
             <br />
             <span>
-              Unit 2 classes will begin immediately after the June/ July exams
-              have concluded. See{" "}
-              <a
-                target="_blank"
-                href="https://46i48l108maaxssg8uyuvr10-wpengine.netdna-ssl.com/wp-content/uploads/2021/03/FINAL-CAPE-Timetable-June-July-2021.pdf"
-              >
-                exam timetable
-              </a>
-              .
+              Classes begin on Monday, August 2nd, 2021, immediately after the
+              June/ July exams have concluded.
             </span>
 
             <br />
@@ -133,31 +134,54 @@ const Page = props => (
                   <td>
                     <b>Unit 1</b>
                   </td>
-                  <td>June 14</td>
-                  <td>August 13</td>
+                  <td>July 5, 2021</td>
+                  <td>August 27</td>
                 </tr>
                 <tr>
                   <td>
                     <b>Unit 2</b>
                   </td>
-                  <td>July 19</td>
-                  <td>August 20</td>
+                  <td>August 2</td>
+                  <td>August 27</td>
                 </tr>
               </tbody>
             </Table>
 
             <br />
-            <Row>
-              <Col sm={6}>
-                <Button
-                  href="/programmes/sixth-form/summer/enroll"
-                  style={{ width: "100%" }}
-                >
-                  Enroll now
-                </Button>
-              </Col>
-              <Col sm={6}></Col>
-            </Row>
+            <br />
+            <Table light hover responsive style={{ width: "100%" }}>
+              <thead>
+                <tr>
+                  <th>Subject</th>
+                  <th>Cost (per month)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Comm Studies</td>
+                  <td>JMD $10,000</td>
+                </tr>
+                <tr>
+                  <td>Carib Studies</td>
+                  <td>JMD $10,000</td>
+                </tr>
+                <tr>
+                  <td>All other subjects</td>
+                  <td>JMD $7,000</td>
+                </tr>
+                <tr>
+                  <td>Course Material</td>
+                  <td>
+                    JMD $4,500 <b>(optional)</b>
+                  </td>
+                </tr>
+              </tbody>
+            </Table>
+
+            <br />
+            <Button href={applyLink} target="_blank" style={{ width: "100%" }}>
+              Enroll now
+            </Button>
           </Col>
           <Col md={5}>
             <MobileView>
@@ -225,7 +249,8 @@ const Page = props => (
               <Row>
                 <Col sm={6}>
                   <Button
-                    href="/programmes/sixth-form/summer/enroll"
+                    href={applyLink}
+                    target="_blank"
                     style={{ width: "100%" }}
                   >
                     Enroll now

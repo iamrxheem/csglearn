@@ -21,7 +21,7 @@ class Layout extends React.Component {
       <>
         <ImportPage />
 
-        {this.props.hideMenu ? null : <Header />}
+        {this.props.hideMenu ? null : <Header hideApplyButton />}
 
         {this.props.hideAlert ? null : <SiteAlert />}
         <main>{this.props.children}</main>

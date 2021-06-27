@@ -35,7 +35,11 @@ class DeleLayout extends React.Component {
     return (
       <>
         <ImportPage />
-        <DiplomaMenu enroll={this.props.enroll} tuition={this.props.tuition} />
+        <DiplomaMenu
+          target="_blank"
+          enroll={this.props.enroll}
+          tuition={this.props.tuition}
+        />
         <MobileView>
           {this.props.showBreak ? <br /> : null}
 

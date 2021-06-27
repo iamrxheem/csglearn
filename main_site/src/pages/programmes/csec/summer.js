@@ -24,6 +24,35 @@ import {
 
 import ProgrammeSummary from "../../../common/programmeSummary"
 
+import { applyLinks } from "../../../data/links"
+let applyLink = ""
+
+applyLinks.map(data => {
+  return (applyLink = data.csecSummer)
+})
+
+const Summary = (
+  <ProgrammeSummary
+    levelOfStudy="Extra classes"
+    modeOfStudy="Online"
+    duration="1 month"
+    numberOfCourses="As many"
+    termBeginsOn="July 5 - August 27, 2021"
+  />
+)
+
+const Crumbs = (
+  <Breadcrumb>
+    <BreadcrumbItem>
+      <Link to="/">Home</Link>
+    </BreadcrumbItem>
+    <BreadcrumbItem>
+      <Link to="/programmes/csec">CSEC</Link>
+    </BreadcrumbItem>
+    <BreadcrumbItem active>Summer Programme</BreadcrumbItem>
+  </Breadcrumb>
+)
+
 const Page = props => (
   <>
     <SEO
@@ -31,147 +60,87 @@ const Page = props => (
       description="Enroll in our online CSEC Summer School Programme and study subjects such as English A, Mathematics, Biology, Chemistry and more! Special discount available."
     />
 
-    <CSECLayout enroll="/programmes/csec/summer/enroll">
-      <Container>
-        <Breadcrumb>
-          <BreadcrumbItem>
-            <Link to="/">Home</Link>
-          </BreadcrumbItem>
-          <BreadcrumbItem>
-            <Link to="/programmes/csec">CSEC</Link>
-          </BreadcrumbItem>
-          <BreadcrumbItem active>Summer Programme</BreadcrumbItem>
-        </Breadcrumb>
+    <CSECLayout
+      title="Summer Programme"
+      breadcrumbs={Crumbs}
+      summary={Summary}
+      enroll={applyLink}
+    >
+      <span>
+        Our summer programme runs from July 5 to August 28, 2021 and are open to
+        all students. Please see the list of subjects being offered:
+      </span>
+      <br />
+      <br />
+      <br />
+      <Table striped bordered light hover responsive style={{ width: "100%" }}>
+        <thead>
+          <tr></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>English A</td>
+            <td>Mathematics</td>
+          </tr>
+          <tr>
+            <td>Biology</td>
+            <td>Chemistry</td>
+          </tr>
+          <tr>
+            <td>Physics</td>
+            <td>Human & Social Biology</td>
+          </tr>
+          <tr>
+            <td>Principles of Accounts</td>
+            <td>Principles of Business</td>
+          </tr>
 
-        <Row>
-          <Col md={7}>
-            <h3>Summer Programme</h3>
+          <tr>
+            <td>Information Technology</td>
+            <td>Social Studies</td>
+          </tr>
+        </tbody>
+      </Table>
 
-            <br />
-            <span>
-              Our summer programme runs from June 14 to August 13, 2021 and are
-              open to all students. Please see the list of subjects being
-              offered:
-            </span>
+      <br />
+      <Button href={applyLink} target="_blank" style={{ width: "100%" }}>
+        Enroll now
+      </Button>
 
-            <br />
-            <br />
-            <br />
-            <Table
-              striped
-              bordered
-              light
-              hover
-              responsive
-              style={{ width: "100%" }}
-            >
-              <thead>
-                <tr></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>English A</td>
-                  <td>Mathematics</td>
-                </tr>
-                <tr>
-                  <td>Biology</td>
-                  <td>Chemistry</td>
-                </tr>
-                <tr>
-                  <td>Physics</td>
-                  <td>Human & Social Biology</td>
-                </tr>
-                <tr>
-                  <td>Principles of Accounts</td>
-                  <td>Principles of Business</td>
-                </tr>
+      <br />
+      <br />
+      <h5>Fees & Tuition</h5>
+      <br />
+      <Table light hover responsive style={{ width: "100%" }}>
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Cost (per month)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>English A</td>
+            <td>JMD $10,000</td>
+          </tr>
+          <tr>
+            <td>Mathematics</td>
+            <td>JMD $10,000</td>
+          </tr>
+          <tr>
+            <td>All other subjects</td>
+            <td>JMD $7,000</td>
+          </tr>
+          <tr>
+            <td>Course Material</td>
+            <td>
+              JMD $4,500 <b>(optional)</b>
+            </td>
+          </tr>
+        </tbody>
+      </Table>
 
-                <tr>
-                  <td>Information Technology</td>
-                  <td>Social Studies</td>
-                </tr>
-              </tbody>
-            </Table>
-
-            <br />
-            <Row>
-              <Col sm={6}>
-                <Button
-                  href="/programmes/csec/summer/enroll"
-                  style={{ width: "100%" }}
-                >
-                  Enroll now
-                </Button>
-              </Col>
-              <Col sm={6}></Col>
-            </Row>
-
-            <br />
-            <br />
-            <h5>Fees & Tuition</h5>
-
-            <br />
-            <Table light hover responsive style={{ width: "100%" }}>
-              <thead>
-                <tr>
-                  <th>Subject</th>
-                  <th>Cost (per month)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>English A</td>
-                  <td>JMD $5,800</td>
-                </tr>
-                <tr>
-                  <td>Mathematics</td>
-                  <td>JMD $5,800</td>
-                </tr>
-                <tr>
-                  <td>All other subjects</td>
-                  <td>JMD $4,200</td>
-                </tr>
-                <tr>
-                  <td>Course Material</td>
-                  <td>
-                    JMD $4,500 <b>(one time)</b>
-                  </td>
-                </tr>
-              </tbody>
-            </Table>
-
-            <br />
-            <br />
-          </Col>
-          <Col md={5}>
-            <ProgrammeSummary
-              levelOfStudy="Extra classes"
-              modeOfStudy="Online"
-              duration="2 months"
-              numberOfCourses="As many"
-              termBeginsOn="Monday, June 14, 2021"
-            />
-
-            <MobileView>
-              <br />
-              <br />
-              <Row>
-                <Col sm={6}>
-                  <Button
-                    href="/programmes/csec/summer/enroll"
-                    style={{ width: "100%" }}
-                  >
-                    Enroll now
-                  </Button>
-                </Col>
-                <Col sm={6}></Col>
-              </Row>
-            </MobileView>
-          </Col>
-        </Row>
-
-        <br />
-      </Container>
+      <br />
     </CSECLayout>
   </>
 )

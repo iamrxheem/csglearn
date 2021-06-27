@@ -19,6 +19,11 @@ function ImportPage() {
     <>
       <Helmet>
         <script
+          async
+          src="https://static-na.payments-amazon.com/OffAmazonPayments/us/js/Widgets.js"
+        ></script>
+
+        <script
           src="https://www.paypal.com/sdk/js?client-id=AWSNp5vB92XLnyeNLore9vTj7iXOhe9td45d_wJomi0Au1tv94zAM0RN5yLAQt6iNCqoJQpOLNlYffwC&currency=USD"
           data-sdk-integration-source="button-factory"
         />

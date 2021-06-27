@@ -35,7 +35,11 @@ class DelfLayout extends React.Component {
     return (
       <>
         <ImportPage />
-        <DiplomaMenu enroll={this.props.enroll} tuition={this.props.tuition} />
+        <DiplomaMenu
+          enroll={this.props.enroll}
+          target="_blank"
+          tuition={this.props.tuition}
+        />
         <MobileView>
           {this.props.showBreak ? <br /> : null}
 

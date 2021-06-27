@@ -6,6 +6,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "../components/header"
 import Footer from "../components/footer/footer"
 
+import { Container, Row, Col } from "react-bootstrap"
 // Menu
 import CSECMenu from "../menus/csecMenu"
 
@@ -21,6 +22,11 @@ import ImportPage from "../components/imports/imports"
 
 // View Components
 import MobileView from "../common/mobileView"
+import BrowserView from "../common/browserView"
+import { isIOS } from "react-device-detect"
+
+// Videos
+import StudentVideo from "../videos/csec.mp4"
 
 class CSECLayout extends React.Component {
   constructor(props) {
@@ -31,12 +37,53 @@ class CSECLayout extends React.Component {
     return (
       <>
         <ImportPage />
-        <CSECMenu enroll={this.props.enroll} />
+        <CSECMenu target="_blank" enroll={this.props.enroll} />
         <MobileView>
-          <img src={StudentImage} style={{ width: "100%" }} />
-          <CsecMiniMenu />
+          <video
+            style={{ width: "100%" }}
+            preload="auto"
+            autoPlay={true}
+            loop
+            muted
+          >
+            <source src={StudentVideo} type="video/mp4" />
+          </video>
         </MobileView>
-        <main>{this.props.children}</main>
+        <main>
+          <Container>
+            {this.props.breadcrumbs}
+
+            <Row>
+              <Col md={7}>
+                <h3>{this.props.title}</h3>
+
+                <br />
+                <CsecMiniMenu enroll={this.props.enroll} />
+
+                <br />
+                {this.props.children}
+              </Col>
+              <Col md={5}>
+                <BrowserView>
+                  <video
+                    style={{ width: "100%" }}
+                    preload="auto"
+                    autoPlay={true}
+                    loop
+                    muted
+                  >
+                    <source src={StudentVideo} type="video/mp4" />
+                  </video>
+                </BrowserView>
+
+                <br />
+                {this.props.summary}
+              </Col>
+            </Row>
+
+            {this.props.faq}
+          </Container>
+        </main>
         <Footer />
       </>
     )

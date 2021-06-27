@@ -18,6 +18,7 @@ import {
   Popover,
   Button
 } from "react-bootstrap"
+import $ from "jquery"
 
 import KidsImage from "../../images/kids-reading.jpeg"
 import LiteracyProgrammeMiniMenu from "../../components/miniMenus/literacyProgrammeMiniMenu"
@@ -31,8 +32,16 @@ import {
   BreadcrumbItem,
   Alert
 } from "shards-react"
+import Swal from "sweetalert2"
 
 import ProgrammeSummary from "../../common/programmeSummary"
+
+import { applyLinks } from "../../data/links"
+let applyLink = ""
+
+applyLinks.map(data => {
+  return (applyLink = data.literacy)
+})
 
 const Page = props => (
   <>
@@ -44,7 +53,7 @@ const Page = props => (
     <LiteracyProgrammeLayout
       container
       showBreak
-      enroll="/programmes/literacy/enroll"
+      enroll={applyLink}
       image={KidsImage}
     >
       <br />
@@ -65,7 +74,7 @@ const Page = props => (
             <h3>Children Reading Classes</h3>
 
             <br />
-            <LiteracyProgrammeMiniMenu />
+            <LiteracyProgrammeMiniMenu enroll={applyLink} />
 
             <br />
             <span>
@@ -108,10 +117,7 @@ const Page = props => (
             </Table>
 
             <br />
-            <Button
-              style={{ width: "100%" }}
-              href="/programmes/literacy/enroll"
-            >
+            <Button style={{ width: "100%" }} target="_blank" href={applyLink}>
               Enroll now
             </Button>
           </Col>
@@ -127,7 +133,7 @@ const Page = props => (
               modeOfStudy="Online"
               duration="3 months"
               numberOfCourses="1"
-              termBeginsOn="Monday, May 17, 2021"
+              termBeginsOn="Monday, June 28, 2021"
             />
 
             <MobileView>
@@ -135,7 +141,8 @@ const Page = props => (
               <br />
               <Button
                 style={{ width: "100%" }}
-                href="/programmes/literacy/enroll"
+                target="_blank"
+                href={applyLink}
               >
                 Enroll now
               </Button>

@@ -64,7 +64,7 @@
     "shards-react": "^1.0.3",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.2.1",
-    "sweetalert2": "^11.0.11",
+    "sweetalert2": "^11.0.16",
     "tedious": "^11.0.8",
     "tls": "^0.0.1",
     "tunnel-agent": "^0.6.0",

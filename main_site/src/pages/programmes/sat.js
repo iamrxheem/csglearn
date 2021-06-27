@@ -8,9 +8,13 @@ import CsecMiniMenu from "../../components/miniMenus/csecMiniMenu"
 // View Components
 import MobileView from "../../common/mobileView"
 import BrowserView from "../../common/browserView"
-
+import Faq from "react-faq-component"
 import View from "../../components/view/view"
 import SEO from "../../components/seo"
+
+// Data
+import { satData } from "../../data/sat"
+
 import {
   Carousel,
   Table,
@@ -35,6 +39,15 @@ import ProgrammeSummary from "../../common/programmeSummary"
 import Img1 from "../../images/young-student.jpg"
 import Image from "../../images/black-college-student.jpg"
 
+import { applyLinks } from "../../data/links"
+import { satData } from "../../data/sat"
+
+let applyLink = ""
+
+applyLinks.map(data => {
+  return (applyLink = data.sat)
+})
+
 const Page = props => (
   <>
     <SEO
@@ -51,7 +64,7 @@ const Page = props => (
         <div style={{ paddingTop: "10px" }}>
           <Breadcrumb>
             <BreadcrumbItem>
-              <Link to="/">Home</Link>
+              <a href="/">Home</a>
             </BreadcrumbItem>
             <BreadcrumbItem>
               <Link to="/programmes">Programmes</Link>
@@ -69,7 +82,13 @@ const Page = props => (
               <Row>
                 <Col xs={6}>
                   <Alert theme="info">
-                    <a style={{ textDecoration: "none" }}>ENROLL NOW</a>
+                    <a
+                      target="_blank"
+                      href={applyLink}
+                      style={{ textDecoration: "none" }}
+                    >
+                      ENROLL NOW
+                    </a>
                   </Alert>
                 </Col>
                 <Col xs={6}>
@@ -95,24 +114,14 @@ const Page = props => (
             </div>
             <br />
 
-            <span>Ready, set -- not so fast!</span>
-
-            <br />
-            <br />
             <span>
-              We're still organising our online SAT Programme and regsitration
-              will be open soon. Consider following us on Instagram for more
-              updates!{" "}
-              <a target="_blank" href="https://www.instagram.com/csglearn">
-                @csglearn
-              </a>
-              .
+              Our online SAT Programme is open to all students who wish to sit
+              the SAT examination in February, 2022.
             </span>
 
             <div id="requirements">
               <br />
-              <br />
-              <br />
+
               <h4>Requirements</h4>
 
               <br />
@@ -137,8 +146,7 @@ const Page = props => (
 
             <div id="tuition">
               <br />
-              <br />
-              <br />
+
               <h4>Fees & Tuition</h4>
 
               <br />
@@ -146,18 +154,21 @@ const Page = props => (
                 <tbody>
                   <tr>
                     <td>Course</td>
-                    <td>JMD $130,000</td>
+                    <td>USD $600</td>
                   </tr>
                   <tr>
                     <td>Course Materials</td>
-                    <td>JMD $5,000</td>
+                    <td>USD $35</td>
                   </tr>
                 </tbody>
               </Table>
+
               <br />
             </div>
 
-            <Button style={{ width: "100%" }}>Enroll now</Button>
+            <Button target="_blank" href={applyLink} style={{ width: "100%" }}>
+              Enroll now
+            </Button>
 
             <br />
             <br />
@@ -169,18 +180,125 @@ const Page = props => (
               numberOfCourses="N/A"
               modeOfStudy="Online"
               showCost
-              cost="To be announced"
-              duration="To be announced"
-              termBeginsOn="To be announced"
+              cost="USD $600"
+              duration="5 months"
+              termBeginsOn="July 19, 2021"
             />
 
             <MobileView>
               <br />
               <br />
-              <br />
             </MobileView>
           </Col>
         </Row>
+
+        <br />
+        <br />
+        <h3 className="text-center">Frequently Asked Questions</h3>
+
+        <br />
+        <Faq
+          data={{
+            title: "",
+            rows: [
+              {
+                title: "Where are we located?",
+                content: (
+                  <>
+                    <br />
+                    <p>
+                      We're based in Kingston, Jamaica but our operations are
+                      online, which allows us to not only provide valuable
+                      educational training and materials to students across
+                      Jamaica, but the entire Caribbean.
+                    </p>
+                    <br />
+                  </>
+                )
+              },
+              {
+                title: "Who can enroll in this programme?",
+                content: (
+                  <>
+                    <br />
+                    <p>
+                      Please see our full list of{" "}
+                      <a href="#requirements">requirements</a>.
+                    </p>
+                    <br />
+                  </>
+                )
+              },
+              {
+                title: "How are classes held?",
+                content: (
+                  <>
+                    <br />
+                    <p>
+                      All classes are held online and are accessible through our{" "}
+                      <a href="https://www.hub.csglearn.com/my" target="_blank">
+                        Student Portal.
+                      </a>
+                    </p>
+                    <br />
+                  </>
+                )
+              },
+              {
+                title: "How often are classes kept?",
+                content: (
+                  <>
+                    <br />
+                    <p>
+                      On average, students are provided 3-4 hours of classtime
+                      per week. Additional classtime may be schedule by your
+                      teacher.
+                    </p>
+                    <br />
+                  </>
+                )
+              },
+              {
+                title: "Are payment plans available?",
+                content: (
+                  <>
+                    <br />
+                    <p>
+                      Yes, payment plans are available for all students. Please
+                      see a list of <a href="#tuition">fees here</a>.
+                    </p>
+                    <br />
+                  </>
+                )
+              },
+              {
+                title: "Where will I sit the exam?",
+                content: (
+                  <>
+                    <br />
+                    <p>
+                      You will be assigned an exmination center based on your
+                      address.
+                    </p>
+                    <br />
+                  </>
+                )
+              },
+              {
+                title: "How can I pay?",
+                content: (
+                  <>
+                    <br />
+                    <p>Students are able to pay online or via bank transfer.</p>
+                    <br />
+                  </>
+                )
+              }
+            ]
+          }}
+        />
+        <br />
+        <br />
       </Container>
 
       <MobileView>

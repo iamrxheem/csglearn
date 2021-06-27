@@ -30,7 +30,7 @@ class SixthFormLayout extends React.Component {
     return (
       <>
         <ImportPage />
-        <SixthFormMenu enroll={this.props.enroll} />
+        <SixthFormMenu target="_blank" enroll={this.props.enroll} />
         <MobileView>
           <img src={StudentImage} style={{ width: "100%" }} />
         </MobileView>

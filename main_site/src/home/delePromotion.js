@@ -89,7 +89,7 @@ const DelePromotion = () => (
               </Button>
             </Col>
             <Col xs={6}>
-              <Button href="/diplomas/dele/enroll" style={{ width: "100%" }}>
+              <Button href="/apply" style={{ width: "100%" }}>
                 Enroll now
               </Button>
             </Col>

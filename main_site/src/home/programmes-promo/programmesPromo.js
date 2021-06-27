@@ -66,17 +66,6 @@ const ProgrammesPromo = () => (
           wrap
         >
           <Carousel.Item>
-            <video
-              style={{ width: "100%" }}
-              preload="auto"
-              autoPlay={true}
-              loop
-              muted
-            >
-              <source src={FaceToFace} type="video/mp4" />
-            </video>
-          </Carousel.Item>
-          <Carousel.Item>
             <img
               className={isMobile ? "break-container" : "d-block w-100"}
               style={{ width: "100%" }}

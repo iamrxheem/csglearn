@@ -23,8 +23,15 @@ import {
 import { Tabs, Tab } from "react-bootstrap"
 import ProgrammeSummary from "../../common/programmeSummary"
 
+import { applyLinks } from "../../data/links"
+let applyLink = ""
+
+applyLinks.map(data => {
+  return (applyLink = data.dele)
+})
+
 const Page = () => (
-  <DeleLayout enroll="/diplomas/dele/enroll" tuition="/diplomas/dele/tuition">
+  <DeleLayout enroll={applyLink} tuition="/diplomas/dele/tuition">
     <Container>
       <SEO
         title="Diplomas de Español como Lengua Extranjera (DELE)"
@@ -136,7 +143,7 @@ const Page = () => (
 
           <br />
           <br />
-          <Button href="/diplomas/dele/enroll" style={{ width: "100%" }}>
+          <Button href={applyLink} target="_blank" style={{ width: "100%" }}>
             Enroll now
           </Button>
         </Col>
@@ -167,13 +174,13 @@ const Page = () => (
             modeOfStudy="Online"
             duration="8 months"
             numberOfCourses="4"
-            termBeginsOn="June 28, 2021"
+            termBeginsOn="July 12, 2021"
           />
 
           <MobileView>
             <br />
             <br />
-            <Button href="/diplomas/dele/enroll" style={{ width: "100%" }}>
+            <Button href={applyLink} target="_blank" style={{ width: "100%" }}>
               Enroll now
             </Button>
           </MobileView>

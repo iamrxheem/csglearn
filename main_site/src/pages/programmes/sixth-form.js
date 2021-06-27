@@ -44,6 +44,13 @@ import SixthFormMiniMenu from "../../components/miniMenus/sixthFormMiniMenu"
 // Images
 import Img1 from "../../images/young-student.jpg"
 
+import { applyLinks } from "../../data/links"
+let applyLink = ""
+
+applyLinks.map(data => {
+  return (applyLink = data.capeSeptember)
+})
+
 const Page = props => (
   <>
     <SEO
@@ -51,7 +58,7 @@ const Page = props => (
       description="Enroll online in our online sixth form programme, beginning on September 14, 2021. Subjects include Communication Studies, Caribbean Studies, Management of Business and more!"
     />
 
-    <SixthFormLayout enroll="/programmes/sixth-form/enroll">
+    <SixthFormLayout enroll="/apply#cape">
       <Container>
         <Breadcrumb>
           <BreadcrumbItem>
@@ -68,7 +75,7 @@ const Page = props => (
             <h3>Sixth Form Programme</h3>
             <br />
 
-            <SixthFormMiniMenu />
+            <SixthFormMiniMenu enroll={applyLink} />
 
             <br />
             <span>
@@ -120,7 +127,8 @@ const Page = props => (
             <Row>
               <Col sm={6}>
                 <Button
-                  href="/programmes/sixth-form/enroll"
+                  href={applyLink}
+                  target="_blank"
                   style={{ width: "100%" }}
                 >
                   Enroll now
@@ -151,7 +159,8 @@ const Page = props => (
               <Row>
                 <Col sm={6}>
                   <Button
-                    href="/programmes/sixth-form/enroll"
+                    href={applyLink}
+                    target="_blank"
                     style={{ width: "100%" }}
                   >
                     Enroll now
@@ -499,10 +508,7 @@ const Page = props => (
           <br />
           <Row>
             <Col sm={6}>
-              <Button
-                href="/programmes/sixth-form/enroll"
-                style={{ width: "100%" }}
-              >
+              <Button href="/apply#cape" style={{ width: "100%" }}>
                 Enroll now
               </Button>
             </Col>

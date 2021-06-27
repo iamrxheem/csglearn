@@ -28,10 +28,7 @@ import { Tabs, Tab } from "react-bootstrap"
 import ProgrammeSummary from "../../../common/programmeSummary"
 
 const Page = () => (
-  <DiplomaLayout
-    enroll="/diplomas/dele/enroll"
-    tuition="/diplomas/dele/tuition"
-  >
+  <DiplomaLayout enroll="/apply" tuition="/diplomas/dele/tuition">
     <Container>
       <SEO
         title="Apply Online - Diplomas de Español como Lengua Extranjera (DELE)"

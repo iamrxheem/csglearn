@@ -116,191 +116,196 @@ class Pay extends React.Component {
           <h3>Make a Payment</h3>
           <br />
 
-          <Row>
-            <Col sm={6}>
-              <div className="text-center">
-                <Row>
-                  <Col xs={6}>
-                    <Alert theme="primary">
-                      <a
-                        onClick={() => {
-                          this.setState({ amount: "35" })
-                        }}
-                      >
-                        Exam Marathon
-                      </a>
-                    </Alert>
-                  </Col>
-                  <Col xs={6}>
-                    <Alert theme="success">
-                      <a
-                        onClick={() => {
-                          this.setState({ amount: "70" })
-                        }}
-                      >
-                        1-on-1 Class
-                      </a>
-                    </Alert>
-                  </Col>
-                  <Col xs={6}>
-                    <Alert theme="danger">
-                      <a
-                        onClick={() => {
-                          this.setState({ amount: "80" })
-                        }}
-                      >
-                        Pay USD $50
-                      </a>
-                    </Alert>
-                  </Col>
-                  <Col xs={6}>
-                    <Alert theme="warning">
-                      <a
-                        onClick={() => {
-                          this.setState({ amount: "100" })
-                        }}
-                      >
-                        Pay USD $100
-                      </a>
-                    </Alert>
-                  </Col>
-                </Row>
-              </div>
+          {false == true ? (
+            <>
+              <Row>
+                <Col sm={6}>
+                  <div className="text-center">
+                    <Row>
+                      <Col xs={6}>
+                        <Alert theme="primary">
+                          <a
+                            onClick={() => {
+                              this.setState({ amount: "35" })
+                            }}
+                          >
+                            Exam Marathon
+                          </a>
+                        </Alert>
+                      </Col>
+                      <Col xs={6}>
+                        <Alert theme="success">
+                          <a
+                            onClick={() => {
+                              this.setState({ amount: "70" })
+                            }}
+                          >
+                            1-on-1 Class
+                          </a>
+                        </Alert>
+                      </Col>
+                      <Col xs={6}>
+                        <Alert theme="danger">
+                          <a
+                            onClick={() => {
+                              this.setState({ amount: "80" })
+                            }}
+                          >
+                            Pay USD $50
+                          </a>
+                        </Alert>
+                      </Col>
+                      <Col xs={6}>
+                        <Alert theme="warning">
+                          <a
+                            onClick={() => {
+                              this.setState({ amount: "100" })
+                            }}
+                          >
+                            Pay USD $100
+                          </a>
+                        </Alert>
+                      </Col>
+                    </Row>
+                  </div>
 
-              <br />
-              <br />
-              <Form>
-                <Row>
-                  <Col md={6}>
-                    <FormGroup>
-                      <InputGroup className="mb-2">
-                        <InputGroupAddon type="prepend">
-                          <InputGroupText>
-                            <i className="fas fa-user"></i>
-                          </InputGroupText>
-                        </InputGroupAddon>
-                        <FormInput placeHolder="Student ID or email" />
-                      </InputGroup>
-                    </FormGroup>
-                  </Col>
-                  <Col md={6}>
-                    <FormGroup>
-                      <InputGroup className="mb-2">
-                        <InputGroupAddon type="prepend">
-                          <InputGroupText>
-                            <i className="fas fa-dollar-sign"></i>
-                          </InputGroupText>
-                        </InputGroupAddon>
-                        <FormInput
-                          onChange={this.handleAmountChange}
-                          value={this.state.amount}
-                          placeHolder="Enter payment amount"
-                        />
-                      </InputGroup>
-                      <small>
-                        <strong>Please enter the amount in USD</strong>
-                      </small>
-                    </FormGroup>
-                  </Col>
-                </Row>
-              </Form>
+                  <br />
+                  <br />
+                  <Form>
+                    <Row>
+                      <Col md={6}>
+                        <FormGroup>
+                          <InputGroup className="mb-2">
+                            <InputGroupAddon type="prepend">
+                              <InputGroupText>
+                                <i className="fas fa-user"></i>
+                              </InputGroupText>
+                            </InputGroupAddon>
+                            <FormInput placeHolder="Student ID or email" />
+                          </InputGroup>
+                        </FormGroup>
+                      </Col>
+                      <Col md={6}>
+                        <FormGroup>
+                          <InputGroup className="mb-2">
+                            <InputGroupAddon type="prepend">
+                              <InputGroupText>
+                                <i className="fas fa-dollar-sign"></i>
+                              </InputGroupText>
+                            </InputGroupAddon>
+                            <FormInput
+                              onChange={this.handleAmountChange}
+                              value={this.state.amount}
+                              placeHolder="Enter payment amount"
+                            />
+                          </InputGroup>
+                          <small>
+                            <strong>Please enter the amount in USD</strong>
+                          </small>
+                        </FormGroup>
+                      </Col>
+                    </Row>
+                  </Form>
 
-              <br />
-              <a href="#" theme="primary" onClick={this.handleShow}>
-                Use our currency converter
-              </a>
+                  <br />
+                  <a href="#" theme="primary" onClick={this.handleShow}>
+                    Use our currency converter
+                  </a>
 
-              <Modal show={this.state.show} onHide={this.handleClose}>
-                <Modal.Header closeButton>
-                  <Modal.Title>Currency Converter</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                  <Row>
-                    <Col md={8}>
-                      <FormGroup>
-                        <Row>
-                          <Col xs={5}>
-                            <FormSelect onChange={this.onCurrencyChange}>
-                              <option
-                                onChange={this.onCurrencyChange}
-                                selected
-                                value="JMD"
-                              >
-                                JMD
-                              </option>
-                              <option
-                                onChange={this.onCurrencyChange}
-                                value="TTD"
-                              >
-                                TTD
-                              </option>
-                            </FormSelect>
-                          </Col>
-                          <Col xs={7}>
-                            <FormGroup>
-                              <FormInput
-                                value={this.state.toBeConvertedAmount}
-                                onChange={this.onToConvertChange}
-                              />
-                            </FormGroup>
-                          </Col>
-                        </Row>
-                      </FormGroup>
-                    </Col>
+                  <Modal show={this.state.show} onHide={this.handleClose}>
+                    <Modal.Header closeButton>
+                      <Modal.Title>Currency Converter</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                      <Row>
+                        <Col md={8}>
+                          <FormGroup>
+                            <Row>
+                              <Col xs={5}>
+                                <FormSelect onChange={this.onCurrencyChange}>
+                                  <option
+                                    onChange={this.onCurrencyChange}
+                                    selected
+                                    value="JMD"
+                                  >
+                                    JMD
+                                  </option>
+                                  <option
+                                    onChange={this.onCurrencyChange}
+                                    value="TTD"
+                                  >
+                                    TTD
+                                  </option>
+                                </FormSelect>
+                              </Col>
+                              <Col xs={7}>
+                                <FormGroup>
+                                  <FormInput
+                                    value={this.state.toBeConvertedAmount}
+                                    onChange={this.onToConvertChange}
+                                  />
+                                </FormGroup>
+                              </Col>
+                            </Row>
+                          </FormGroup>
+                        </Col>
 
-                    {/* This field will show the value of the USD amount */}
-                    <Col md={4}>
-                      <FormGroup>
-                        <InputGroup className="mb-2">
-                          <InputGroupAddon type="prepend">
-                            <InputGroupText>US</InputGroupText>
-                          </InputGroupAddon>
-                          <FormInput value={this.state.usdAmount} />
-                        </InputGroup>
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                </Modal.Body>
-                <Modal.Footer>
-                  <Button theme="danger" onClick={this.handleClose}>
-                    Close
-                  </Button>
-                  <Button theme="primary" onClick={this.payThis}>
-                    Pay this amount
-                  </Button>
-                </Modal.Footer>
-              </Modal>
+                        {/* This field will show the value of the USD amount */}
+                        <Col md={4}>
+                          <FormGroup>
+                            <InputGroup className="mb-2">
+                              <InputGroupAddon type="prepend">
+                                <InputGroupText>US</InputGroupText>
+                              </InputGroupAddon>
+                              <FormInput value={this.state.usdAmount} />
+                            </InputGroup>
+                          </FormGroup>
+                        </Col>
+                      </Row>
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button theme="danger" onClick={this.handleClose}>
+                        Close
+                      </Button>
+                      <Button theme="primary" onClick={this.payThis}>
+                        Pay this amount
+                      </Button>
+                    </Modal.Footer>
+                  </Modal>
 
-              <MobileView>
-                <br />
-                <br />
-              </MobileView>
-            </Col>
-            <Col sm={6}>
-              <PayPalButton
-                amount={this.state.amount * 1.07}
-                // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
-                onSuccess={(details, data) => {
-                  alert(
-                    "Transaction completed by " + details.payer.name.given_name
-                  )
+                  <MobileView>
+                    <br />
+                    <br />
+                  </MobileView>
+                </Col>
+                <Col sm={6}>
+                  <PayPalButton
+                    amount={this.state.amount * 1.07}
+                    // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
+                    onSuccess={(details, data) => {
+                      alert(
+                        "Transaction completed by " +
+                          details.payer.name.given_name
+                      )
 
-                  // OPTIONAL: Call your server to save the transaction
-                  return fetch("/paypal-transaction-complete", {
-                    method: "post",
-                    body: JSON.stringify({
-                      orderId: data.orderID
-                    })
-                  })
-                }}
-                options={{
-                  clientId:
-                    "AWSNp5vB92XLnyeNLore9vTj7iXOhe9td45d_wJomi0Au1tv94zAM0RN5yLAQt6iNCqoJQpOLNlYffwC",
-                  currency: "USD"
-                }}
-              />
-            </Col>
-          </Row>
+                      // OPTIONAL: Call your server to save the transaction
+                      return fetch("/paypal-transaction-complete", {
+                        method: "post",
+                        body: JSON.stringify({
+                          orderId: data.orderID
+                        })
+                      })
+                    }}
+                    options={{
+                      clientId:
+                        "AWSNp5vB92XLnyeNLore9vTj7iXOhe9td45d_wJomi0Au1tv94zAM0RN5yLAQt6iNCqoJQpOLNlYffwC",
+                      currency: "USD"
+                    }}
+                  />
+                </Col>
+              </Row>
+            </>
+          ) : null}
         </Container>
       </Layout>
     )

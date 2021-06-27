@@ -136,6 +136,30 @@ const ProgrammeSummary = props => (
       <br />
       <br />
 
+      {props.frequency ? (
+        <>
+          {/* Duration */}
+          <Col xs={3} sm={3} md={3}>
+            <i className="fas fa-money-check-alt fa-3x"></i>
+          </Col>
+          <Col xs={9} sm={9} md={9}>
+            <span>
+              <b>COST</b>
+            </span>
+
+            <br />
+            <span style={{ marginTop: "10px" }}>{props.cost}</span>
+          </Col>
+
+          <br />
+          <br />
+          <br />
+          <br />
+        </>
+      ) : (
+        <></>
+      )}
+
       {/* Term Begins On */}
       <Col xs={3} sm={3} md={3}>
         <i className="fas fa-calendar-alt fa-3x"></i>

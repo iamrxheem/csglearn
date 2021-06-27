@@ -32,6 +32,13 @@ import {
 
 import ProgrammeSummary from "../../../common/programmeSummary"
 
+import { applyLinks } from "../../../data/links"
+let applyLink = ""
+
+applyLinks.map(data => {
+  return (applyLink = data.literacy)
+})
+
 const Page = props => (
   <>
     <SEO
@@ -41,7 +48,7 @@ const Page = props => (
 
     <LiteracyProgrammeLayout
       container={false}
-      enroll="/programmes/literacy/enroll"
+      enroll={applyLink}
       image="https://www.unfpa.org/sites/default/files/home-banner-news/jamaica_youngmothers.jpg"
     >
       <Container>
@@ -63,7 +70,7 @@ const Page = props => (
             <h3>Adult Reading Classes</h3>
             <br />
 
-            <LiteracyProgrammeMiniMenu />
+            <LiteracyProgrammeMiniMenu enroll={applyLink} />
 
             <br />
             <span>
@@ -105,10 +112,7 @@ const Page = props => (
             </Table>
 
             <br />
-            <Button
-              style={{ width: "100%" }}
-              href="/programmes/literacy/enroll"
-            >
+            <Button style={{ width: "100%" }} href={applyLink} target="_blank">
               Enroll now
             </Button>
           </Col>
@@ -124,7 +128,7 @@ const Page = props => (
               modeOfStudy="Online"
               duration="3 months"
               numberOfCourses="1"
-              termBeginsOn="Monday, May 17, 2021"
+              termBeginsOn="Monday, June 28, 2021"
             />
 
             <MobileView>
@@ -132,7 +136,8 @@ const Page = props => (
               <br />
               <Button
                 style={{ width: "100%" }}
-                href="/programmes/literacy/enroll"
+                href={applyLink}
+                target="_blank"
               >
                 Enroll now
               </Button>

@@ -4,17 +4,18 @@ import { Link } from "gatsby"
 // Shards-React Components
 import { Row, Col, Container, Alert, Nav, NavItem, NavLink } from "shards-react"
 
-const LiteracyProgrammeMiniMenu = () => (
+const LiteracyProgrammeMiniMenu = props => (
   <>
     <Row>
       <Col xs={6}>
         <Alert theme="primary" className="text-center">
-          <Link
+          <a
             style={{ textDecoration: "none" }}
-            to="/programmes/literacy/enroll"
+            target="_blank"
+            href={props.enroll}
           >
             ENROLL NOW
-          </Link>
+          </a>
         </Alert>
       </Col>
       <Col xs={6}>

@@ -9,12 +9,13 @@ const SixthFormMiniMenu = props => (
     <Row>
       <Col xs={6}>
         <Alert theme="info">
-          <Link
+          <a
             style={{ textDecoration: "none" }}
-            to="/programmes/sixth-form/enroll"
+            target="_blank"
+            href={props.enroll}
           >
             ENROLL NOW
-          </Link>
+          </a>
         </Alert>
       </Col>
       <Col xs={6}>

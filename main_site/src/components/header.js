@@ -17,7 +17,8 @@ import {
   InputGroupAddon,
   InputGroupText,
   FormInput,
-  Collapse
+  Collapse,
+  Button
 } from "shards-react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Img } from "react-image"
@@ -97,9 +98,24 @@ class Header extends React.Component {
             </BrowserView>
 
             {/* Display the simple text on mobile devices */}
-
             <MobileView>CSG Learning</MobileView>
           </NavbarBrand>
+
+          <MobileView>
+            {this.props.hideApplyButton ? (
+              <></>
+            ) : (
+              <>
+                <Button
+                  target="_blank"
+                  href={this.props.enroll}
+                  className="ml-5"
+                >
+                  Apply
+                </Button>
+              </>
+            )}
+          </MobileView>
 
           <NavbarToggler onClick={this.toggleNavbar} />
 
@@ -143,6 +159,18 @@ class Header extends React.Component {
                   Contact
                 </Link>
               </NavItem>
+
+              <BrowserView>
+                <NavItem>
+                  <Button
+                    target="_blank"
+                    href={this.props.enroll}
+                    className="ml-1"
+                  >
+                    Apply
+                  </Button>
+                </NavItem>
+              </BrowserView>
             </Nav>
           </Collapse>
         </Navbar>

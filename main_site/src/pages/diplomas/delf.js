@@ -23,8 +23,15 @@ import {
 import { Tabs, Tab } from "react-bootstrap"
 import ProgrammeSummary from "../../common/programmeSummary"
 
+import { applyLinks } from "../../data/links"
+let applyLink = ""
+
+applyLinks.map(data => {
+  return (applyLink = data.delf)
+})
+
 const Page = () => (
-  <DelfLayout enroll="/diplomas/delf/enroll" tuition="/diplomas/delf/tuition">
+  <DelfLayout enroll={applyLink} tuition="/diplomas/delf/tuition">
     <Container>
       <SEO title="Diplôme d'Etudes en Langue Française (DELF)" description="" />
 
@@ -134,7 +141,7 @@ const Page = () => (
 
           <br />
           <br />
-          <Button href="/diplomas/delf/enroll" style={{ width: "100%" }}>
+          <Button href={applyLink} style={{ width: "100%" }}>
             Enroll now
           </Button>
         </Col>
@@ -165,13 +172,13 @@ const Page = () => (
             modeOfStudy="Online"
             duration="6 months"
             numberOfCourses="4"
-            termBeginsOn="June 28, 2021"
+            termBeginsOn="July 12, 2021"
           />
 
           <MobileView>
             <br />
             <br />
-            <Button href="/diplomas/delf/enroll" style={{ width: "100%" }}>
+            <Button href={applyLink} target="_blank" style={{ width: "100%" }}>
               Enroll now
             </Button>
           </MobileView>

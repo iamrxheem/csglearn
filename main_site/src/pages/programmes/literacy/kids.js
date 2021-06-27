@@ -44,7 +44,7 @@ const Page = props => (
     <LiteracyProgrammeLayout
       container
       showBreak
-      enroll="/programmes/literacy/enroll"
+      enroll="/apply"
       image={KidsImage}
     >
       <br />
@@ -72,7 +72,7 @@ const Page = props => (
             <br />
             <span>
               Our online Adult Literacy and Numeracy Programme is offered for
-              students age 5 - 17, and provides early childhood and developent
+              students age 4 - 17, and provides early childhood and developent
               with special focus on
             </span>
 
@@ -87,7 +87,7 @@ const Page = props => (
 
             <br />
             <span>
-              Our programme last for three (3) months and are conducted
+              This programme lasts for three (3) months and are conducted
               completely online.
             </span>
 
@@ -110,10 +110,7 @@ const Page = props => (
             </Table>
 
             <br />
-            <Button
-              style={{ width: "100%" }}
-              href="/programmes/literacy/enroll"
-            >
+            <Button style={{ width: "100%" }} href="/apply">
               Enroll now
             </Button>
           </Col>
@@ -129,16 +126,13 @@ const Page = props => (
               modeOfStudy="Online"
               duration="3 months"
               numberOfCourses="1"
-              termBeginsOn="Monday, May 17, 2021"
+              termBeginsOn="Monday, June 28, 2021"
             />
 
             <MobileView>
               <br />
               <br />
-              <Button
-                style={{ width: "100%" }}
-                href="/programmes/literacy/enroll"
-              >
+              <Button style={{ width: "100%" }} href="/apply">
                 Enroll now
               </Button>
             </MobileView>

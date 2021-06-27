@@ -9,9 +9,13 @@ const DiplomaMiniMenu = props => (
     <Row>
       <Col xs={6}>
         <Alert theme="primary" className="text-center">
-          <Link style={{ textDecoration: "none" }} to={props.enroll}>
+          <a
+            style={{ textDecoration: "none" }}
+            target="_blank"
+            href={props.enroll}
+          >
             ENROLL NOW
-          </Link>
+          </a>
         </Alert>
       </Col>
       <Col xs={6}>

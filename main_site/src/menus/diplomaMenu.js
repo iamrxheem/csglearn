@@ -115,7 +115,7 @@ class DiplomaMenu extends React.Component {
           </Link>
 
           <MobileView>
-            <Button href={this.props.enroll} className="ml-5">
+            <Button target="_blank" href={this.props.enroll} className="ml-5">
               Enroll
             </Button>
           </MobileView>

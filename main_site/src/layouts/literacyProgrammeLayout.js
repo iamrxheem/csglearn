@@ -30,7 +30,7 @@ class LiteracyProgrammeLayout extends React.Component {
     return (
       <>
         <ImportPage />
-        <LiteracyProgrammeMenu enroll={this.props.enroll} />
+        <LiteracyProgrammeMenu target="_blank" enroll={this.props.enroll} />
         <MobileView>
           {this.props.showBreak ? <br /> : null}
           <img
