@@ -9,6 +9,8 @@ import MobileView from "../common/mobileView"
 import BrowserView from "../common/browserView"
 import { PayPalButton } from "react-paypal-button-v2"
 
+import StudentImage from "../images/black-college-student.jpg"
+
 import {
   Container,
   Breadcrumb,
@@ -29,72 +31,110 @@ import {
   FormSelect,
   DropdownItem
 } from "shards-react"
-import Modal from "react-bootstrap/Modal"
+
+import { isMobile } from "react-device-detect"
+import Faq from "react-faq-component"
+
+import CSECImage from "../images/csec.png"
+import CAPEImage from "../images/cape.png"
+
+const data = {
+  title: "",
+  rows: [
+    {
+      title: "Pay Another Amount",
+      content: (
+        <>
+          <br />
+          <p>
+            Pay an atlernate or miscellaneous amount, which can include tuition
+            advance payment, late fees etc.
+          </p>
+
+          <br />
+          <Row>
+            <Col xs={6}>
+              <Button
+                style={{ width: "100%" }}
+                href="https://buy.stripe.com/bIY8xbaAI8B64CYdRd"
+                target="_blank"
+                theme="primary"
+              >
+                $50
+              </Button>
+            </Col>
+            <Col xs={6}>
+              <Button
+                style={{ width: "100%" }}
+                href="https://buy.stripe.com/00g7t7gZ68B67Pa3cB"
+                target="_blank"
+                theme="info"
+              >
+                $100
+              </Button>
+            </Col>
+            <Col xs={6}>
+              <br />
+              <Button
+                style={{ width: "100%" }}
+                href="https://buy.stripe.com/14k9Bf5go9Fa6L65kK"
+                target="_blank"
+                theme="success"
+              >
+                $200
+              </Button>
+            </Col>
+            <Col xs={6}>
+              <br />
+              <Button
+                style={{ width: "100%" }}
+                href="https://buy.stripe.com/28o14J9wEbNi5H2bJ9"
+                target="_blank"
+                theme="warning"
+              >
+                $500
+              </Button>
+            </Col>
+            <Col xs={12}>
+              <br />
+              <Button
+                style={{ width: "100%" }}
+                href="https://buy.stripe.com/9AQcNraAI04AfhC8wU"
+                target="_blank"
+                theme="light"
+              >
+                <i className="fas fa-credit-card mr-2"></i>
+                Pay $1,000
+              </Button>
+            </Col>
+          </Row>
+
+          <br />
+          <br />
+        </>
+      )
+    }
+  ]
+}
+
+const styles = {
+  // bgColor: 'white',
+  titleTextColor: "",
+  rowTitleColor: ""
+  // rowContentColor: 'grey',
+  // arrowColor: "red",
+}
+
+const config = {
+  animate: true,
+  tabFocus: true
+}
 
 class Pay extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-      amount: "",
-      show: false,
-      currency: "JMD",
-      toBeConvertedAmount: "",
-      usdAmount: ""
-    }
-
-    this.handleAmountChange = this.handleAmountChange.bind(this)
-    this.handleClose = this.handleClose.bind(this)
-    this.handleShow = this.handleShow.bind(this)
-    this.payThis = this.payThis.bind(this)
-    this.onToConvertChange = this.onToConvertChange.bind(this)
-    this.calculateUSD = this.calculateUSD.bind(this)
-    this.onCurrencyChange = this.onCurrencyChange.bind(this)
-  }
-
-  calculateUSD(e) {
-    if (this.state.currency === "JMD") {
-      this.setState({
-        usdAmount:
-          Math.round((this.state.toBeConvertedAmount / 14.5) * 100) / 100
-      })
-    } else {
-      this.setState({
-        usdAmount: Math.round(this.state.toBeConvertedAmount * 0.15 * 100) / 100
-      })
-    }
-  }
-
-  onCurrencyChange(e) {
-    this.setState({ currency: e.target.value })
-
-    this.calculateUSD()
-  }
-
-  onToConvertChange(e) {
-    this.setState({ toBeConvertedAmount: e.target.value })
-
-    this.calculateUSD()
-  }
-
-  payThis(e) {
-    this.setState({ amount: this.state.usdAmount })
-
-    this.handleClose()
-  }
-
-  handleAmountChange(e) {
-    this.setState({ amount: e.target.value })
-
-    PayPalButton.forceUpdate()
-  }
-
-  handleClose(e) {
-    this.setState({ show: false })
-  }
-
-  handleShow(e) {
-    this.setState({ show: true })
+    this.state = {}
   }
 
   render() {
@@ -102,8 +142,12 @@ class Pay extends React.Component {
       <Layout hideAlert>
         <SEO
           title="Pay Online"
-          description="Make an online payment for your CSG Learning Account."
+          description="Pay online using a valid debit or credit card. Choose the subjects you wish to pay for or request an electronic invoice."
         />
+
+        <MobileView>
+          <img src={StudentImage} style={{ width: "100%" }} />
+        </MobileView>
 
         <Container>
           <Breadcrumb>
@@ -113,199 +157,203 @@ class Pay extends React.Component {
             <BreadcrumbItem active>Payment</BreadcrumbItem>
           </Breadcrumb>
 
-          <h3>Make a Payment</h3>
+          <h4>Make a Payment</h4>
           <br />
 
-          {false == true ? (
-            <>
+          <Row>
+            <Col md={6}>
               <Row>
-                <Col sm={6}>
-                  <div className="text-center">
-                    <Row>
-                      <Col xs={6}>
-                        <Alert theme="primary">
-                          <a
-                            onClick={() => {
-                              this.setState({ amount: "35" })
-                            }}
-                          >
-                            Exam Marathon
-                          </a>
-                        </Alert>
-                      </Col>
-                      <Col xs={6}>
-                        <Alert theme="success">
-                          <a
-                            onClick={() => {
-                              this.setState({ amount: "70" })
-                            }}
-                          >
-                            1-on-1 Class
-                          </a>
-                        </Alert>
-                      </Col>
-                      <Col xs={6}>
-                        <Alert theme="danger">
-                          <a
-                            onClick={() => {
-                              this.setState({ amount: "80" })
-                            }}
-                          >
-                            Pay USD $50
-                          </a>
-                        </Alert>
-                      </Col>
-                      <Col xs={6}>
-                        <Alert theme="warning">
-                          <a
-                            onClick={() => {
-                              this.setState({ amount: "100" })
-                            }}
-                          >
-                            Pay USD $100
-                          </a>
-                        </Alert>
-                      </Col>
-                    </Row>
-                  </div>
-
-                  <br />
-                  <br />
-                  <Form>
-                    <Row>
-                      <Col md={6}>
-                        <FormGroup>
-                          <InputGroup className="mb-2">
-                            <InputGroupAddon type="prepend">
-                              <InputGroupText>
-                                <i className="fas fa-user"></i>
-                              </InputGroupText>
-                            </InputGroupAddon>
-                            <FormInput placeHolder="Student ID or email" />
-                          </InputGroup>
-                        </FormGroup>
-                      </Col>
-                      <Col md={6}>
-                        <FormGroup>
-                          <InputGroup className="mb-2">
-                            <InputGroupAddon type="prepend">
-                              <InputGroupText>
-                                <i className="fas fa-dollar-sign"></i>
-                              </InputGroupText>
-                            </InputGroupAddon>
-                            <FormInput
-                              onChange={this.handleAmountChange}
-                              value={this.state.amount}
-                              placeHolder="Enter payment amount"
-                            />
-                          </InputGroup>
-                          <small>
-                            <strong>Please enter the amount in USD</strong>
-                          </small>
-                        </FormGroup>
-                      </Col>
-                    </Row>
-                  </Form>
-
-                  <br />
-                  <a href="#" theme="primary" onClick={this.handleShow}>
-                    Use our currency converter
-                  </a>
-
-                  <Modal show={this.state.show} onHide={this.handleClose}>
-                    <Modal.Header closeButton>
-                      <Modal.Title>Currency Converter</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                      <Row>
-                        <Col md={8}>
-                          <FormGroup>
-                            <Row>
-                              <Col xs={5}>
-                                <FormSelect onChange={this.onCurrencyChange}>
-                                  <option
-                                    onChange={this.onCurrencyChange}
-                                    selected
-                                    value="JMD"
-                                  >
-                                    JMD
-                                  </option>
-                                  <option
-                                    onChange={this.onCurrencyChange}
-                                    value="TTD"
-                                  >
-                                    TTD
-                                  </option>
-                                </FormSelect>
-                              </Col>
-                              <Col xs={7}>
-                                <FormGroup>
-                                  <FormInput
-                                    value={this.state.toBeConvertedAmount}
-                                    onChange={this.onToConvertChange}
-                                  />
-                                </FormGroup>
-                              </Col>
-                            </Row>
-                          </FormGroup>
-                        </Col>
-
-                        {/* This field will show the value of the USD amount */}
-                        <Col md={4}>
-                          <FormGroup>
-                            <InputGroup className="mb-2">
-                              <InputGroupAddon type="prepend">
-                                <InputGroupText>US</InputGroupText>
-                              </InputGroupAddon>
-                              <FormInput value={this.state.usdAmount} />
-                            </InputGroup>
-                          </FormGroup>
-                        </Col>
-                      </Row>
-                    </Modal.Body>
-                    <Modal.Footer>
-                      <Button theme="danger" onClick={this.handleClose}>
-                        Close
-                      </Button>
-                      <Button theme="primary" onClick={this.payThis}>
-                        Pay this amount
-                      </Button>
-                    </Modal.Footer>
-                  </Modal>
-
-                  <MobileView>
-                    <br />
-                    <br />
-                  </MobileView>
+                <Col xs={6}>
+                  <Button
+                    href="https://buy.stripe.com/bIYfZDaAI5oUfhC3cq"
+                    style={{ width: "100%" }}
+                    target="_blank"
+                    theme="info"
+                  >
+                    Misc. Fees
+                  </Button>
                 </Col>
-                <Col sm={6}>
-                  <PayPalButton
-                    amount={this.state.amount * 1.07}
-                    // shippingPreference="NO_SHIPPING" // default is "GET_FROM_FILE"
-                    onSuccess={(details, data) => {
-                      alert(
-                        "Transaction completed by " +
-                          details.payer.name.given_name
-                      )
+                <Col xs={6}>
+                  <Button
+                    href="https://buy.stripe.com/3csbJn4ck04AglGdR5"
+                    style={{ width: "100%" }}
+                    target="_blank"
+                    theme="danger"
+                  >
+                    1-on-1 Class
+                  </Button>
+                </Col>
+                <Col xs={6}>
+                  <br />
 
-                      // OPTIONAL: Call your server to save the transaction
-                      return fetch("/paypal-transaction-complete", {
-                        method: "post",
-                        body: JSON.stringify({
-                          orderId: data.orderID
-                        })
-                      })
-                    }}
-                    options={{
-                      clientId:
-                        "AWSNp5vB92XLnyeNLore9vTj7iXOhe9td45d_wJomi0Au1tv94zAM0RN5yLAQt6iNCqoJQpOLNlYffwC",
-                      currency: "USD"
-                    }}
-                  />
+                  <Button
+                    href="https://buy.stripe.com/4gw6p338g7x26L65kA"
+                    style={{ width: "100%" }}
+                    target="_blank"
+                    theme="success"
+                  >
+                    SAT Misc. Fee
+                  </Button>
+                </Col>
+                <Col xs={6}>
+                  <br />
+
+                  <Button
+                    href="https://buy.stripe.com/eVacNrbEMbNiglGdR7"
+                    style={{ width: "100%" }}
+                    target="_blank"
+                    theme="primary"
+                  >
+                    SAT Installments
+                  </Button>
+                </Col>
+                <Col xs={12}>
+                  <br />
+
+                  <Button
+                    href="https://wa.link/k4bg6m"
+                    style={{ width: "100%" }}
+                    target="_blank"
+                    theme="light"
+                  >
+                    <i className="fas fa-file-alt mr-2"></i>
+                    Request an Invoice
+                  </Button>
                 </Col>
               </Row>
-            </>
-          ) : null}
+
+              {/* CSEC Payment Buttons */}
+              <>
+                <br />
+                <br />
+
+                <img
+                  className="center"
+                  style={{ width: "25%" }}
+                  src={CSECImage}
+                />
+                <br />
+
+                <h5 className="text-center">CSEC Payments</h5>
+
+                <br />
+                <p>
+                  Pay your tuition on your CSEC subjects online. If you're not
+                  sure how much to pay,{" "}
+                  <a href="https://wa.link/js8zg0" target="_blank">
+                    let us know
+                  </a>
+                  .
+                </p>
+
+                <br />
+                <Row>
+                  <Col xs={6}>
+                    <Button
+                      href="https://buy.stripe.com/bIY5kZ8sA6sY4CY3cv"
+                      style={{ width: "100%" }}
+                      target="_blank"
+                      theme="primary"
+                    >
+                      English & Math
+                    </Button>
+                  </Col>
+                  <Col xs={6}>
+                    <Button
+                      href="https://buy.stripe.com/8wM8xb8sA7x20mI7sM"
+                      style={{ width: "100%" }}
+                      target="_blank"
+                      theme="light"
+                    >
+                      All other subjects
+                    </Button>
+                  </Col>
+                </Row>
+              </>
+
+              {/* CAPE Payment Buttons */}
+              <>
+                <br />
+                <br />
+
+                <img
+                  className="center"
+                  style={{ width: "25%" }}
+                  src={CAPEImage}
+                />
+                <br />
+
+                <MobileView>
+                  <h5 className="text-center">CAPE Payments</h5>
+                </MobileView>
+                <BrowserView>
+                  <h5>CAPE Payments</h5>
+                </BrowserView>
+                <br />
+                <p>
+                  Pay your tuition on your CAPE subjects online. If you're not
+                  sure how much to pay,{" "}
+                  <a href="https://wa.link/js8zg0" target="_blank">
+                    let us know
+                  </a>
+                  .
+                </p>
+
+                <br />
+                <Row>
+                  <Col xs={6}>
+                    <Button
+                      href="https://buy.stripe.com/14keVz4ckg3y5H28wS"
+                      style={{ width: "100%" }}
+                      target="_blank"
+                      theme="primary"
+                    >
+                      Comm. Studies
+                    </Button>
+                  </Col>
+                  <Col xs={6}>
+                    <Button
+                      href="https://buy.stripe.com/00geVz7ow2cId9u4gB"
+                      style={{ width: "100%" }}
+                      target="_blank"
+                      theme="light"
+                    >
+                      All other subjects
+                    </Button>
+                  </Col>
+                </Row>
+              </>
+
+              <br />
+              <br />
+            </Col>
+            <Col sm={6}>
+              <MobileView>
+                <h5 className="text-center">Course Materials</h5>
+              </MobileView>
+              <BrowserView>
+                <h5>Course Materials</h5>
+              </BrowserView>
+              <br />
+              <p>
+                Pay your course material fee and adjust the quantity for the
+                number of subjects you're paying for.
+              </p>
+              <br />
+              <Button
+                href="https://buy.stripe.com/4gw8xb5go7x27Pa8wO"
+                style={{ width: "100%" }}
+                target="_blank"
+                theme="info"
+              >
+                <i className="fas fa-bookmark mr-2"></i>
+                Pay Course Materials
+              </Button>
+              <br />
+              <br />
+              <Faq data={data} styles={styles} config={config} />
+            </Col>
+          </Row>
         </Container>
       </Layout>
     )

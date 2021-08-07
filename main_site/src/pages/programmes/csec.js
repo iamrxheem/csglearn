@@ -58,7 +58,7 @@ const Summary = (
       modeOfStudy="Online"
       duration="8 months"
       numberOfCourses="As many"
-      termBeginsOn="Monday, August 23, 2021"
+      termBeginsOn="Monday, August 9, 2021"
     />
   </>
 )
@@ -159,7 +159,13 @@ const FAQComponent = (
             content: (
               <>
                 <br />
-                <p>Students are able to pay online or via bank transfer.</p>
+                <p>
+                  Students are able to{" "}
+                  <a href="https://www.csglearn.com/pay" target="_blank">
+                    pay online
+                  </a>{" "}
+                  or via bank transfer.
+                </p>
                 <br />
               </>
             )
@@ -187,10 +193,32 @@ const Page = props => (
       <p>
         Registration is now open for our online CSEC classes starting in August.
         Candidates are able to register for online classes for either the
-        January 2022 exams or the May/ June 2022 exams.
+        January 2022 exams or the May/ June 2022 exams. Classes begin Monday,
+        August 9. Enrolled students get access to:
       </p>
       <br />
 
+      <ul>
+        <li>3-4 hours of class time weekly for each subject</li>
+        <li style={{ paddingTop: "15px" }}>Weekly assignments</li>
+        <li style={{ paddingTop: "15px" }}>Monthly mock exams</li>
+        <li style={{ paddingTop: "15px" }}>
+          Monthly progress reports for parents
+        </li>
+        <li style={{ paddingTop: "15px" }}>Virtual textbooks</li>
+        <li style={{ paddingTop: "15px" }}>
+          Additional virtual class materials
+        </li>
+      </ul>
+
+      <br />
+      <p>
+        See special offers for international students in{" "}
+        <a href="/tt/exam22">Trinidad & Tobago</a> and{" "}
+        <a href="/bb/exam22">Barbados</a>.
+      </p>
+
+      <br />
       <h5>Subjects Offered</h5>
 
       <br />
@@ -202,20 +230,24 @@ const Page = props => (
           <tr>
             <td>English A</td>
             <td>Mathematics</td>
-            <td>Biology</td>
           </tr>
           <tr>
+            <td>Biology</td>
             <td>Chemistry</td>
+          </tr>
+          <tr>
             <td>Physics</td>
             <td>Human & Social Biology</td>
           </tr>
           <tr>
             <td>Principles of Accounts</td>
             <td>Principles of Business</td>
-            <td>Social Studies</td>
           </tr>
           <tr>
+            <td>Social Studies</td>
             <td>Caribbean History</td>
+          </tr>
+          <tr>
             <td>Information Technology</td>
             <td>Office Administration</td>
           </tr>
@@ -225,7 +257,6 @@ const Page = props => (
           </tr>
         </tbody>
       </Table>
-
       <br />
       <a
         className="btn btn-primary"
@@ -236,7 +267,7 @@ const Page = props => (
         Enroll now
       </a>
 
-      <br />
+      <br id="#tuition" />
       <br />
 
       <h5>Fees & Tuition</h5>
@@ -251,12 +282,12 @@ const Page = props => (
         </thead>
         <tbody>
           <tr>
-            <td>English A</td>
+            <td>English A or Mathematics</td>
             <td>JMD $5,800</td>
           </tr>
           <tr>
-            <td>Mathematics</td>
-            <td>JMD $5,800</td>
+            <td>Sciences</td>
+            <td>JMD $5,300</td>
           </tr>
           <tr>
             <td>All other subjects</td>

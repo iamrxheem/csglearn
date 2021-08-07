@@ -18,7 +18,7 @@ import {
 } from "shards-react"
 
 const ContactPage = () => (
-  <Layout>
+  <Layout hideAlert>
     <SEO
       title="Contact Us"
       description="Contact our Customer Support team today online, or give us a call at (876) 707-3443 or by email at info@csglearn.com."
@@ -35,26 +35,56 @@ const ContactPage = () => (
       <h2>Contact Us</h2>
 
       <br />
-      <span>
+      <p>
         Our mission is to help your child accomplish everything he is capable of
-        and realize his full potential. And that promise doesn’t stop after
-        we’ve shipped you our product. Take a moment to review our Website,
-        including the FAQ’s page.
-      </span>
-
-      <hr className="m-5" />
-
-      <h6>Customer Service</h6>
-      <span>
-        You may contact our Customer Service department at{" "}
-        <a href="mailto:info@csglearn.com">info@csglearn.com</a> or (876)
-        707-3443.
-      </span>
+        and realize his full potential. And that promise doesn’t stop after our
+        classes have ended. Take a moment to review our Website, including the
+        FAQ’s page.
+      </p>
 
       <br />
-      <span>
-        Monday through Friday, <strong>8AM – 7PM EST</strong>.
-      </span>
+      <Row>
+        <Col xs={1}>
+          <i class="fas fa-ticket-alt fa-xl"></i>
+        </Col>
+        <Col xs={11}>
+          <p>
+            Open a{" "}
+            <a href="https://www.ticket.csglearn.com/open.php" target="_blank">
+              Customer Support Ticket
+            </a>
+          </p>
+        </Col>
+      </Row>
+
+      <hr className="m-4" />
+
+      <Row>
+        <Col xs={12} md={6}>
+          <h5>Customer Service</h5>
+
+          <br />
+          <p>
+            You may contact our Customer Service department at{" "}
+            <a href="mailto:info@csglearn.com">info@csglearn.com</a> or via
+            WhatsApp (876) 707-3443.
+          </p>
+
+          <p>
+            Monday through Friday, <strong>9AM – 5PM EST</strong>.
+          </p>
+          <br />
+        </Col>
+        <Col xs={12} md={6}>
+          <h6>Partnerships</h6>
+
+          <p>
+            <a href="mailto:partnerships@csglearn.com">
+              partnerships@csglearn.com
+            </a>
+          </p>
+        </Col>
+      </Row>
     </Container>
   </Layout>
 )

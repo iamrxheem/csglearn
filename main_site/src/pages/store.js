@@ -1,13 +1,19 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../components/layout"
+import StoreLayout from "../layouts/storeLayout"
 import SEO from "../components/seo"
-// import "../assets/js/ecwid.js"
 
 // View Components
 import MobileView from "../common/mobileView"
 import BrowserView from "../common/browserView"
+import { PayPalButton } from "react-paypal-button-v2"
+import { Carousel } from "react-bootstrap"
+
+import ICanCountBookCover from "../images/textbooks/i-can-count-book-cover.png"
+
+// Store item preview
+import StoreItemPreview from "../store/storeItemPreview"
 
 import {
   Container,
@@ -16,33 +22,122 @@ import {
   Row,
   Col,
   Button,
-  Alert
+  Form,
+  FormInput,
+  FormGroup,
+  Alert,
+  InputGroup,
+  InputGroupText,
+  InputGroupAddon,
+  Dropdown,
+  DropdownToggle,
+  DropdownMenu,
+  FormSelect,
+  DropdownItem
 } from "shards-react"
+import Modal from "react-bootstrap/Modal"
+import Swal from "sweetalert2"
 
-class Agreements extends React.Component {
-  executeOnClick(isExpanded) {
-    console.log(isExpanded)
+class Store extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {}
   }
 
   render() {
     return (
-      <>
-        <Layout hideAlert hideMenu>
-          <SEO title="Online Store" description="" />
+      <StoreLayout title="Online Store" description="" hideAlert>
+        <Carousel>
+          <Carousel.Item>
+            <img className="d-block w-100" src="" alt="" />
+            <Carousel.Caption>
+              <h3></h3>
+              <p></p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src="" alt="" />
 
-          <frameset rows="100%">
-            <frame
-              name=""
-              src="https://csglearn.company.site/?lang=en&from_admin"
+            <Carousel.Caption>
+              <h3></h3>
+              <p></p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="d-block w-100" src="" alt="" />
+
+            <Carousel.Caption>
+              <h3></h3>
+              <p></p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+        <br />
+        <br />
+        <Container>
+          <Row>
+            <StoreItemPreview
+              itemName="CSEC Revision - Mathematics"
+              imgSrc={ICanCountBookCover}
+              amount={25}
+              href="english-a"
+              priceID=""
             />
-            <noframes>
-              <body>Your browser does not support frames.</body>
-            </noframes>
-          </frameset>
-        </Layout>
-      </>
+
+            <StoreItemPreview
+              itemName="CSEC Revision - Mathematics"
+              imgSrc={ICanCountBookCover}
+              amount={25}
+              href="math"
+            />
+            <StoreItemPreview
+              itemName="CSEC Revision - Mathematics"
+              imgSrc={ICanCountBookCover}
+              amount={25}
+              href=""
+            />
+            <StoreItemPreview
+              itemName="CSEC Revision - Mathematics"
+              imgSrc={ICanCountBookCover}
+              amount={25}
+              href=""
+            />
+            <StoreItemPreview
+              itemName="CSEC Revision - Mathematics"
+              imgSrc={ICanCountBookCover}
+              amount={25}
+              href=""
+            />
+            <StoreItemPreview
+              itemName="CSEC Revision - Mathematics"
+              imgSrc={ICanCountBookCover}
+              amount={25}
+              href=""
+            />
+            <StoreItemPreview
+              itemName="CSEC Revision - Mathematics"
+              imgSrc={ICanCountBookCover}
+              amount={25}
+              href=""
+            />
+            <StoreItemPreview
+              itemName="CSEC Revision - Mathematics"
+              imgSrc={ICanCountBookCover}
+              amount={25}
+              href=""
+            />
+            <StoreItemPreview
+              itemName="CSEC Revision - Mathematics"
+              imgSrc={ICanCountBookCover}
+              amount={25}
+              href=""
+            />
+          </Row>
+        </Container>
+      </StoreLayout>
     )
   }
 }
 
-export default Agreements
+export default Store

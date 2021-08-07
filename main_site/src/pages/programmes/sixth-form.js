@@ -20,6 +20,7 @@ import {
   Popover,
   Button
 } from "react-bootstrap"
+import ProgrammeVideo from "../../videos/cape.mp4"
 
 // Shards-React Components
 import {
@@ -35,6 +36,7 @@ import {
   CardBody,
   CardFooter
 } from "shards-react"
+import Faq from "react-faq-component"
 
 import { isMobile } from "react-device-detect"
 
@@ -45,11 +47,7 @@ import SixthFormMiniMenu from "../../components/miniMenus/sixthFormMiniMenu"
 import Img1 from "../../images/young-student.jpg"
 
 import { applyLinks } from "../../data/links"
-let applyLink = ""
-
-applyLinks.map(data => {
-  return (applyLink = data.capeSeptember)
-})
+let applyLink = "https://wa.link/20mktm"
 
 const Page = props => (
   <>
@@ -58,7 +56,7 @@ const Page = props => (
       description="Enroll online in our online sixth form programme, beginning on September 14, 2021. Subjects include Communication Studies, Caribbean Studies, Management of Business and more!"
     />
 
-    <SixthFormLayout enroll="/apply#cape">
+    <SixthFormLayout enroll={applyLink}>
       <Container>
         <Breadcrumb>
           <BreadcrumbItem>
@@ -78,14 +76,37 @@ const Page = props => (
             <SixthFormMiniMenu enroll={applyLink} />
 
             <br />
-            <span>
+            <p>
               Our Sixth Form Programme allows students to complete their
-              preferred CAPE subjects in a two-year study. Students are able
+              preferred CAPE subjects in a one-year study. Students are able
               enroll in online classes and exam registration.
-            </span>
+            </p>
 
             <br />
+            <p>Enrolled students get access to:</p>
+
+            <ul>
+              <li>3-4 hours of class time weekly for each subject</li>
+              <li style={{ paddingTop: "15px" }}>Weekly assignments</li>
+              <li style={{ paddingTop: "15px" }}>Monthly mock exams</li>
+              <li style={{ paddingTop: "15px" }}>
+                Monthly progress reports for parents
+              </li>
+              <li style={{ paddingTop: "15px" }}>Virtual textbooks</li>
+              <li style={{ paddingTop: "15px" }}>
+                Additional virtual class materials
+              </li>
+            </ul>
             <br />
+
+            <p>
+              See special offers for international students in{" "}
+              <a href="/tt/exam22">Trinidad & Tobago</a> and{" "}
+              <a href="/bb/exam22">Barbados</a>.
+            </p>
+
+            <br />
+            <h5>Subjects Offered</h5>
             <br />
             <Table light hover responsive style={{ width: "100%" }}>
               <thead>
@@ -123,25 +144,37 @@ const Page = props => (
               </tbody>
             </Table>
 
-            <br />
-            <Row>
-              <Col sm={6}>
-                <Button
-                  href={applyLink}
-                  target="_blank"
-                  style={{ width: "100%" }}
-                >
-                  Enroll now
-                </Button>
-              </Col>
-              <Col sm={6}></Col>
-            </Row>
-          </Col>
-          <Col md={5}>
             <MobileView>
               <br />
               <br />
+              <video
+                className="break-container"
+                style={{ width: "100%" }}
+                preload="auto"
+                autoPlay={true}
+                loop
+                muted
+              >
+                <source src={ProgrammeVideo} type="video/mp4" />
+              </video>
             </MobileView>
+          </Col>
+          <Col md={5}>
+            <BrowserView>
+              <video
+                style={{ width: "100%" }}
+                preload="auto"
+                autoPlay={true}
+                loop
+                muted
+              >
+                <source src={ProgrammeVideo} type="video/mp4" />
+              </video>
+              <br />
+            </BrowserView>
+
+            <br />
+            <br />
 
             <ProgrammeSummary
               hasOptions
@@ -150,371 +183,122 @@ const Page = props => (
               modeOfStudy="Online"
               duration="8 months"
               numberOfCourses="As many"
-              termBeginsOn="Monday, Spetember 13, 2021"
+              termBeginsOn="Monday, August 2, 2021"
             />
-
-            <MobileView>
-              <br />
-              <br />
-              <Row>
-                <Col sm={6}>
-                  <Button
-                    href={applyLink}
-                    target="_blank"
-                    style={{ width: "100%" }}
-                  >
-                    Enroll now
-                  </Button>
-                </Col>
-                <Col sm={6}></Col>
-              </Row>
-            </MobileView>
-          </Col>
-        </Row>
-
-        <br />
-        <br />
-        <br />
-        <Row>
-          <Col md={4}>
-            <img
-              className="center"
-              style={{ width: "30%" }}
-              src={BusinessIcon}
-            />
-
-            <h4 className="text-center">Business</h4>
-
-            <br />
-            <span style={{ fontSize: "15px" }}>
-              Review the options for our Sixth Form Business Programme and
-              select the best one that matches your desired career. Note the
-              subjects needed to study at the University of the West Indies.
-            </span>
-
-            <br />
-            <br />
-            <Card className={isMobile ? "break-container" : ""}>
-              <CardHeader>
-                <h6>Option 1 - Business Only</h6>
-                <br />
-
-                <span style={{ fontSize: "15px" }}>
-                  Minimum two (2) out of the following following subjects
-                </span>
-
-                <br />
-                <br />
-                <ul>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>
-                      Management of Business
-                    </span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Entrepreneurship</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Economics</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Accounting</span>
-                  </li>
-                </ul>
-                <span style={{ fontSize: "15px" }}>
-                  + Communication Studies <b>(yr 1)</b> and Caribbean Studies{" "}
-                  <b>(yr 2)</b>
-                </span>
-                <br />
-                <br />
-              </CardHeader>
-              <CardBody>
-                <h6>Option 2 - Business & Law</h6>
-                <br />
-                <span style={{ fontSize: "15px" }}>
-                  Minimum two (2) out of the following following subjects
-                </span>
-
-                <br />
-                <br />
-                <ul>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>
-                      Management of Business
-                    </span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Entrepreneurship</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Sociology</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Caribbean Studies</span>
-                  </li>
-                </ul>
-                <span style={{ fontSize: "15px" }}>
-                  + Communication Studies <b>(yr 1 or 2)</b> and <b>Law</b>.
-                </span>
-                <br />
-                <br />
-              </CardBody>
-              <CardFooter>
-                <h6>Option 3 - Business & Technology</h6>
-                <br />
-                <span style={{ fontSize: "15px" }}>
-                  Minimum two (2) out of the following following subjects
-                </span>
-
-                <span style={{ fontSize: "15px" }}>
-                  Minimum two (2) out of the following following subjects
-                </span>
-
-                <br />
-                <br />
-                <ul>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>
-                      Management of Business
-                    </span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Entrepreneurship</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Sociology</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Economics</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Caribbean Studies</span>
-                  </li>
-                </ul>
-                <span style={{ fontSize: "15px" }}>
-                  + Communication Studies <b>(yr 1 or 2)</b> and Computer
-                  Science <strong>or</strong> Information Technology.
-                </span>
-                <br />
-                <br />
-              </CardFooter>
-            </Card>
-          </Col>
-          <Col md={4}>
-            <MobileView>
-              <br />
-              <br />
-            </MobileView>
-
-            <img
-              className="center"
-              style={{ width: "10%" }}
-              src="https://cdn2.iconfinder.com/data/icons/medicine-84/1000/Medicine-color-04-512.png"
-            />
-
-            <h4 className="text-center">Science & Medicine</h4>
-
-            <br />
-            <span style={{ fontSize: "15px" }}>
-              Our Sixth Form Science and Medicine Programme enables students to
-              sit their preferred CAPE science subjects in preparation for
-              studying medicine or a related field.
-            </span>
-
-            <br />
-            <br />
-            <Card className={isMobile ? "break-container" : ""}>
-              <CardHeader>
-                <h6>Option 1 - Pure Science</h6>
-                <br />
-
-                <span style={{ fontSize: "15px" }}>
-                  Minimum two (2) out of the following following subjects
-                </span>
-
-                <br />
-                <br />
-
-                <ul>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Biology</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Chemistry</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Physics</span>
-                  </li>
-                </ul>
-                <span style={{ fontSize: "15px" }}>
-                  + Communication Studies <strong>(yr 1 or 2)</strong>
-                </span>
-                <br />
-                <br />
-              </CardHeader>
-              <CardBody>
-                <h6>Option 2 - Science & Business</h6>
-                <br />
-
-                <span style={{ fontSize: "15px" }}>
-                  Minimum two (2) out of the following following subjects
-                </span>
-
-                <br />
-                <br />
-                <ul>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Biology</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Chemistry</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Physics</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Caribbean Studies</span>
-                  </li>
-                </ul>
-                <span style={{ fontSize: "15px" }}>
-                  + Communication Studies <strong>(yr 1 or 2) </strong> and
-                  Management of Business or Entrepreneurship
-                </span>
-                <br />
-                <br />
-              </CardBody>
-              <CardFooter>
-                <h6>Option 3 - Science & Technology</h6>
-                <br />
-
-                <span style={{ fontSize: "15px" }}>
-                  Minimum two (2) out of the following following subjects
-                </span>
-
-                <br />
-                <br />
-
-                <ul>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Biology</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Chemistry</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Physics</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Caribbean Studies</span>
-                  </li>
-                </ul>
-                <span style={{ fontSize: "15px" }}>
-                  + Communication Studies <b>(yr 1 or 2)</b> and Computer
-                  Science <strong>or</strong> Information Technology
-                </span>
-                <br />
-                <br />
-              </CardFooter>
-            </Card>
-          </Col>
-          <Col md={4}>
-            <MobileView>
-              <br />
-              <br />
-            </MobileView>
-            <img
-              className="center"
-              style={{ width: "30%" }}
-              src="https://previews.123rf.com/images/cowpland/cowpland1705/cowpland170500016/77165419-sociology-science-concept.jpg"
-            />
-
-            <h4 className="text-center">Humanities</h4>
-
-            <br />
-            <span style={{ fontSize: "15px" }}>
-              Study Law, Sociology, Communi Studies and more in our Humanities
-              Programme. Students can select from a list of required for
-              studying Law or other university entry requirements.
-            </span>
-
-            <br />
-            <br />
-            <Card className={isMobile ? "break-container" : ""}>
-              <CardHeader>
-                <h6>Option 1 - Lawyer Up</h6>
-                <br />
-
-                <span style={{ fontSize: "15px" }}>
-                  Must do all of the following
-                </span>
-
-                <br />
-                <br />
-                <ul>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Law</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Sociology</span>
-                  </li>
-                </ul>
-
-                <br />
-                <span style={{ fontSize: "15px" }}>
-                  + Communication Studies <strong> (yr 1) and</strong>{" "}
-                  Communication Studies <strong> (yr 2)</strong>
-                </span>
-                <br />
-                <br />
-              </CardHeader>
-              <CardBody>
-                <h6>Option 2</h6>
-                <br />
-
-                <span style={{ fontSize: "15px" }}>
-                  Minimum two (2) out of the following following subjects
-                </span>
-
-                <br />
-                <br />
-
-                <ul>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Sociology</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Entrepreneurship</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Physics</span>
-                  </li>
-                  <li>
-                    <span style={{ fontSize: "15px" }}>Caribbean Studies</span>
-                  </li>
-                </ul>
-
-                <span style={{ fontSize: "15px" }}>
-                  + Communication Studies <b>(yr 1 or 2)</b>
-                </span>
-                <br />
-                <br />
-              </CardBody>
-            </Card>
           </Col>
         </Row>
 
         <MobileView>
           <br />
           <br />
-          <Row>
-            <Col sm={6}>
-              <Button href="/apply#cape" style={{ width: "100%" }}>
-                Enroll now
-              </Button>
-            </Col>
-            <Col sm={6}></Col>
-          </Row>
+
+          <Button href={applyLink} style={{ width: "100%" }}>
+            Enroll now
+          </Button>
         </MobileView>
+
+        <br />
+        <br />
+        <h3 className="text-center">Frequently Asked Questions</h3>
+
+        <br />
+        <Faq
+          data={{
+            title: "",
+            rows: [
+              {
+                title: "Where are we located?",
+                content: (
+                  <>
+                    <br />
+                    <p>
+                      We're based in Kingston, Jamaica but our operations are
+                      online, which allows us to not only provide valuable
+                      educational training and materials to students across
+                      Jamaica, but the entire Caribbean.
+                    </p>
+                    <br />
+                  </>
+                )
+              },
+              {
+                title: "How are classes held?",
+                content: (
+                  <>
+                    <br />
+                    <p>
+                      All classes are held online and are accessible through our{" "}
+                      <a href="https://www.hub.csglearn.com/my" target="_blank">
+                        Student Portal.
+                      </a>
+                    </p>
+                    <br />
+                  </>
+                )
+              },
+              {
+                title: "How often are classes kept?",
+                content: (
+                  <>
+                    <br />
+                    <p>
+                      On average, students are provided 3-4 hours of classtime
+                      per week. Additional classtime may be schedule by your
+                      teacher.
+                    </p>
+                    <br />
+                  </>
+                )
+              },
+              {
+                title: "Are payment plans available?",
+                content: (
+                  <>
+                    <br />
+                    <p>Yes, payment plans are available for all students.</p>
+                    <br />
+                  </>
+                )
+              },
+              {
+                title: "Am I able to register for the CXC Examination as well?",
+                content: (
+                  <>
+                    <br />
+                    <p>
+                      Yes, students can indicate whether they are registering
+                      for extra classes only or classes and exam registration.
+                    </p>
+                    <br />
+                  </>
+                )
+              },
+              {
+                title: "Where will I sit the exam?",
+                content: (
+                  <>
+                    <br />
+                    <p>
+                      You will be assigned an exmination center based in your
+                      address by your local Ministry of Education.
+                    </p>
+                    <br />
+                  </>
+                )
+              },
+              {
+                title: "How can I pay?",
+                content: (
+                  <>
+                    <br />
+                    <p>Students are able to pay online or via bank transfer.</p>
+                    <br />
+                  </>
+                )
+              }
+            ]
+          }}
+        />
       </Container>
     </SixthFormLayout>
   </>

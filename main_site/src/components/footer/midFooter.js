@@ -19,14 +19,18 @@ function MidFooter() {
 
               <ul className="ul">
                 <li>
-                  <Link className="link-light" to="/contact">
-                    Contact Us
-                  </Link>
+                  <a href="/support" className="link-light">
+                    Customer Support Center
+                  </a>
                 </li>
                 <li>
-                  <Link className="link-light" to="/">
-                    How to Reset Your Password
-                  </Link>
+                  <a
+                    target="_blank"
+                    className="link-light"
+                    href="https://www.ticket.csglearn.com/open.php"
+                  >
+                    Create Support Ticket
+                  </a>
                 </li>
                 <li>
                   <Link className="link-light" to="/">
@@ -66,16 +70,7 @@ function MidFooter() {
                     Student Portal
                   </a>
                 </li>
-                <li>
-                  <Link className="link-light" to="/help">
-                    Help Centre
-                  </Link>
-                </li>
-                <li>
-                  <a href="/interview" className="link-light">
-                    Interview Scheduler
-                  </a>
-                </li>
+
                 <li>
                   <a
                     className="link-light"
@@ -84,9 +79,6 @@ function MidFooter() {
                   >
                     Webmail
                   </a>
-                </li>
-                <li>
-                  <Link className="link-light" to="/"></Link>
                 </li>
               </ul>
 

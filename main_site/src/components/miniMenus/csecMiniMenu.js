@@ -20,17 +20,17 @@ const CsecMiniMenu = props => (
         </Col>
         <Col xs={6}>
           <Alert theme="danger">
-            <a style={{ textDecoration: "none" }} href="/cape">
+            <a
+              style={{ textDecoration: "none" }}
+              href={props.cape ? props.cape : "/cape"}
+            >
               FOR CAPE
             </a>
           </Alert>
         </Col>
         <Col xs={6}>
           <Alert theme="success">
-            <a
-              style={{ textDecoration: "none" }}
-              href="/programmes/csec/tuition"
-            >
+            <a style={{ textDecoration: "none" }} href="#tuition">
               TUITION
             </a>
           </Alert>

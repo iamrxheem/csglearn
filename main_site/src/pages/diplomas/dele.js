@@ -169,12 +169,12 @@ const Page = () => (
 
           <ProgrammeSummary
             showCost
-            cost="JMD $80,000"
+            cost="JMD $50,000"
             levelOfStudy="Accredited Diploma"
             modeOfStudy="Online"
-            duration="8 months"
+            duration="3 months"
             numberOfCourses="4"
-            termBeginsOn="July 12, 2021"
+            termBeginsOn="August 30, 2021"
           />
 
           <MobileView>

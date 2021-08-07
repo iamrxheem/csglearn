@@ -58,9 +58,10 @@ const Page = () => (
 
           <br />
           <span>
-            Registration for online classes are now open! Students can register
-            for both online classes and exam registration for both{" "}
-            <a href="/csec">CXC (CSEC)</a> and <a href="/6form">CAPE</a>.
+            Registration for online classes are now open for classes starting in
+            August! Students can register for both online classes and exam
+            registration for both <a href="/csec">CXC (CSEC)</a> and{" "}
+            <a href="/6form">CAPE</a>.
           </span>
 
           <br />
@@ -89,6 +90,27 @@ const Page = () => (
           </div>
 
           <br />
+          <p>Registered candidates get access to:</p>
+
+          <ul>
+            <li>3-4 hours of class time weekly for each subject</li>
+            <li style={{ paddingTop: "15px" }}>Weekly assignments</li>
+            <li style={{ paddingTop: "15px" }}>Monthly mock exams</li>
+            <li style={{ paddingTop: "15px" }}>
+              Monthly progress reports for parents
+            </li>
+            <li style={{ paddingTop: "15px" }}>Virtual textbooks</li>
+            <li style={{ paddingTop: "15px" }}>
+              Additional virtual class materials
+            </li>
+          </ul>
+
+          <br />
+          <p>
+            See special offers for students in{" "}
+            <a href="/tt/exam22">Trinidad & Tobago</a> and{" "}
+            <a href="/bb/exam22">Barbados</a>.
+          </p>
         </Col>
         <Col sm={6}>
           <BrowserView>

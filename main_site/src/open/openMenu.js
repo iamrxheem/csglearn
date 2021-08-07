@@ -160,7 +160,7 @@ class OpenMenu extends React.Component {
               {/* Contact Us */}
               <NavItem>
                 <Link className="nav-link" to="/open/contact">
-                  <i class="fas fa-id-badge mr-2" /> Contact
+                  Contact
                 </Link>
               </NavItem>
 

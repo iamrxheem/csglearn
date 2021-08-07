@@ -10,6 +10,7 @@ import BrowserView from "../common/browserView"
 import StarsRating from "../common/starsRating"
 
 import {
+  Badge,
   Container,
   Breadcrumb,
   BreadcrumbItem,
@@ -31,14 +32,14 @@ import ProjectManagementImage from "../images/short-courses/project-managent.png
 import CustomerServiceImage from "../images/short-courses/customer-service.png"
 
 const ContactPage = () => (
-  <Layout>
+  <Layout hideAlert>
     <SEO title="Short Courses & Certifications" description="" />
 
     <br />
     <Container>
       <Breadcrumb>
         <BreadcrumbItem>
-          <Link to="/">Home</Link>
+          <a href="/">Home</a>
         </BreadcrumbItem>
         <BreadcrumbItem active>Short Courses</BreadcrumbItem>
       </Breadcrumb>
@@ -48,14 +49,15 @@ const ContactPage = () => (
           <MobileView>
             <br />
           </MobileView>
-          <Card>
-            <CardImg src={WebDevImage} />
+
+          <Card className={isMobile ? "break-container" : ""}>
+            <CardImg style={{ width: "100%" }} src={CustomerServiceImage} />
 
             <CardBody>
-              <CardTitle>Web Design</CardTitle>
+              <CardTitle>Customer Service & Sales</CardTitle>
 
               <br />
-              <Button href="/short-courses/webdev">Learn more</Button>
+              <Button href="/short-courses/customer-service">Learn more</Button>
             </CardBody>
           </Card>
         </Col>
@@ -63,15 +65,16 @@ const ContactPage = () => (
           <MobileView>
             <br />
           </MobileView>
-          <Card>
-            <CardImg src={ProjectManagementImage} />
+
+          <Card className={isMobile ? "break-container" : ""}>
+            <CardImg style={{ width: "100%" }} src={WebDevImage} />
 
             <CardBody>
-              <CardTitle>Project Management</CardTitle>
+              <CardTitle>Web Design</CardTitle>
 
               <br />
-              <Button href="/short-courses/project-management">
-                Learn more
+              <Button href="" theme="light">
+                Coming soon
               </Button>
             </CardBody>
           </Card>
@@ -80,15 +83,15 @@ const ContactPage = () => (
           <MobileView>
             <br />
           </MobileView>
-
-          <Card>
-            <CardImg src={CustomerServiceImage} />
+          <Card className={isMobile ? "break-container" : ""}>
+            <CardImg style={{ width: "100%" }} src={ProjectManagementImage} />
 
             <CardBody>
-              <CardTitle>Customer Service & Sales</CardTitle>
-
+              <CardTitle>Project Management</CardTitle>
               <br />
-              <Button href="/short-courses/customer-service">Learn more</Button>
+              <Button href="" theme="light">
+                Coming soon
+              </Button>
             </CardBody>
           </Card>
         </Col>

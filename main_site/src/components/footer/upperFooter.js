@@ -36,19 +36,19 @@ function UpperFooter() {
 
             <ul className="ul">
               <li>
-                <Link to="/programmes/sat">SAT Classes</Link>
+                <a href="/programmes/sat">SAT Classes</a>
               </li>
               <li>
-                <Link to="/diplomas/dele">Diploma in Spanish</Link>
+                <a href="/diplomas/dele">Diploma in Spanish</a>
               </li>
               <li>
-                <Link to="/diplomas/delf">Diploma in French</Link>
+                <a href="/diplomas/delf">Diploma in French</a>
               </li>
               <li>
-                <Link to="/programmes/csec">CSEC Classes</Link>
+                <a href="/programmes/csec">CSEC Classes</a>
               </li>
               <li>
-                <Link to="/programmes/sixth-form">Sixth Form Programme</Link>
+                <a href="/programmes/sixth-form">Sixth Form Programme</a>
               </li>
             </ul>
 
@@ -60,19 +60,19 @@ function UpperFooter() {
 
             <ul className="ul">
               <li>
-                <Link to="/programmes/literacy">Literacy Classes</Link>
+                <a href="/programmes/literacy">Literacy Classes</a>
               </li>
               <li>
-                <Link to="/short-courses/webdev">Web Design</Link>
+                <a href="/short-courses/webdev">Web Design</a>
               </li>
               <li>
-                <Link to="/short-courses/">Customer Service</Link>
+                <a href="/short-courses/">Customer Service</a>
               </li>
               <li>
-                <Link to="/short-courses/">Project Management</Link>
+                <a href="/short-courses/">Project Management</a>
               </li>
               <li>
-                <Link to="/short-courses/">CSEC & CAPE Timetables</Link>
+                <a href="/short-courses/">CSEC & CAPE Timetables</a>
               </li>
             </ul>
           </Col>

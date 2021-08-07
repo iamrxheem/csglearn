@@ -13,6 +13,7 @@ import DELEImage from "../images/dele.png"
 import DELFImage from "../images/delf.png"
 import SATImage from "../images/sat.jpg"
 import ACCAImage from "../images/acca.jpg"
+import IELTSImage from "../images/ielts.png"
 import KidsImage from "../images/kids-reading.jpeg"
 
 const imgageStyle = {
@@ -40,6 +41,7 @@ const OnlineClasses = () => (
       <br />
       <Container>
         <Row>
+          {/* CSEC */}
           <Col md={4}>
             <img src={CSECImage} style={imgageStyle} />
             <h5 className="text-center">Online CSEC Classes</h5>
@@ -52,16 +54,18 @@ const OnlineClasses = () => (
 
             <br />
             <br />
-            <Link
+            <Button
               style={{ textDecoration: "none" }}
               theme="dark"
               className="center btn btn-outline-primary"
               outline
-              to="/programmes/csec"
+              href="/programmes/csec"
             >
               Learn more
-            </Link>
+            </Button>
           </Col>
+
+          {/* Sixth Form */}
           <Col md={4}>
             <MobileView>
               <br />
@@ -69,60 +73,93 @@ const OnlineClasses = () => (
               <br />
             </MobileView>
             <img src={CAPEImage} style={imgageStyle} />
-            <h5 className="text-center">Associate Sixth Form</h5>
+            <h5 className="text-center">Online CAPE Classes</h5>
             <br />
             <span>
               Our 2-year Associate Sixth Form and Career Counselling programme
               allows students to complete their preferred CAPE subjects in
               preparation for university.
             </span>
-
             <br />
             <br />
-            <Link
+            <Button
               style={{ textDecoration: "none" }}
               theme="dark"
               className="center btn btn-outline-dark"
               outline
-              to="/programmes/sixth-form"
+              href="/programmes/sixth-form"
             >
               Learn more
-            </Link>
+            </Button>
           </Col>
+
+          {/* IELTS */}
           <Col md={4}>
             <MobileView>
               <br />
               <br />
               <br />
+              <br />
             </MobileView>
+            <img src={IELTSImage} style={imgageStyle} />
+            <h5 className="text-center">English Language Certification</h5>
+            <br />
+            <span>
+              IELTS is an English language test for study, migration or work.
+              Millions take the test every year, and is accepted by employers,
+              universities and immigration bodies around the world.
+            </span>
+
+            <br />
+            <br />
+            <Button
+              style={{ textDecoration: "none" }}
+              theme="dark"
+              className="center btn btn-outline-dark"
+              outline
+              href="/diplomas/ielts"
+            >
+              Learn more
+            </Button>
+            <MobileView>
+              <br />
+              <br />
+            </MobileView>
+          </Col>
+
+          {/* Diploma in Spanish */}
+          <Col md={4}>
+            <br />
+            <br />
+            <br />
+
             <img src={DELEImage} style={imgageStyle} />
             <h5 className="text-center">Diploma in Spanish</h5>
             <br />
             <span>
               Start learning Spanish from scratch for the accredited Beginners
-              Diploma in Spanish, or the Diploma in Spanish Master's
-              Certification for proficient and fluent speakers.
+              Diploma in Spanish, starting in September.
             </span>
 
             <br />
             <br />
-            <Link
+            <Button
               style={{ textDecoration: "none" }}
               theme="dark"
               className="center btn btn-outline-primary"
               outline
-              to="/diplomas/dele"
+              href="/diplomas/dele"
             >
               Learn more
-            </Link>
+            </Button>
           </Col>
+
+          {/* Diploma in French */}
           <Col md={4}>
             <br />
             <br />
             <br />
-            <BrowserView>
-              <br />
-            </BrowserView>
+
             <img src={DELFImage} style={imgageStyle} />
             <h5 className="text-center">Diploma in French</h5>
             <br />
@@ -133,16 +170,18 @@ const OnlineClasses = () => (
 
             <br />
             <br />
-            <Link
+            <Button
               style={{ textDecoration: "none" }}
               theme="dark"
               className="center btn btn-outline-primary"
               outline
-              to="/diplomas/delf"
+              href="/diplomas/delf"
             >
               Learn more
-            </Link>
+            </Button>
           </Col>
+
+          {/* Literacy class */}
           <Col md={4}>
             <br />
             <br />
@@ -170,7 +209,7 @@ const OnlineClasses = () => (
             <br />
             <Row>
               <Col xs={6}>
-                <a
+                <Button
                   style={{ textDecoration: "none", width: "100%" }}
                   theme="dark"
                   className="center btn btn-outline-primary"
@@ -178,10 +217,10 @@ const OnlineClasses = () => (
                   href="/programmes/literacy/kids"
                 >
                   Kids
-                </a>
+                </Button>
               </Col>
               <Col xs={6}>
-                <a
+                <Button
                   style={{ textDecoration: "none", width: "100%" }}
                   theme="dark"
                   className="center btn btn-outline-primary"
@@ -189,7 +228,7 @@ const OnlineClasses = () => (
                   href="/programmes/literacy/adults"
                 >
                   Adults
-                </a>
+                </Button>
               </Col>
             </Row>
           </Col>
@@ -207,7 +246,7 @@ const OnlineClasses = () => (
 
             <br />
             <br />
-            <a
+            <Button
               style={{ textDecoration: "none" }}
               theme="dark"
               className="center btn btn-outline-primary"
@@ -215,7 +254,7 @@ const OnlineClasses = () => (
               href="/programmes/sat"
             >
               Learn more
-            </a>
+            </Button>
           </Col>
         </Row>
 

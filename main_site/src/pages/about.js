@@ -9,9 +9,9 @@ import MobileView from "../common/mobileView"
 import BrowserView from "../common/browserView"
 
 import { Container, Breadcrumb, BreadcrumbItem, Row, Col } from "shards-react"
-
+import Logo from "../images/csg-learning.png"
 const ContactPage = () => (
-  <Layout>
+  <Layout hideAlert>
     <SEO
       title="About Us"
       description="Learn more about the team at CSG Learning Institute, lead by Mr. Raheem McDonald and our mission, culture and staff."
@@ -26,7 +26,9 @@ const ContactPage = () => (
       </Breadcrumb>
 
       <Row>
-        <Col sm={4}></Col>
+        <Col sm={4}>
+          <img src={Logo} style={{ width: "100%" }} />
+        </Col>
         <Col sm={8}>
           <span>
             CSG Learning Institute orginally started as{" "}

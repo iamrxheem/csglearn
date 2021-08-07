@@ -23,10 +23,7 @@ function ImportPage() {
           src="https://static-na.payments-amazon.com/OffAmazonPayments/us/js/Widgets.js"
         ></script>
 
-        <script
-          src="https://www.paypal.com/sdk/js?client-id=AWSNp5vB92XLnyeNLore9vTj7iXOhe9td45d_wJomi0Au1tv94zAM0RN5yLAQt6iNCqoJQpOLNlYffwC&currency=USD"
-          data-sdk-integration-source="button-factory"
-        />
+        <script src="https://www.paypal.com/sdk/js?client-id=AemVDjWkD5QVsAv7RNKcF-HxMf7V_vksSdDWA-i2NBeVZhj6qd8UWXluk2LYlMsPMMgOsSdTFM7h0cTe"></script>
 
         <script
           type="text/javascript"
@@ -84,6 +81,8 @@ function ImportPage() {
           name="keywords"
           content="cxc, csec, cxcguide, csglearn, Raheem McDonald, CSG Learning Institute, CSG Learning, Kerwin Springer, DELE, diplomas de espanol, jamaica, education, online, online learning, accredited university, accredited, exam, CAPE, cape exam, csec past papers, cxc past peprs, paperbin, paperbin xyz, cxc textbooks, accredited, university, online university, dele, SAT, college board, sat exam, SAT jamaica, past papers, cxc past papers, cape past papers, csec past papers, the student hub, diplomas in french, sixth form"
         />
+        <script src="https://js.stripe.com/v3/" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch" />
       </Helmet>
     </>
   )

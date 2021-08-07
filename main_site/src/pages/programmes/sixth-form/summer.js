@@ -134,7 +134,7 @@ const Page = props => (
                   <td>
                     <b>Unit 1</b>
                   </td>
-                  <td>July 5, 2021</td>
+                  <td>August 2, 2021</td>
                   <td>August 27</td>
                 </tr>
                 <tr>
@@ -159,20 +159,29 @@ const Page = props => (
               <tbody>
                 <tr>
                   <td>Comm Studies</td>
-                  <td>JMD $10,000</td>
+                  <td>
+                    JMD $10,000
+                    <br /> USD $65
+                  </td>
                 </tr>
                 <tr>
                   <td>Carib Studies</td>
-                  <td>JMD $10,000</td>
+                  <td>
+                    JMD $10,000
+                    <br /> USD $65
+                  </td>
                 </tr>
                 <tr>
                   <td>All other subjects</td>
-                  <td>JMD $7,000</td>
+                  <td>
+                    JMD $7,000 <br /> USD $45
+                  </td>
                 </tr>
                 <tr>
                   <td>Course Material</td>
                   <td>
                     JMD $4,500 <b>(optional)</b>
+                    <br /> USD $30
                   </td>
                 </tr>
               </tbody>

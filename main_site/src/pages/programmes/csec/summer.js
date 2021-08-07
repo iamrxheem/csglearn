@@ -35,9 +35,9 @@ const Summary = (
   <ProgrammeSummary
     levelOfStudy="Extra classes"
     modeOfStudy="Online"
-    duration="1 month"
+    duration="2 months"
     numberOfCourses="As many"
-    termBeginsOn="July 5 - August 27, 2021"
+    termBeginsOn="August 2 - August 27, 2021"
   />
 )
 
@@ -65,10 +65,11 @@ const Page = props => (
       breadcrumbs={Crumbs}
       summary={Summary}
       enroll={applyLink}
+      cape="/programmes/sixth-form/summer"
     >
       <span>
-        Our summer programme runs from July 5 to August 28, 2021 and are open to
-        all students. Please see the list of subjects being offered:
+        Our summer programme runs from July 12 to August 28, 2021 and are open
+        to all students. Please see the list of subjects being offered:
       </span>
       <br />
       <br />
@@ -121,26 +122,31 @@ const Page = props => (
         <tbody>
           <tr>
             <td>English A</td>
-            <td>JMD $10,000</td>
+            <td>
+              JMD $10,000 <br /> USD $65
+            </td>
           </tr>
           <tr>
             <td>Mathematics</td>
-            <td>JMD $10,000</td>
+            <td>
+              JMD $10,000 <br /> USD $65
+            </td>
           </tr>
           <tr>
             <td>All other subjects</td>
-            <td>JMD $7,000</td>
+            <td>
+              JMD $7,000
+              <br /> USD $45
+            </td>
           </tr>
           <tr>
             <td>Course Material</td>
             <td>
-              JMD $4,500 <b>(optional)</b>
+              JMD $4,500 <b>(optional)</b> <br /> USD $30
             </td>
           </tr>
         </tbody>
       </Table>
-
-      <br />
     </CSECLayout>
   </>
 )

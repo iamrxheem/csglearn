@@ -58,7 +58,10 @@ class CSECLayout extends React.Component {
                 <h3>{this.props.title}</h3>
 
                 <br />
-                <CsecMiniMenu enroll={this.props.enroll} />
+                <CsecMiniMenu
+                  cape={this.props.cape ? this.props.cape : ""}
+                  enroll={this.props.enroll}
+                />
 
                 <br />
                 {this.props.children}

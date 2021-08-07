@@ -42,6 +42,10 @@ const AppPreview = () => (
             <i className="fas fa-check-circle mr-3 text-success"></i>
             <span>Upload assignments and homework</span>
           </li>
+          <li className="mt-3">
+            <i className="fas fa-check-circle mr-3 text-success"></i>
+            <span>Chat with teachers and classmates</span>
+          </li>
         </ul>
         <br />
         <Link className="btn btn-primary" to="/app">

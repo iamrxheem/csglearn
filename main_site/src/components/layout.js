@@ -7,9 +7,9 @@ import Header from "./header"
 import Footer from "./footer/footer"
 
 // CSS and imports
-
 import "../assets/css/bulma-tabs.css"
 import "../assets/css/bulma-icons.css"
+import "../assets/css/design-cards.css"
 
 // All imports
 import ImportPage from "./imports/imports"
@@ -21,7 +21,14 @@ class Layout extends React.Component {
       <>
         <ImportPage />
 
-        {this.props.hideMenu ? null : <Header hideApplyButton />}
+        {this.props.hideMenu ? null : (
+          <Header
+            replaceTopImg={this.props.replaceTopImg}
+            topImg="https://i.ytimg.com/vi/C3XwcFQmQA4/maxresdefault.jpg"
+            enroll={this.props.enroll}
+            hideApplyButton
+          />
+        )}
 
         {this.props.hideAlert ? null : <SiteAlert />}
         <main>{this.props.children}</main>

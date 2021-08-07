@@ -32,10 +32,10 @@ import OnlineClasses from "../home/onlineClasses"
 import Reviews from "../home/reviews"
 import DelePromotion from "../home/delePromotion"
 import CsecSeptemberClasses from "../home/csecSeptemberClasses"
+import IELTS from "../home/ielts"
 
 import StayInTheLoop from "../components/stayInTheLoop/stayInTheLoop"
 
-// Gets the country code here
 // import { getCountryCode } from "../assets/js/userCountry"
 import ReadingClasses from "../images/reading-classes.png"
 
@@ -91,18 +91,13 @@ class IndexPage extends React.Component {
         </Helmet>
 
         <Layout hideAlert>
-          <CsecSeptemberClasses />
-          <MobileView>
-            <DelePromotion />
-          </MobileView>
-
           <Container>
             <ProgrammesPromo />
           </Container>
 
-          <BrowserView>
-            <DelePromotion />
-          </BrowserView>
+          <br />
+          <br />
+          <CsecSeptemberClasses />
 
           <OnlineClasses />
 

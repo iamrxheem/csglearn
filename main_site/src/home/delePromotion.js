@@ -7,28 +7,24 @@ import MobileView from "../common/mobileView"
 import BrowserView from "../common/browserView"
 import { isMobile } from "react-device-detect"
 import LazyLoad from "react-lazyload"
+import Img from "../images/black-college-student.jpg"
 
 const DelePromotion = () => (
   <Container fluid>
     <>
       <Row>
         <Col md={6}>
-          <LazyLoad>
-            <video
-              className={isMobile ? "break-container" : ""}
+          <MobileView>
+            <img
+              src={Img}
               style={{ width: "100%" }}
-              preload="auto"
-              autoPlay={true}
-              loop
-              muted
-            >
-              <source
-                style={{ width: "100%" }}
-                src={DeleVideo}
-                type="video/mp4"
-              />
-            </video>
-          </LazyLoad>
+              className="break-container"
+            />
+          </MobileView>
+
+          <BrowserView>
+            <img src={Img} style={{ width: "100%" }} />
+          </BrowserView>
         </Col>
         <Col md={6}>
           <br />

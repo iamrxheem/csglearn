@@ -72,7 +72,10 @@ class Header extends React.Component {
         {/* Top logo */}
         <MobileView>
           <a href="/">
-            <img src={TopLogo} style={{ width: "100%" }} />
+            <img
+              src={this.props.replaceTopImg ? this.props.topImg : TopLogo}
+              style={{ width: "100%" }}
+            />
           </a>
         </MobileView>
 
@@ -134,9 +137,9 @@ class Header extends React.Component {
 
               {/* Programmes */}
               <NavItem>
-                <Link className="nav-link" to="/programmes">
+                <NavLink className="nav-link" href="/programmes">
                   Programmes
-                </Link>
+                </NavLink>
               </NavItem>
 
               {/* Short Courses */}
@@ -147,11 +150,21 @@ class Header extends React.Component {
               </NavItem>
 
               {/* Accreditted Diplomas */}
-              <NavItem>
-                <Link className="nav-link" to="/diplomas">
-                  Diplomas
-                </Link>
-              </NavItem>
+              <Dropdown
+                open={this.state.dropdownOpen}
+                toggle={this.toggleDropdown}
+              >
+                <DropdownToggle nav caret>
+                  Accreditted Diplomas
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem>Diplomas in Spanish</DropdownItem>
+                  <DropdownItem>Diplomas in French</DropdownItem>
+
+                  <hr />
+                  <DropdownItem>English Language Certification</DropdownItem>
+                </DropdownMenu>
+              </Dropdown>
 
               {/* Contact */}
               <NavItem>
@@ -164,7 +177,7 @@ class Header extends React.Component {
                 <NavItem>
                   <Button
                     target="_blank"
-                    href={this.props.enroll}
+                    href={this.props.enroll ? this.props.enroll : "/apply"}
                     className="ml-1"
                   >
                     Apply

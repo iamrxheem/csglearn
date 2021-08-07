@@ -1,18 +1,16 @@
 export const applyLinks = [
   {
-    sat: "https://zfrmz.com/oTaLB16yeNY4e9pzIj3a",
+    acca:
+      "https://api.whatsapp.com/send?phone=18767073443&text=Good%20day%2C%20%0A%0AI%20would%20like%20to%20enroll%20in%20your%20online%20ACCA%20Programme.%20My%20name%20is%20",
+    sat: `https://api.whatsapp.com/send?phone=18767073443&text=Good%20day%2C%20%0A%0AI%20would%20like%20to%20enroll%20in%20your%20online%20SAT%20Programme.%20My%20name%20is%20`,
     csecSummer:
-      "https://forms.zohopublic.com/csglearninginstitute/form/CSECSummerProgrammeApplicationForm/formperma/2JyxgytsQew2u7HO6fISVzexEJksgpCTyHsS7Gz2KMs",
-    capeSummer: "https://zfrmz.com/qdGhigrwkYH0NX8uCySj",
+      "https://api.whatsapp.com/send?phone=18767073443&text=Good%20day%2C%20%0A%0AI%20would%20like%20to%20enroll%20in%20your%20online%20CSEC%20Programme%20for%20the%20following%20subjects%3A%20",
+    capeSummer: "https://wa.link/20mktm",
     csecSeptember:
-      "https://forms.zohopublic.com/csglearninginstitute/form/CSECSummerProgrammeOnlineApplicationForm/formperma/ITXP9uDz1BFuoXLzZgWT102nyoJ-3uz_fKr8ERHBgJo",
-    capeSeptember:
-      "https://forms.zohopublic.com/csglearninginstitute/form/SixthFormApplicationForm/formperma/KzS0owBdPzi9_ukGpWYg6qshaeDOa3xT7rMkQjf3q24",
-    literacy:
-      "https://forms.zohopublic.com/csglearninginstitute/form/LiteracyProgrammeApplicationForm/formperma/W2g46VpKRwDSR2fdlxUqhPTNYbf1XtXYqH06vYgz5h4",
-    dele:
-      "https://forms.zohopublic.com/csglearninginstitute/form/DiplomainSpanishRegistrationForm/formperma/hzPuluNSrQgm_4HrsSVPXm1_lo1tVOd0wGWXU6i8g8M",
-    delf:
-      "https://forms.zohopublic.com/csglearninginstitute/form/DiplomainFrenchRegistrationForm/formperma/7LKz5bXmcfhTBbPpMrCoxYfRqEAhpIyq5AKB6Ba7eNk"
+      "https://api.whatsapp.com/send?phone=18767073443&text=Good%20day%2C%20%0A%0AI%20would%20like%20to%20enroll%20in%20your%20online%20CSEC%20Programme%20for%20the%20following%20subjects%3A%20",
+    capeSeptember: "https://wa.link/20mktm",
+    literacy: "https://wa.link/s9a6ix",
+    dele: "https://wa.link/os9xgs",
+    delf: "https://wa.link/z031zm"
   }
 ]

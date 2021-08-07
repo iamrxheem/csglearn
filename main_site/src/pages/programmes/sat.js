@@ -12,6 +12,8 @@ import Faq from "react-faq-component"
 import View from "../../components/view/view"
 import SEO from "../../components/seo"
 
+import StudentVideo from "../../videos/sat.mp4"
+
 // Data
 import { satData } from "../../data/sat"
 
@@ -40,7 +42,6 @@ import Img1 from "../../images/young-student.jpg"
 import Image from "../../images/black-college-student.jpg"
 
 import { applyLinks } from "../../data/links"
-import { satData } from "../../data/sat"
 
 let applyLink = ""
 
@@ -57,7 +58,15 @@ const Page = props => (
 
     <Layout hideAlert>
       <MobileView>
-        <img src={Image} style={{ width: "100%" }} />
+        <video
+          style={{ width: "100%" }}
+          preload="auto"
+          autoPlay={true}
+          loop
+          muted
+        >
+          <source src={StudentVideo} type="video/mp4" />
+        </video>
       </MobileView>
 
       <Container>
@@ -81,27 +90,13 @@ const Page = props => (
             <div className="text-center">
               <Row>
                 <Col xs={6}>
-                  <Alert theme="info">
+                  <Alert theme="danger">
                     <a
                       target="_blank"
                       href={applyLink}
                       style={{ textDecoration: "none" }}
                     >
                       ENROLL NOW
-                    </a>
-                  </Alert>
-                </Col>
-                <Col xs={6}>
-                  <Alert theme="danger">
-                    <a style={{ textDecoration: "none" }} href="#requirements">
-                      REQUIREMENTS
-                    </a>
-                  </Alert>
-                </Col>
-                <Col xs={6}>
-                  <Alert theme="success">
-                    <a style={{ textDecoration: "none" }} href="#tuition">
-                      FEES & TUITION
                     </a>
                   </Alert>
                 </Col>
@@ -115,56 +110,65 @@ const Page = props => (
             <br />
 
             <span>
-              Our online SAT Programme is open to all students who wish to sit
-              the SAT examination in February, 2022.
+              Registration for our online SAT classes are now open. Our full
+              course includes:
             </span>
 
-            <div id="requirements">
-              <br />
+            <br />
+            <br />
+            <ul>
+              <li>3-4 hours of class time weekly for each subject</li>
+              <li style={{ paddingTop: "15px" }}>Weekly assignments</li>
+              <li style={{ paddingTop: "15px" }}>Monthly mock exams</li>
+              <li style={{ paddingTop: "15px" }}>
+                Monthly progress reports for parents
+              </li>
+              <li style={{ paddingTop: "15px" }}>Virtual textbooks</li>
+              <li style={{ paddingTop: "15px" }}>
+                Additional virtual class materials
+              </li>
+            </ul>
 
-              <h4>Requirements</h4>
+            <br />
+            <h4>Plus</h4>
 
-              <br />
-              <span>Candidates applying must meet the follwoing criteria</span>
+            <br />
+            <p>All enrolled students get access to</p>
 
-              <br />
-              <br />
-              <ul>
-                <li>
-                  Must be at least 13 years old at the time of registration
-                </li>
-                <li style={{ paddingTop: "15px" }}>
-                  Candidates under 18 years must be enrolled in a recognised
-                  educational instsitution
-                </li>
-                <li style={{ paddingTop: "15px" }}>
-                  Candidate must possess a valid government-issued photo ID at
-                  the time of registration
-                </li>
-              </ul>
-            </div>
+            <ul>
+              <li style={{ paddingBottom: "15px" }}>
+                College Application Master Class
+              </li>
+              <li style={{ paddingBottom: "15px" }}>
+                Monthly Live Q&A with CSG Learning College Experts
+              </li>
+              <li style={{ paddingBottom: "15px" }}>
+                Downloadable worksheets and templates
+              </li>
+              <li style={{ paddingBottom: "15px" }}>Financial Aid Workshop</li>
+              <li style={{ paddingBottom: "15px" }}>
+                Research hub for college searches
+              </li>
+            </ul>
 
-            <div id="tuition">
-              <br />
+            <br />
+            <h4>Fees & Tuition</h4>
 
-              <h4>Fees & Tuition</h4>
+            <br />
+            <Table hover>
+              <tbody>
+                <tr>
+                  <td>Course</td>
+                  <td>USD $900</td>
+                </tr>
+                <tr>
+                  <td>Miscellaneous Fee</td>
+                  <td>USD $100</td>
+                </tr>
+              </tbody>
+            </Table>
 
-              <br />
-              <Table hover>
-                <tbody>
-                  <tr>
-                    <td>Course</td>
-                    <td>USD $600</td>
-                  </tr>
-                  <tr>
-                    <td>Course Materials</td>
-                    <td>USD $35</td>
-                  </tr>
-                </tbody>
-              </Table>
-
-              <br />
-            </div>
+            <br />
 
             <Button target="_blank" href={applyLink} style={{ width: "100%" }}>
               Enroll now
@@ -175,14 +179,29 @@ const Page = props => (
             <br />
           </Col>
           <Col md={5}>
+            <BrowserView>
+              <video
+                style={{ width: "100%" }}
+                preload="auto"
+                autoPlay={true}
+                loop
+                muted
+              >
+                <source src={StudentVideo} type="video/mp4" />
+              </video>
+
+              <br />
+              <br />
+            </BrowserView>
+
             <ProgrammeSummary
               levelOfStudy="Accredited Certification"
-              numberOfCourses="N/A"
+              numberOfCourses="English, Mathematics, Essay "
               modeOfStudy="Online"
               showCost
-              cost="USD $600"
-              duration="5 months"
-              termBeginsOn="July 19, 2021"
+              cost="USD $900"
+              duration="3 months"
+              termBeginsOn="August 30, 2021"
             />
 
             <MobileView>

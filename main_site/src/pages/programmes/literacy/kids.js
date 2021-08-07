@@ -126,7 +126,7 @@ const Page = props => (
               modeOfStudy="Online"
               duration="3 months"
               numberOfCourses="1"
-              termBeginsOn="Monday, June 28, 2021"
+              termBeginsOn="Monday, August 2nd, 2021"
             />
 
             <MobileView>

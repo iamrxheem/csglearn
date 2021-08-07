@@ -3,6 +3,7 @@ import { Row, Col, Button, Container } from "shards-react"
 import { isIOS } from "react-device-detect"
 
 import StudentVideo from "../videos/exam-22-home.mp4"
+import MobileView from "../common/mobileView"
 
 class CsecSeptemberClasses extends React.Component {
   render() {
@@ -10,37 +11,29 @@ class CsecSeptemberClasses extends React.Component {
       <div style={{ width: "100%" }}>
         <Row>
           <Col sm={6}>
-            {isIOS ? (
-              <>
-                <img
-                  src="https://www.csglearn.com/static/young-student-b2c1a34bf40be9cf30e4cc000e21e6c3.jpg"
-                  style={{ width: "100%" }}
-                />
-              </>
-            ) : (
-              <>
-                <video
-                  style={{ width: "100%" }}
-                  preload="auto"
-                  autoPlay={true}
-                  loop
-                  muted
-                >
-                  <source src={StudentVideo} type="video/mp4" />
-                </video>
-              </>
-            )}
+            <video
+              style={{ width: "100%" }}
+              preload="auto"
+              autoPlay={true}
+              loop
+              muted
+            >
+              <source src={StudentVideo} type="video/mp4" />
+            </video>
           </Col>
           <Col sm={6}>
-            <br />
+            <MobileView>
+              <br />
+            </MobileView>
+
             <Container>
-              <h4>Register for the CSEC & CAPE May/ June 2022 Exams</h4>
+              <h4>Join our online CXC Classes</h4>
 
               <br />
               <span>
-                Registration for the January and May/ June exams are now open!
-                Register online now and start learning from the comfort of your
-                home.
+                Registration for the January and May/ June 2022 exams are now
+                open! Enroll online now and start learning from the comfort of
+                your home.
               </span>
 
               <br />
@@ -53,15 +46,15 @@ class CsecSeptemberClasses extends React.Component {
                     <br />
                     <br />
                     <span>
-                      <strong>September 6</strong>
+                      <strong>August 2</strong>
                     </span>
                   </Col>
                   <Col xs={4}>
-                    <i className="far fa-clipboard fa-2x text-secondary"></i>
+                    <i className="fas fa-users fa-2x text-secondary"></i>
                     <br />
                     <br />
                     <span>
-                      <strong>Materials Included</strong>
+                      <strong>Small Class Sizes</strong>
                     </span>
                   </Col>
                   <Col xs={4}>
@@ -69,7 +62,7 @@ class CsecSeptemberClasses extends React.Component {
                     <br />
                     <br />
                     <span>
-                      <strong>Online Only</strong>
+                      <strong>Online</strong>
                     </span>
                   </Col>
                 </Row>
@@ -79,21 +72,27 @@ class CsecSeptemberClasses extends React.Component {
               <br />
               <Row>
                 <Col xs={6}>
-                  <Button pill href="/csec">
+                  <Button style={{ width: "100%" }} pill href="/csec">
                     Register for CSEC
                   </Button>
                 </Col>
                 <Col xs={6}>
-                  <Button outline href="/sixth-form">
+                  <Button style={{ width: "100%" }} outline href="/sixth-form">
                     Register for CAPE
                   </Button>
                 </Col>
               </Row>
+
+              <br />
+              <p>
+                See special offers for students in{" "}
+                <a href="/tt/exam22">Trinidad & Tobago</a> and{" "}
+                <a href="/bb/exam22">Barbados</a>.
+              </p>
             </Container>
           </Col>
         </Row>
 
-        <br />
         <br />
       </div>
     )
